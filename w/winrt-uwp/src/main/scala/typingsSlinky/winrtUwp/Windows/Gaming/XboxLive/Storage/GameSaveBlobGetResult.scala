@@ -7,12 +7,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-@JSGlobal("Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult")
 @js.native
-abstract class GameSaveBlobGetResult () extends js.Object {
+trait GameSaveBlobGetResult extends js.Object {
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   var status: GameSaveErrorStatus = js.native
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   var value: IMapView[String, IBuffer] = js.native
+}
+
+object GameSaveBlobGetResult {
+  @scala.inline
+  def apply(status: GameSaveErrorStatus, value: IMapView[String, IBuffer]): GameSaveBlobGetResult = {
+    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GameSaveBlobGetResult]
+  }
+  @scala.inline
+  implicit class GameSaveBlobGetResultOps[Self <: GameSaveBlobGetResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatus(value: GameSaveErrorStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: IMapView[String, IBuffer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.nodePgMigrate.mod
 
-import typingsSlinky.nodePgMigrate.AnonOptions
+import typingsSlinky.nodePgMigrate.anon.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait TableOptions extends js.Object {
   var constraints: js.UndefOr[ConstraintOptions] = js.native
   var ifNotExists: js.UndefOr[Boolean] = js.native
   var inherits: js.UndefOr[Name] = js.native
-  var like: js.UndefOr[Name | AnonOptions] = js.native
+  var like: js.UndefOr[Name | Options] = js.native
   var temporary: js.UndefOr[Boolean] = js.native
 }
 
@@ -82,7 +82,7 @@ object TableOptions {
         ret
     }
     @scala.inline
-    def withLike(value: Name | AnonOptions): Self = {
+    def withLike(value: Name | Options): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("like")(value.asInstanceOf[js.Any])
         ret

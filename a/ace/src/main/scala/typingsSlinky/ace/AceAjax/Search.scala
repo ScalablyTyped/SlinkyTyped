@@ -1,6 +1,5 @@
 package typingsSlinky.ace.AceAjax
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,20 +40,62 @@ trait Search extends js.Object {
   def setOptions(An: js.Any): Unit = js.native
 }
 
-@JSGlobal("AceAjax.Search")
-@js.native
-object Search
-  extends /**
-  * Creates a new `Search` object. The following search options are avaliable:
-  * - `needle`: The string or regular expression you're looking for
-  * - `backwards`: Whether to search backwards from where cursor currently is. Defaults to `false`.
-  * - `wrap`: Whether to wrap the search back to the beginning when it hits the end. Defaults to `false`.
-  * - `caseSensitive`: Whether the search ought to be case-sensitive. Defaults to `false`.
-  * - `wholeWord`: Whether the search matches only on whole words. Defaults to `false`.
-  * - `range`: The [[Range]] to search within. Set this to `null` for the whole document
-  * - `regExp`: Whether the search is a regular expression or not. Defaults to `false`.
-  * - `start`: The starting [[Range]] or cursor position to begin the search
-  * - `skipCurrent`: Whether or not to include the current line in the search. Default to `false`.
-  **/
-Instantiable0[Search]
+object Search {
+  @scala.inline
+  def apply(
+    find: IEditSession => Range,
+    findAll: IEditSession => js.Array[Range],
+    getOptions: () => js.Any,
+    replace: (String, String) => String,
+    set: js.Any => Search,
+    setOptions: js.Any => Unit
+  ): Search = {
+    val __obj = js.Dynamic.literal(find = js.Any.fromFunction1(find), findAll = js.Any.fromFunction1(findAll), getOptions = js.Any.fromFunction0(getOptions), replace = js.Any.fromFunction2(replace), set = js.Any.fromFunction1(set), setOptions = js.Any.fromFunction1(setOptions))
+    __obj.asInstanceOf[Search]
+  }
+  @scala.inline
+  implicit class SearchOps[Self <: Search] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFind(value: IEditSession => Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("find")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFindAll(value: IEditSession => js.Array[Range]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findAll")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetOptions(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptions")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withReplace(value: (String, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: js.Any => Search): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOptions(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOptions")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

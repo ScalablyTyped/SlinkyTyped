@@ -1,10 +1,10 @@
 package typingsSlinky.styledReactModal.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.std.Event_
 import typingsSlinky.styledReactModal.mod.ModalProps
 import typingsSlinky.styledReactModal.mod.default
 import scala.scalajs.js
@@ -39,7 +39,7 @@ object StyledReactModal {
     @scala.inline
     def onBackgroundClick(value: /* event */ SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onBackgroundClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onEscapeKeydown(value: /* event */ Event_ => Unit): this.type = set("onEscapeKeydown", js.Any.fromFunction1(value))
+    def onEscapeKeydown(value: /* event */ Event => Unit): this.type = set("onEscapeKeydown", js.Any.fromFunction1(value))
   }
   
   def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

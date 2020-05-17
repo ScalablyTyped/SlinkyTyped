@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCalendar.AnonQuotaUser
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCalendar.anon.QuotaUser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ColorsResource extends js.Object {
   /** Returns the color definitions for calendars and events. */
-  def get(request: AnonQuotaUser): Request_[Colors_] = js.native
+  def get(request: QuotaUser): Request[Colors] = js.native
 }
 
 object ColorsResource {
   @scala.inline
-  def apply(get: AnonQuotaUser => Request_[Colors_]): ColorsResource = {
+  def apply(get: QuotaUser => Request[Colors]): ColorsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[ColorsResource]
   }
@@ -25,7 +25,7 @@ object ColorsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonQuotaUser => Request_[Colors_]): Self = {
+    def withGet(value: QuotaUser => Request[Colors]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

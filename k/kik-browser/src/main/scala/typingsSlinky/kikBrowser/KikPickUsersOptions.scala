@@ -1,5 +1,6 @@
 package typingsSlinky.kikBrowser
 
+import typingsSlinky.kikBrowser.anon.Username
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +11,7 @@ trait KikPickUsersOptions extends js.Object {
   var filtered: js.UndefOr[js.Array[String]] = js.native
   var maxResults: js.UndefOr[Double] = js.native
   var minResults: js.UndefOr[Double] = js.native
-  var preselected: js.UndefOr[js.Array[AnonUsername]] = js.native
+  var preselected: js.UndefOr[js.Array[Username]] = js.native
 }
 
 object KikPickUsersOptions {
@@ -74,7 +75,7 @@ object KikPickUsersOptions {
         ret
     }
     @scala.inline
-    def withPreselected(value: js.Array[AnonUsername]): Self = {
+    def withPreselected(value: js.Array[Username]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("preselected")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeZssRichTextEditor.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNativeZssRichTextEditor.PartialRichTextEditorProp
+import typingsSlinky.reactNativeZssRichTextEditor.anon.PartialRichTextEditorProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

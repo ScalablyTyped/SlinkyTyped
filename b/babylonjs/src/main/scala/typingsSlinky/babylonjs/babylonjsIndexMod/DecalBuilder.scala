@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.babylonjsIndexMod
 
-import typingsSlinky.babylonjs.AnonAngle
+import typingsSlinky.babylonjs.anon.Angle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,6 +28,6 @@ object DecalBuilder extends js.Object {
     * @returns the decal mesh
     * @see https://doc.babylonjs.com/how_to/decals
     */
-  def CreateDecal(name: String, sourceMesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh, options: AnonAngle): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateDecal(name: String, sourceMesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh, options: Angle): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
 

@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 @js.native
 object ensureElement extends js.Object {
   def apply(): ReactElement = js.native
+  def apply(child: TagMod[Any]): ReactElement = js.native
   def apply(
-    child: js.UndefOr[TagMod[Any]],
+    child: TagMod[Any],
     tagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any
   ): ReactElement = js.native
-  def apply(child: TagMod[Any]): ReactElement = js.native
 }
 

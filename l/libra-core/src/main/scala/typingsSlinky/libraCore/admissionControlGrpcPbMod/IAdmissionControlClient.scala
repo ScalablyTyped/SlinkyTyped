@@ -3,9 +3,9 @@ package typingsSlinky.libraCore.admissionControlGrpcPbMod
 import typingsSlinky.grpc.mod.ClientUnaryCall
 import typingsSlinky.grpc.mod.Metadata
 import typingsSlinky.grpc.mod.ServiceError
-import typingsSlinky.libraCore.PartialCallOptions
 import typingsSlinky.libraCore.admissionControlPbMod.SubmitTransactionRequest
 import typingsSlinky.libraCore.admissionControlPbMod.SubmitTransactionResponse
+import typingsSlinky.libraCore.anon.PartialCallOptions
 import typingsSlinky.libraCore.getWithProofPbMod.UpdateToLatestLedgerRequest
 import typingsSlinky.libraCore.getWithProofPbMod.UpdateToLatestLedgerResponse
 import scala.scalajs.js

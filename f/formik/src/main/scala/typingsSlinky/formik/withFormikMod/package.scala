@@ -9,7 +9,6 @@ package object withFormikMod {
     /* component */ typingsSlinky.formik.withFormikMod.CompositeComponent[TMergedProps], 
     slinky.core.ReactComponentClass[TOwnProps]
   ]
-  type CompositeComponent[P] = slinky.core.ReactComponentClass[P]
   type InferableComponentDecorator[TOwnProps] = js.Function1[
     /* component */ typingsSlinky.formik.withFormikMod.CompositeComponent[TOwnProps], 
     typingsSlinky.formik.withFormikMod.CompositeComponent[TOwnProps]

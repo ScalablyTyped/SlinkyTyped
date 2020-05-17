@@ -3,8 +3,8 @@ package typingsSlinky.jestTestResult.typesMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.istanbulLibCoverage.mod.CoverageMapData
 import typingsSlinky.jestConsole.typesMod.ConsoleBuffer
-import typingsSlinky.jestTestResult.AnonAdded
-import typingsSlinky.jestTestResult.AnonEnd
+import typingsSlinky.jestTestResult.anon.Added
+import typingsSlinky.jestTestResult.anon.End
 import typingsSlinky.jestTypes.configMod.DisplayName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,9 +23,9 @@ trait TestResult extends js.Object {
   var numPendingTests: Double = js.native
   var numTodoTests: Double = js.native
   var openHandles: js.Array[js.Error] = js.native
-  var perfStats: AnonEnd = js.native
+  var perfStats: End = js.native
   var skipped: Boolean = js.native
-  var snapshot: AnonAdded = js.native
+  var snapshot: Added = js.native
   var sourceMaps: js.UndefOr[StringDictionary[String]] = js.native
   var testExecError: js.UndefOr[SerializableError] = js.native
   var testFilePath: String = js.native
@@ -41,9 +41,9 @@ object TestResult {
     numPendingTests: Double,
     numTodoTests: Double,
     openHandles: js.Array[js.Error],
-    perfStats: AnonEnd,
+    perfStats: End,
     skipped: Boolean,
-    snapshot: AnonAdded,
+    snapshot: Added,
     testFilePath: String,
     testResults: js.Array[AssertionResult]
   ): TestResult = {
@@ -93,7 +93,7 @@ object TestResult {
         ret
     }
     @scala.inline
-    def withPerfStats(value: AnonEnd): Self = {
+    def withPerfStats(value: End): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("perfStats")(value.asInstanceOf[js.Any])
         ret
@@ -105,7 +105,7 @@ object TestResult {
         ret
     }
     @scala.inline
-    def withSnapshot(value: AnonAdded): Self = {
+    def withSnapshot(value: Added): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("snapshot")(value.asInstanceOf[js.Any])
         ret

@@ -1,13 +1,18 @@
 package typingsSlinky.winrt.Windows.Data.Xml.Xsl
 
-import typingsSlinky.winrt.Windows.Data.Xml.Dom.XmlDocument
+import typingsSlinky.winrt.Windows.Data.Xml.Dom.IXmlNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Data.Xml.Xsl.XsltProcessor")
 @js.native
-class XsltProcessor protected () extends IXsltProcessor {
-  def this(document: XmlDocument) = this()
+trait XsltProcessor extends IXsltProcessor
+
+object XsltProcessor {
+  @scala.inline
+  def apply(transformToString: IXmlNode => String): XsltProcessor = {
+    val __obj = js.Dynamic.literal(transformToString = js.Any.fromFunction1(transformToString))
+    __obj.asInstanceOf[XsltProcessor]
+  }
 }
 

@@ -13,3 +13,16 @@ import scala.scalajs.js.annotation._
 */
 trait ObjectLiteralElementLike extends js.Object
 
+object ObjectLiteralElementLike {
+  @scala.inline
+  implicit def apply(value: AccessorDeclaration): ObjectLiteralElementLike = value.asInstanceOf[ObjectLiteralElementLike]
+  @scala.inline
+  implicit def apply(value: MethodDeclaration): ObjectLiteralElementLike = value.asInstanceOf[ObjectLiteralElementLike]
+  @scala.inline
+  implicit def apply(value: PropertyAssignment): ObjectLiteralElementLike = value.asInstanceOf[ObjectLiteralElementLike]
+  @scala.inline
+  implicit def apply(value: ShorthandPropertyAssignment): ObjectLiteralElementLike = value.asInstanceOf[ObjectLiteralElementLike]
+  @scala.inline
+  implicit def apply(value: SpreadAssignment): ObjectLiteralElementLike = value.asInstanceOf[ObjectLiteralElementLike]
+}
+

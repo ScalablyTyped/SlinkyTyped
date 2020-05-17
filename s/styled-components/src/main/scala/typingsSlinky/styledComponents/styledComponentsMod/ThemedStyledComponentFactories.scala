@@ -179,7 +179,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined {[ TTag in keyof react.react._Global_.JSX.IntrinsicElements ]: styled-components.styled-components.ThemedStyledFunction<TTag, T, {}, never>} */
+/* Inlined {[ TTag in keyof react.react.<global>.JSX.IntrinsicElements ]: styled-components.styled-components.ThemedStyledFunction<TTag, T, {}, never>} */
 @js.native
 trait ThemedStyledComponentFactories[T /* <: js.Object */] extends js.Object {
   var a: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.a, T, js.Object, scala.Nothing] = js.native

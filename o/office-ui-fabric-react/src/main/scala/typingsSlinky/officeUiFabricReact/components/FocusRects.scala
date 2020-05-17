@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.uifabricUtilities.AnonRootRef
+import typingsSlinky.uifabricUtilities.anon.RootRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ object FocusRects {
     def rootRef(value: ReactRef[HTMLElement]): this.type = set("rootRef", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnonRootRef): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: RootRef): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: FocusRects.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,21 +1,21 @@
 package typingsSlinky.reduxBatchedActions.mod
 
 import typingsSlinky.redux.mod.Action
-import typingsSlinky.reduxBatchedActions.AnonBatch
+import typingsSlinky.reduxBatchedActions.anon.Batch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait BatchAction extends js.Object {
-  var meta: AnonBatch = js.native
+  var meta: Batch = js.native
   var payload: js.Array[Action[_]] = js.native
   var `type`: BatchActionType = js.native
 }
 
 object BatchAction {
   @scala.inline
-  def apply(meta: AnonBatch, payload: js.Array[Action[_]], `type`: BatchActionType): BatchAction = {
+  def apply(meta: Batch, payload: js.Array[Action[_]], `type`: BatchActionType): BatchAction = {
     val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchAction]
@@ -27,7 +27,7 @@ object BatchAction {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMeta(value: AnonBatch): Self = {
+    def withMeta(value: Batch): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

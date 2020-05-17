@@ -1,7 +1,7 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.AnonId
-import typingsSlinky.mongodb.AnonNModified
+import typingsSlinky.mongodb.anon.Id
+import typingsSlinky.mongodb.anon.NModified
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,9 +11,9 @@ trait UpdateWriteOpResult extends js.Object {
   var connection: js.Any = js.native
   var matchedCount: scala.Double = js.native
   var modifiedCount: scala.Double = js.native
-  var result: AnonNModified = js.native
+  var result: NModified = js.native
   var upsertedCount: scala.Double = js.native
-  var upsertedId: AnonId = js.native
+  var upsertedId: Id = js.native
 }
 
 object UpdateWriteOpResult {
@@ -22,9 +22,9 @@ object UpdateWriteOpResult {
     connection: js.Any,
     matchedCount: scala.Double,
     modifiedCount: scala.Double,
-    result: AnonNModified,
+    result: NModified,
     upsertedCount: scala.Double,
-    upsertedId: AnonId
+    upsertedId: Id
   ): UpdateWriteOpResult = {
     val __obj = js.Dynamic.literal(connection = connection.asInstanceOf[js.Any], matchedCount = matchedCount.asInstanceOf[js.Any], modifiedCount = modifiedCount.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any], upsertedCount = upsertedCount.asInstanceOf[js.Any], upsertedId = upsertedId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateWriteOpResult]
@@ -54,7 +54,7 @@ object UpdateWriteOpResult {
         ret
     }
     @scala.inline
-    def withResult(value: AnonNModified): Self = {
+    def withResult(value: NModified): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
         ret
@@ -66,7 +66,7 @@ object UpdateWriteOpResult {
         ret
     }
     @scala.inline
-    def withUpsertedId(value: AnonId): Self = {
+    def withUpsertedId(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("upsertedId")(value.asInstanceOf[js.Any])
         ret

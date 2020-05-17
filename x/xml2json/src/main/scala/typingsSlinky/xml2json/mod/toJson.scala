@@ -1,7 +1,7 @@
 package typingsSlinky.xml2json.mod
 
-import typingsSlinky.xml2json.objectfalseJsonOptions
-import typingsSlinky.xml2json.objecttrueJsonOptions
+import typingsSlinky.xml2json.anon.objectfalseJsonOptions
+import typingsSlinky.xml2json.anon.objecttrueJsonOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

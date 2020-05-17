@@ -1,6 +1,6 @@
 package typingsSlinky.chartmogulNode.mod.Customer
 
-import typingsSlinky.chartmogulNode.AnonAddresszip
+import typingsSlinky.chartmogulNode.anon.Addresszip
 import typingsSlinky.chartmogulNode.commonMod.Strings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Customer extends js.Object {
-  var address: js.UndefOr[AnonAddresszip] = js.native
+  var address: js.UndefOr[Addresszip] = js.native
   var arr: js.UndefOr[Double] = js.native
   var attributes: js.UndefOr[Attributes_] = js.native
   var `billing-system-type`: js.UndefOr[String] = js.native
@@ -49,7 +49,7 @@ object Customer {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddress(value: AnonAddresszip): Self = {
+    def withAddress(value: Addresszip): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
         ret

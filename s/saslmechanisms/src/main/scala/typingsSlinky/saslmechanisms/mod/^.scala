@@ -1,6 +1,6 @@
 package typingsSlinky.saslmechanisms.mod
 
-import typingsSlinky.saslmechanisms.TypeofFactory
+import typingsSlinky.saslmechanisms.anon.TypeofFactory
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

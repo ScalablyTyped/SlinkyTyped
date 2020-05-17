@@ -1,11 +1,11 @@
 package typingsSlinky.kiwicomOrbitDesignTokens.mod
 
-import typingsSlinky.kiwicomOrbitDesignTokens.PartialCloudColor
-import typingsSlinky.kiwicomOrbitDesignTokens.PartialInkColor
-import typingsSlinky.kiwicomOrbitDesignTokens.PartialProductColor
-import typingsSlinky.kiwicomOrbitDesignTokens.PartialSocialColor
-import typingsSlinky.kiwicomOrbitDesignTokens.PartialStatusColor
-import typingsSlinky.kiwicomOrbitDesignTokens.PartialWhiteColor
+import typingsSlinky.kiwicomOrbitDesignTokens.anon.PartialCloudColor
+import typingsSlinky.kiwicomOrbitDesignTokens.anon.PartialInkColor
+import typingsSlinky.kiwicomOrbitDesignTokens.anon.PartialProductColor
+import typingsSlinky.kiwicomOrbitDesignTokens.anon.PartialSocialColor
+import typingsSlinky.kiwicomOrbitDesignTokens.anon.PartialStatusColor
+import typingsSlinky.kiwicomOrbitDesignTokens.anon.PartialWhiteColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

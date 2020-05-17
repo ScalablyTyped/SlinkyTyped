@@ -1,0 +1,12 @@
+package typingsSlinky.emberTestHelpers.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@ember/test-helpers", "getContext")
+@js.native
+object getContext extends js.Object {
+  def apply(): js.Object = js.native
+}
+

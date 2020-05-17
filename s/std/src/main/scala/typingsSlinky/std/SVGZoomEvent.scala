@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +12,4 @@ trait SVGZoomEvent extends UIEvent {
   val previousTranslate: org.scalajs.dom.raw.SVGPoint = js.native
   val zoomRectScreen: org.scalajs.dom.raw.SVGRect = js.native
 }
-
-@JSGlobal("SVGZoomEvent")
-@js.native
-object SVGZoomEvent extends Instantiable0[SVGZoomEvent]
 

@@ -4,13 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("jsts.geom.Geometry")
 @js.native
-/**
-  * Creates a new <tt>Geometry</tt> via the specified GeometryFactory.
-  */
-class Geometry () extends js.Object {
-  def this(factory: js.Any) = this()
+trait Geometry extends js.Object {
   /**
     * The bounding box of this <code>Geometry</code>.
     */
@@ -901,5 +896,421 @@ class Geometry () extends js.Object {
     * @see Geometry#contains
     */
   def within(g: Geometry): Boolean = js.native
+}
+
+object Geometry {
+  @scala.inline
+  def apply(
+    apply: js.Any => Unit,
+    buffer: (Double, Double, Double) => Geometry,
+    checkNotGeometryCollection: Geometry => Unit,
+    compare: (js.Array[_], js.Array[_]) => Double,
+    compareTo: Geometry => Double,
+    compareToSameClass: Geometry => Double,
+    computeEnvelopeInternal: () => Envelope,
+    contains: Geometry => Boolean,
+    convexHull: () => Geometry,
+    coveredBy: Geometry => Boolean,
+    covers: Geometry => Boolean,
+    crosses: Geometry => Boolean,
+    difference: Geometry => Geometry,
+    disjoint: Geometry => Boolean,
+    distance: Geometry => Double,
+    envelope: Envelope,
+    equal: (Coordinate, Coordinate, Double) => Boolean,
+    equals: js.Object => Boolean,
+    equalsExact: (Geometry, Double) => Boolean,
+    equalsNorm: Geometry => Boolean,
+    equalsTopo: Geometry => Boolean,
+    getArea: () => Double,
+    getBoundary: () => Geometry,
+    getBoundaryDimension: () => Double,
+    getCentroid: () => Point,
+    getCoordinate: () => Coordinate,
+    getCoordinates: () => js.Array[Coordinate],
+    getDimension: () => Double,
+    getEnvelope: () => Geometry,
+    getEnvelopeInternal: () => Envelope,
+    getFactory: () => js.Any,
+    getGeometryN: Double => Geometry,
+    getGeometryType: () => String,
+    getInteriorPoint: () => Point,
+    getLength: () => Double,
+    getNumGeometries: () => Double,
+    getNumPoints: () => Double,
+    getPrecisionModel: () => PrecisionModel,
+    intersection: Geometry => Geometry,
+    intersects: Geometry => Boolean,
+    isEmpty: () => Boolean,
+    isEquivalentClass: Geometry => Boolean,
+    isGeometryCollection: () => Boolean,
+    isGeometryCollectionBase: () => Boolean,
+    isRectangle: () => Boolean,
+    isSimple: () => Boolean,
+    isValid: () => Boolean,
+    isWithinDistance: (Geometry, Double) => Boolean,
+    norm: () => Geometry,
+    normalize: () => Unit,
+    overlaps: Geometry => Boolean,
+    relate: (Geometry, String) => Boolean,
+    relate2: Geometry => js.Any,
+    symDifference: Geometry => Geometry,
+    touches: Geometry => Boolean,
+    union: Geometry => Geometry,
+    within: Geometry => Boolean
+  ): Geometry = {
+    val __obj = js.Dynamic.literal(apply = js.Any.fromFunction1(apply), buffer = js.Any.fromFunction3(buffer), checkNotGeometryCollection = js.Any.fromFunction1(checkNotGeometryCollection), compare = js.Any.fromFunction2(compare), compareTo = js.Any.fromFunction1(compareTo), compareToSameClass = js.Any.fromFunction1(compareToSameClass), computeEnvelopeInternal = js.Any.fromFunction0(computeEnvelopeInternal), contains = js.Any.fromFunction1(contains), convexHull = js.Any.fromFunction0(convexHull), coveredBy = js.Any.fromFunction1(coveredBy), covers = js.Any.fromFunction1(covers), crosses = js.Any.fromFunction1(crosses), difference = js.Any.fromFunction1(difference), disjoint = js.Any.fromFunction1(disjoint), distance = js.Any.fromFunction1(distance), envelope = envelope.asInstanceOf[js.Any], equal = js.Any.fromFunction3(equal), equals = js.Any.fromFunction1(equals), equalsExact = js.Any.fromFunction2(equalsExact), equalsNorm = js.Any.fromFunction1(equalsNorm), equalsTopo = js.Any.fromFunction1(equalsTopo), getArea = js.Any.fromFunction0(getArea), getBoundary = js.Any.fromFunction0(getBoundary), getBoundaryDimension = js.Any.fromFunction0(getBoundaryDimension), getCentroid = js.Any.fromFunction0(getCentroid), getCoordinate = js.Any.fromFunction0(getCoordinate), getCoordinates = js.Any.fromFunction0(getCoordinates), getDimension = js.Any.fromFunction0(getDimension), getEnvelope = js.Any.fromFunction0(getEnvelope), getEnvelopeInternal = js.Any.fromFunction0(getEnvelopeInternal), getFactory = js.Any.fromFunction0(getFactory), getGeometryN = js.Any.fromFunction1(getGeometryN), getGeometryType = js.Any.fromFunction0(getGeometryType), getInteriorPoint = js.Any.fromFunction0(getInteriorPoint), getLength = js.Any.fromFunction0(getLength), getNumGeometries = js.Any.fromFunction0(getNumGeometries), getNumPoints = js.Any.fromFunction0(getNumPoints), getPrecisionModel = js.Any.fromFunction0(getPrecisionModel), intersection = js.Any.fromFunction1(intersection), intersects = js.Any.fromFunction1(intersects), isEmpty = js.Any.fromFunction0(isEmpty), isEquivalentClass = js.Any.fromFunction1(isEquivalentClass), isGeometryCollection = js.Any.fromFunction0(isGeometryCollection), isGeometryCollectionBase = js.Any.fromFunction0(isGeometryCollectionBase), isRectangle = js.Any.fromFunction0(isRectangle), isSimple = js.Any.fromFunction0(isSimple), isValid = js.Any.fromFunction0(isValid), isWithinDistance = js.Any.fromFunction2(isWithinDistance), norm = js.Any.fromFunction0(norm), normalize = js.Any.fromFunction0(normalize), overlaps = js.Any.fromFunction1(overlaps), relate = js.Any.fromFunction2(relate), relate2 = js.Any.fromFunction1(relate2), symDifference = js.Any.fromFunction1(symDifference), touches = js.Any.fromFunction1(touches), union = js.Any.fromFunction1(union), within = js.Any.fromFunction1(within))
+    __obj.asInstanceOf[Geometry]
+  }
+  @scala.inline
+  implicit class GeometryOps[Self <: Geometry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApply(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBuffer(value: (Double, Double, Double) => Geometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withCheckNotGeometryCollection(value: Geometry => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkNotGeometryCollection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCompare(value: (js.Array[_], js.Array[_]) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compare")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCompareTo(value: Geometry => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareTo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCompareToSameClass(value: Geometry => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareToSameClass")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withComputeEnvelopeInternal(value: () => Envelope): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEnvelopeInternal")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withContains(value: Geometry => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withConvexHull(value: () => Geometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convexHull")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCoveredBy(value: Geometry => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coveredBy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCovers(value: Geometry => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("covers")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCrosses(value: Geometry => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crosses")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDifference(value: Geometry => Geometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("difference")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDisjoint(value: Geometry => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disjoint")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDistance(value: Geometry => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEnvelope(value: Envelope): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("envelope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEqual(value: (Coordinate, Coordinate, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equal")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withEquals(value: js.Object => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEqualsExact(value: (Geometry, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equalsExact")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withEqualsNorm(value: Geometry => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equalsNorm")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEqualsTopo(value: Geometry => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equalsTopo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetArea(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getArea")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBoundary(value: () => Geometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBoundary")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBoundaryDimension(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBoundaryDimension")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetCentroid(value: () => Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCentroid")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetCoordinate(value: () => Coordinate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCoordinate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetCoordinates(value: () => js.Array[Coordinate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCoordinates")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDimension(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDimension")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEnvelope(value: () => Geometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEnvelope")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEnvelopeInternal(value: () => Envelope): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEnvelopeInternal")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFactory(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFactory")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetGeometryN(value: Double => Geometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getGeometryN")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetGeometryType(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getGeometryType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetInteriorPoint(value: () => Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getInteriorPoint")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLength(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLength")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNumGeometries(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumGeometries")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNumPoints(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumPoints")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPrecisionModel(value: () => PrecisionModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPrecisionModel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIntersection(value: Geometry => Geometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intersection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIntersects(value: Geometry => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intersects")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsEmpty(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmpty")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsEquivalentClass(value: Geometry => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEquivalentClass")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsGeometryCollection(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGeometryCollection")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsGeometryCollectionBase(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGeometryCollectionBase")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsRectangle(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRectangle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsSimple(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSimple")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsValid(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsWithinDistance(value: (Geometry, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isWithinDistance")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withNorm(value: () => Geometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("norm")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNormalize(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOverlaps(value: Geometry => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlaps")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRelate(value: (Geometry, String) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRelate2(value: Geometry => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relate2")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSymDifference(value: Geometry => Geometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symDifference")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTouches(value: Geometry => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touches")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUnion(value: Geometry => Geometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("union")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWithin(value: Geometry => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("within")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

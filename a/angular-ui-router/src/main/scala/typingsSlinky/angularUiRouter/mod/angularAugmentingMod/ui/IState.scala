@@ -1,7 +1,7 @@
 package typingsSlinky.angularUiRouter.mod.angularAugmentingMod.ui
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angular.mod._Global_.Function
+import typingsSlinky.angular.mod.global.Function
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

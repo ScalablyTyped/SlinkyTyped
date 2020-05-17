@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object ErrorSettings {
-  type Param = (typingsSlinky.semanticUiProgress.PickImplmethod | typingsSlinky.semanticUiProgress.PickImplnonNumeric) with typingsSlinky.semanticUiProgress.PartialPickImplkeyofImplMethod
+  type Param = (typingsSlinky.semanticUiProgress.anon.PickImplmethod | typingsSlinky.semanticUiProgress.anon.PickImplnonNumeric) with typingsSlinky.semanticUiProgress.anon.PartialPickImplkeyofImplMethod
 }

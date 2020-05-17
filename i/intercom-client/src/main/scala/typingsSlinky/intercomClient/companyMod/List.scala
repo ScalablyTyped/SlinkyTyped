@@ -1,6 +1,6 @@
 package typingsSlinky.intercomClient.companyMod
 
-import typingsSlinky.intercomClient.AnonNext
+import typingsSlinky.intercomClient.anon.Next
 import typingsSlinky.intercomClient.intercomClientStrings.companyDotlist
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait List extends js.Object {
   var companies: js.Array[Company with CompanyIdentifier] = js.native
-  var pages: AnonNext = js.native
+  var pages: Next = js.native
   var total_count: Double = js.native
   var `type`: companyDotlist = js.native
 }
@@ -18,7 +18,7 @@ object List {
   @scala.inline
   def apply(
     companies: js.Array[Company with CompanyIdentifier],
-    pages: AnonNext,
+    pages: Next,
     total_count: Double,
     `type`: companyDotlist
   ): List = {
@@ -39,7 +39,7 @@ object List {
         ret
     }
     @scala.inline
-    def withPages(value: AnonNext): Self = {
+    def withPages(value: Next): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
         ret

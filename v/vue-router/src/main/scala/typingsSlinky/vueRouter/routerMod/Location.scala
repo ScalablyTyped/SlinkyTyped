@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Location extends js.Object {
+trait Location extends RawLocation {
   var append: js.UndefOr[Boolean] = js.native
   var hash: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native

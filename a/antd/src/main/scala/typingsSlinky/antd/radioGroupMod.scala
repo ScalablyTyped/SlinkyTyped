@@ -1,6 +1,8 @@
 package typingsSlinky.antd
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.anon.ButtonStyle
+import typingsSlinky.antd.anon.PartialRadioGroupState
 import typingsSlinky.antd.contextMod.ConfigConsumerProps
 import typingsSlinky.antd.radioInterfaceMod.RadioChangeEvent
 import typingsSlinky.antd.radioInterfaceMod.RadioGroupProps
@@ -28,7 +30,7 @@ object radioGroupMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonButtonStyle = js.native
+    var defaultProps: ButtonStyle = js.native
     def getDerivedStateFromProps(nextProps: RadioGroupProps, prevState: RadioGroupState): PartialRadioGroupState = js.native
   }
   

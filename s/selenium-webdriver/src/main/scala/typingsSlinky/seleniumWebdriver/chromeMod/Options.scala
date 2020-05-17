@@ -1,6 +1,6 @@
 package typingsSlinky.seleniumWebdriver.chromeMod
 
-import typingsSlinky.seleniumWebdriver.AnonHeight
+import typingsSlinky.seleniumWebdriver.anon.Height
 import typingsSlinky.seleniumWebdriver.mod.Capabilities
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -218,7 +218,7 @@ class Options () extends Capabilities {
     * @throws {TypeError} if width or height is unspecified, not a number, or
     *     less than or equal to 0.
     */
-  def windowSize(size: AnonHeight): Options = js.native
+  def windowSize(size: Height): Options = js.native
 }
 
 /* static members */

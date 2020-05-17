@@ -1,5 +1,6 @@
 package typingsSlinky.entriaRelayExperimental
 
+import typingsSlinky.entriaRelayExperimental.anon.NetworkCacheConfig
 import typingsSlinky.relayRuntime.mod.Observable
 import typingsSlinky.relayRuntime.relayModernGraphQLTagMod.GraphQLTaggedNode
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType
@@ -24,7 +25,7 @@ object fetchQueryMod extends js.Object {
     environment: Environment,
     query: GraphQLTaggedNode,
     variables: /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any,
-    options: AnonNetworkCacheConfig
+    options: NetworkCacheConfig
   ): Observable[
     /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any
   ] = js.native

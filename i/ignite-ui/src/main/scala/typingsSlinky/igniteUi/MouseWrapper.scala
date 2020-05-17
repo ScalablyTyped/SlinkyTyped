@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,7 +46,7 @@ object MouseWrapper {
         ret
     }
     @scala.inline
-    def withCapture(value: (/* event */ Event_, /* ui */ CaptureEventUIParam) => Unit): Self = {
+    def withCapture(value: (/* event */ Event, /* ui */ CaptureEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(js.Any.fromFunction2(value))
         ret
@@ -82,7 +82,7 @@ object MouseWrapper {
         ret
     }
     @scala.inline
-    def withDrag(value: (/* event */ Event_, /* ui */ DragEventUIParam) => Unit): Self = {
+    def withDrag(value: (/* event */ Event, /* ui */ DragEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.Any.fromFunction2(value))
         ret
@@ -94,7 +94,7 @@ object MouseWrapper {
         ret
     }
     @scala.inline
-    def withStart(value: (/* event */ Event_, /* ui */ StartEventUIParam) => Unit): Self = {
+    def withStart(value: (/* event */ Event, /* ui */ StartEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction2(value))
         ret
@@ -106,7 +106,7 @@ object MouseWrapper {
         ret
     }
     @scala.inline
-    def withStop(value: (/* event */ Event_, /* ui */ StopEventUIParam) => Unit): Self = {
+    def withStop(value: (/* event */ Event, /* ui */ StopEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction2(value))
         ret

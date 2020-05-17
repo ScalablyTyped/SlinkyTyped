@@ -7,19 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the item editing event.
   */
-@JSGlobal("ASPxClientFileManagerItemEditingEventArgs")
 @js.native
-class ASPxClientFileManagerItemEditingEventArgs protected () extends ASPxClientFileManagerActionEventArgsBase {
-  /**
-    * Initializes a new instance of the ASPxClientFileManagerItemEditingEventArgs object with the specified parameters.
-    * @param fullName A string value that is the folder's full name.
-    * @param name A string value that specifies the item's name.
-    * @param isFolder true if the current item is a folder; false if the current item is a file.
-    */
-  def this(fullName: String, name: String, isFolder: Boolean) = this()
+trait ASPxClientFileManagerItemEditingEventArgs extends ASPxClientFileManagerActionEventArgsBase {
   /**
     * Gets or sets a value indicating whether the action which raised the event should be canceled.
     */
   var cancel: Boolean = js.native
+}
+
+object ASPxClientFileManagerItemEditingEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, fullName: String, isFolder: Boolean, name: String): ASPxClientFileManagerItemEditingEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], fullName = fullName.asInstanceOf[js.Any], isFolder = isFolder.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientFileManagerItemEditingEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientFileManagerItemEditingEventArgsOps[Self <: ASPxClientFileManagerItemEditingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

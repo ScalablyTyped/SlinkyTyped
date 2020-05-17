@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
   * Mock options object
   */
 @js.native
-trait MockOptions extends js.Object {
+trait MockOptions extends InspectionOptions {
   /**
     * body to match
     */

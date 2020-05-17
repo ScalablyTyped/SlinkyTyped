@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait WhileStatement
-  extends _Statement
+  extends Statement
      with Base[typingsSlinky.luaparse.luaparseStrings.WhileStatement] {
   var body: js.Array[Statement] = js.native
   var condition: Expression = js.native

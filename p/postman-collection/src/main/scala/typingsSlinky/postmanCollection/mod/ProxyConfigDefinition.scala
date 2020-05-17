@@ -1,6 +1,6 @@
 package typingsSlinky.postmanCollection.mod
 
-import typingsSlinky.postmanCollection.AnonPattern
+import typingsSlinky.postmanCollection.anon.Pattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ProxyConfigDefinition extends PropertyDefinition {
   var host: js.UndefOr[String] = js.native
-  var `match`: js.UndefOr[String | AnonPattern | UrlMatchPattern] = js.native
+  var `match`: js.UndefOr[String | Pattern | UrlMatchPattern] = js.native
   var port: js.UndefOr[Double] = js.native
   var tunnel: js.UndefOr[Boolean] = js.native
 }
@@ -38,7 +38,7 @@ object ProxyConfigDefinition {
         ret
     }
     @scala.inline
-    def withMatch(value: String | AnonPattern | UrlMatchPattern): Self = {
+    def withMatch(value: String | Pattern | UrlMatchPattern): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
         ret

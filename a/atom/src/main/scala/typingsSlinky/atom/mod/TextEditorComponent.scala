@@ -1,25 +1,25 @@
 package typingsSlinky.atom.mod
 
-import typingsSlinky.atom.AnonClientX
+import typingsSlinky.atom.anon.ClientX
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait TextEditorComponent extends js.Object {
-  def pixelPositionForMouseEvent(event: AnonClientX): PixelPosition = js.native
+  def pixelPositionForMouseEvent(event: ClientX): PixelPosition = js.native
   /** Does not clip screenPosition, unlike similar method on TextEditorElement */
   def pixelPositionForScreenPosition(screenPosition: PointLike): PixelPosition = js.native
-  def screenPositionForMouseEvent(event: AnonClientX): Point = js.native
+  def screenPositionForMouseEvent(event: ClientX): Point = js.native
   def screenPositionForPixelPosition(pos: PixelPosition): Point = js.native
 }
 
 object TextEditorComponent {
   @scala.inline
   def apply(
-    pixelPositionForMouseEvent: AnonClientX => PixelPosition,
+    pixelPositionForMouseEvent: ClientX => PixelPosition,
     pixelPositionForScreenPosition: PointLike => PixelPosition,
-    screenPositionForMouseEvent: AnonClientX => Point,
+    screenPositionForMouseEvent: ClientX => Point,
     screenPositionForPixelPosition: PixelPosition => Point
   ): TextEditorComponent = {
     val __obj = js.Dynamic.literal(pixelPositionForMouseEvent = js.Any.fromFunction1(pixelPositionForMouseEvent), pixelPositionForScreenPosition = js.Any.fromFunction1(pixelPositionForScreenPosition), screenPositionForMouseEvent = js.Any.fromFunction1(screenPositionForMouseEvent), screenPositionForPixelPosition = js.Any.fromFunction1(screenPositionForPixelPosition))
@@ -32,7 +32,7 @@ object TextEditorComponent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPixelPositionForMouseEvent(value: AnonClientX => PixelPosition): Self = {
+    def withPixelPositionForMouseEvent(value: ClientX => PixelPosition): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pixelPositionForMouseEvent")(js.Any.fromFunction1(value))
         ret
@@ -44,7 +44,7 @@ object TextEditorComponent {
         ret
     }
     @scala.inline
-    def withScreenPositionForMouseEvent(value: AnonClientX => Point): Self = {
+    def withScreenPositionForMouseEvent(value: ClientX => Point): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("screenPositionForMouseEvent")(js.Any.fromFunction1(value))
         ret

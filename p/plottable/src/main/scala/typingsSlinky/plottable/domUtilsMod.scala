@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGRect
 import typingsSlinky.d3Selection.mod.Selection_
+import typingsSlinky.plottable.anon.Left
 import typingsSlinky.plottable.interfacesMod.IEntityBounds
 import typingsSlinky.plottable.interfacesMod.Range
 import typingsSlinky.plottable.interfacesMod.SimpleSelection
@@ -26,7 +27,7 @@ object domUtilsMod extends js.Object {
   def elementWidth(elementOrSelection: Selection_[Element, _, _, _]): Double = js.native
   def elementWidth(elementOrSelection: Element): Double = js.native
   def entityBounds(element: Element): IEntityBounds = js.native
-  def expandRect(rect: ClientRect, amount: Double): AnonLeft = js.native
+  def expandRect(rect: ClientRect, amount: Double): Left = js.native
   def getElementTransform(elem: Element): ICssTransformMatrix | Null = js.native
   def getHtmlElementAncestors(elem: Element): js.Array[HTMLElement] = js.native
   def getRotate(el: SimpleSelection[_]): Double = js.native

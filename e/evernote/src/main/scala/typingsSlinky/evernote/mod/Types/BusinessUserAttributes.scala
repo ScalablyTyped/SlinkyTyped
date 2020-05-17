@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.Types
 
-import typingsSlinky.evernote.AnonCompanyStartDate
+import typingsSlinky.evernote.anon.CompanyStartDate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "Types.BusinessUserAttributes")
 @js.native
 class BusinessUserAttributes () extends js.Object {
-  def this(args: AnonCompanyStartDate) = this()
+  def this(args: CompanyStartDate) = this()
   var companyStartDate: js.UndefOr[Timestamp] = js.native
   var department: js.UndefOr[String] = js.native
   var linkedInProfileUrl: js.UndefOr[String] = js.native

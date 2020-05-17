@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.OutlineRenderer")
 @js.native
-class OutlineRenderer protected () extends ISceneComponent {
-  /**
-    * Instantiates a new outline renderer. (There could be only one per scene).
-    * @param scene Defines the scene it belongs to
-    */
-  def this(scene: Scene) = this()
+trait OutlineRenderer extends ISceneComponent {
   var _afterRenderingMesh: js.Any = js.native
   var _beforeRenderingMesh: js.Any = js.native
   var _cachedDefines: js.Any = js.native
@@ -38,15 +32,5 @@ class OutlineRenderer protected () extends ISceneComponent {
     */
   def render(subMesh: SubMesh, batch: InstancesBatch): Unit = js.native
   def render(subMesh: SubMesh, batch: InstancesBatch, useOverlay: Boolean): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("BABYLON.OutlineRenderer")
-@js.native
-object OutlineRenderer extends js.Object {
-  /**
-    * Stencil value used to avoid outline being seen within the mesh when the mesh is transparent
-    */
-  var _StencilReference: js.Any = js.native
 }
 

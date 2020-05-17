@@ -7,13 +7,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Jasmine extends js.Object {
   var Spec: typingsSlinky.jasmine.jasmine.Spec = js.native
-  var clock: Clock_ = js.native
+  var clock: Clock = js.native
   var util: Util = js.native
 }
 
 object Jasmine {
   @scala.inline
-  def apply(Spec: Spec, clock: Clock_, util: Util): Jasmine = {
+  def apply(Spec: Spec, clock: Clock, util: Util): Jasmine = {
     val __obj = js.Dynamic.literal(Spec = Spec.asInstanceOf[js.Any], clock = clock.asInstanceOf[js.Any], util = util.asInstanceOf[js.Any])
     __obj.asInstanceOf[Jasmine]
   }
@@ -30,7 +30,7 @@ object Jasmine {
         ret
     }
     @scala.inline
-    def withClock(value: Clock_): Self = {
+    def withClock(value: Clock): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clock")(value.asInstanceOf[js.Any])
         ret

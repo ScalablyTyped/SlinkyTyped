@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeViewData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeViewLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeViewUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.3]
   */
-@JSGlobal("Excel.RangeView")
 @js.native
-class RangeView () extends ClientObject {
+trait RangeView extends ClientObject {
   /**
     *
     * Represents the cell addresses of the RangeView. Read-only.
@@ -119,7 +118,7 @@ class RangeView () extends ClientObject {
     */
   def load(): RangeView = js.native
   def load(options: RangeViewLoadOptions): RangeView = js.native
-  def load(propertyNamesAndPaths: AnonExpand): RangeView = js.native
+  def load(propertyNamesAndPaths: Expand): RangeView = js.native
   def load(propertyNames: String): RangeView = js.native
   def load(propertyNames: js.Array[String]): RangeView = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

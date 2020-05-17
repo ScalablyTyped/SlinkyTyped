@@ -1,6 +1,6 @@
 package typingsSlinky.gatsby.mod
 
-import typingsSlinky.gatsby.AnonDel
+import typingsSlinky.gatsby.anon.Del
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,7 @@ object CreatePageArgs {
   def apply[TContext](
     actions: Actions,
     boundActionCreators: Actions,
-    cache: AnonDel,
+    cache: Del,
     createContentDigest: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof createContentDigest */ js.Any,
     createNodeId: js.Function,
     emitter: EventEmitter,

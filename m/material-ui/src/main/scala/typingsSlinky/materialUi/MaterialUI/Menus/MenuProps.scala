@@ -1,11 +1,12 @@
 package typingsSlinky.materialUi.MaterialUI.Menus
 
+import org.scalajs.dom.raw.Event
+import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.materialUi.MaterialUI.ReactLink
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.KeyboardEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,15 +22,11 @@ trait MenuProps extends js.Object {
   var maxHeight: js.UndefOr[Double] = js.native
   var multiple: js.UndefOr[Boolean] = js.native
   var onChange: js.UndefOr[
-    js.Function2[
-      /* e */ SyntheticEvent[Event_, js.Object], 
-      /* itemValue */ js.Any | js.Array[_], 
-      Unit
-    ]
+    js.Function2[/* e */ SyntheticEvent[Event, js.Object], /* itemValue */ js.Any | js.Array[_], Unit]
   ] = js.native
   var onEscKeyDown: js.UndefOr[KeyboardEventHandler[js.Object]] = js.native
   var onItemClick: js.UndefOr[
-    js.Function2[/* e */ SyntheticEvent[Event_, js.Object], /* item */ MenuItem, Unit]
+    js.Function2[/* e */ SyntheticEvent[Event, js.Object], ReactComponentClass[MenuItemProps], Unit]
   ] = js.native
   var onKeyDown: js.UndefOr[KeyboardEventHandler[js.Object]] = js.native
   var selectedMenuItemStyle: js.UndefOr[CSSProperties] = js.native
@@ -136,7 +133,7 @@ object MenuProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: (/* e */ SyntheticEvent[Event_, js.Object], /* itemValue */ js.Any | js.Array[_]) => Unit): Self = {
+    def withOnChange(value: (/* e */ SyntheticEvent[Event, js.Object], /* itemValue */ js.Any | js.Array[_]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
         ret
@@ -160,7 +157,7 @@ object MenuProps {
         ret
     }
     @scala.inline
-    def withOnItemClick(value: (/* e */ SyntheticEvent[Event_, js.Object], /* item */ MenuItem) => Unit): Self = {
+    def withOnItemClick(value: (/* e */ SyntheticEvent[Event, js.Object], ReactComponentClass[MenuItemProps]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction2(value))
         ret

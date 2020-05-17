@@ -1,7 +1,7 @@
 package typingsSlinky.nodePgMigrate.mod
 
+import typingsSlinky.nodePgMigrate.anon.precedenceALWAYSBYDEFAULT
 import typingsSlinky.nodePgMigrate.nodePgMigrateBooleans.`false`
-import typingsSlinky.nodePgMigrate.precedenceALWAYSBYDEFAULT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

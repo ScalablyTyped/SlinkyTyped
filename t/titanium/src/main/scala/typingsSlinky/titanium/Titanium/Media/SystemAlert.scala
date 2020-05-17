@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 		 * An object for playing system sounds.
 		 * @deprecated This iOS-only API has been deprecated and moved to the [Ti.SystemAlert](https://github.com/appcelerator-modules/ti.systemalert) module in 8.0.0.
 		 */
-@JSGlobal("Titanium.Media.SystemAlert")
 @js.native
-class SystemAlert () extends Proxy {
+trait SystemAlert extends Proxy {
   /**
   			 * URL identifying the audio resource.
   			 */

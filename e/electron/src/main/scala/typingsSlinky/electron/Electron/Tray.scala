@@ -22,11 +22,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Electron.Tray")
 @js.native
-class Tray protected () extends EventEmitter {
-  def this(image: String) = this()
-  def this(image: NativeImage_) = this()
+trait Tray extends EventEmitter {
   @JSName("addListener")
   def addListener_balloonclick(event: `balloon-click`, listener: js.Function): this.type = js.native
   @JSName("addListener")

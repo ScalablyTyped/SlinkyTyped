@@ -1,7 +1,7 @@
 package typingsSlinky.reactResizeDetector.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactResizeDetector.PartialReactResizeDetecto
+import typingsSlinky.reactResizeDetector.anon.PartialReactResizeDetecto
 import typingsSlinky.reactResizeDetector.reactResizeDetectorStrings.height
 import typingsSlinky.reactResizeDetector.reactResizeDetectorStrings.width
 import scala.scalajs.js

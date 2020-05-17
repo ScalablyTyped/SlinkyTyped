@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -133,7 +133,7 @@ object IgSplitter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCollapsed(value: (/* event */ Event_, /* ui */ CollapsedEventUIParam) => Unit): Self = {
+    def withCollapsed(value: (/* event */ Event, /* ui */ CollapsedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(js.Any.fromFunction2(value))
         ret
@@ -157,7 +157,7 @@ object IgSplitter {
         ret
     }
     @scala.inline
-    def withExpanded(value: (/* event */ Event_, /* ui */ ExpandedEventUIParam) => Unit): Self = {
+    def withExpanded(value: (/* event */ Event, /* ui */ ExpandedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.Any.fromFunction2(value))
         ret
@@ -193,7 +193,7 @@ object IgSplitter {
         ret
     }
     @scala.inline
-    def withLayoutRefreshed(value: (/* event */ Event_, /* ui */ LayoutRefreshedEventUIParam) => Unit): Self = {
+    def withLayoutRefreshed(value: (/* event */ Event, /* ui */ LayoutRefreshedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("layoutRefreshed")(js.Any.fromFunction2(value))
         ret
@@ -205,7 +205,7 @@ object IgSplitter {
         ret
     }
     @scala.inline
-    def withLayoutRefreshing(value: (/* event */ Event_, /* ui */ LayoutRefreshingEventUIParam) => Unit): Self = {
+    def withLayoutRefreshing(value: (/* event */ Event, /* ui */ LayoutRefreshingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("layoutRefreshing")(js.Any.fromFunction2(value))
         ret
@@ -265,7 +265,7 @@ object IgSplitter {
         ret
     }
     @scala.inline
-    def withResizeEnded(value: (/* event */ Event_, /* ui */ ResizeEndedEventUIParam) => Unit): Self = {
+    def withResizeEnded(value: (/* event */ Event, /* ui */ ResizeEndedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resizeEnded")(js.Any.fromFunction2(value))
         ret
@@ -289,7 +289,7 @@ object IgSplitter {
         ret
     }
     @scala.inline
-    def withResizeStarted(value: (/* event */ Event_, /* ui */ ResizeStartedEventUIParam) => Unit): Self = {
+    def withResizeStarted(value: (/* event */ Event, /* ui */ ResizeStartedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resizeStarted")(js.Any.fromFunction2(value))
         ret
@@ -301,7 +301,7 @@ object IgSplitter {
         ret
     }
     @scala.inline
-    def withResizing(value: (/* event */ Event_, /* ui */ ResizingEventUIParam) => Unit): Self = {
+    def withResizing(value: (/* event */ Event, /* ui */ ResizingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resizing")(js.Any.fromFunction2(value))
         ret

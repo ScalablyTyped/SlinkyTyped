@@ -1,7 +1,7 @@
 package typingsSlinky.rdfjsFetchLite.mod
 
-import typingsSlinky.rdfjsFetchLite.FnCall
-import typingsSlinky.rdfjsFetchLite.PickparsersSinkMapEventEm
+import typingsSlinky.rdfjsFetchLite.anon.FnCall
+import typingsSlinky.rdfjsFetchLite.anon.PickparsersSinkMapEventEm
 import typingsSlinky.std.RequestInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`

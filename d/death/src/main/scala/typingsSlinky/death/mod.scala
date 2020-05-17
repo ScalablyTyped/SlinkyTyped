@@ -1,5 +1,6 @@
 package typingsSlinky.death
 
+import typingsSlinky.death.anon.Debug
 import typingsSlinky.death.deathStrings.SIGHUP
 import typingsSlinky.death.deathStrings.SIGINT
 import typingsSlinky.death.deathStrings.SIGQUIT
@@ -36,7 +37,7 @@ object mod extends js.Object {
     *  // later
     *  OFF_DEATH();
     */
-  def apply(options: AnonDebug): js.Function1[
+  def apply(options: Debug): js.Function1[
     /* callback */ js.Function1[/* signal */ SIGINT | SIGTERM | SIGQUIT | SIGHUP | uncaughtException, Unit], 
     js.Function0[Unit]
   ] = js.native

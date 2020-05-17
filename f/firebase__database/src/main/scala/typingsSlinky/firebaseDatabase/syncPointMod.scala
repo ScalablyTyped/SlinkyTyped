@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseDatabase
 
+import typingsSlinky.firebaseDatabase.anon.Events
 import typingsSlinky.firebaseDatabase.eventMod.Event
 import typingsSlinky.firebaseDatabase.eventRegistrationMod.EventRegistration
 import typingsSlinky.firebaseDatabase.nodeMod.Node
@@ -60,8 +61,8 @@ object syncPointMod extends js.Object {
     def getQueryViews(): js.Array[View] = js.native
     def hasCompleteView(): Boolean = js.native
     def isEmpty(): Boolean = js.native
-    def removeEventRegistration(query: Query): AnonEvents = js.native
-    def removeEventRegistration(query: Query, eventRegistration: Null, cancelError: js.Error): AnonEvents = js.native
+    def removeEventRegistration(query: Query): Events = js.native
+    def removeEventRegistration(query: Query, eventRegistration: Null, cancelError: js.Error): Events = js.native
     /**
       * Remove event callback(s).  Return cancelEvents if a cancelError is specified.
       *
@@ -73,8 +74,8 @@ object syncPointMod extends js.Object {
       * @param {Error=} cancelError If a cancelError is provided, appropriate cancel events will be returned.
       * @return {{removed:!Array.<!Query>, events:!Array.<!Event>}} removed queries and any cancel events
       */
-    def removeEventRegistration(query: Query, eventRegistration: EventRegistration): AnonEvents = js.native
-    def removeEventRegistration(query: Query, eventRegistration: EventRegistration, cancelError: js.Error): AnonEvents = js.native
+    def removeEventRegistration(query: Query, eventRegistration: EventRegistration): Events = js.native
+    def removeEventRegistration(query: Query, eventRegistration: EventRegistration, cancelError: js.Error): Events = js.native
     def viewExistsForQuery(query: Query): Boolean = js.native
     def viewForQuery(query: Query): View | Null = js.native
   }

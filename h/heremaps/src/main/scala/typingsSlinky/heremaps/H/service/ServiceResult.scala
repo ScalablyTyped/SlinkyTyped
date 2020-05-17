@@ -1,10 +1,10 @@
 package typingsSlinky.heremaps.H.service
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.heremaps.AnonContext
-import typingsSlinky.heremaps.AnonIsolines
-import typingsSlinky.heremaps.AnonItems
-import typingsSlinky.heremaps.AnonLanguage
+import typingsSlinky.heremaps.anon.Context
+import typingsSlinky.heremaps.anon.Isolines
+import typingsSlinky.heremaps.anon.Items
+import typingsSlinky.heremaps.anon.Language
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,10 +15,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ServiceResult
   extends /* key */ StringDictionary[js.Any] {
-  var Response: js.UndefOr[AnonIsolines] = js.native
-  var response: js.UndefOr[AnonLanguage] = js.native
-  var results: js.UndefOr[AnonItems] = js.native
-  var search: js.UndefOr[AnonContext] = js.native
+  var Response: js.UndefOr[Isolines] = js.native
+  var response: js.UndefOr[Language] = js.native
+  var results: js.UndefOr[Items] = js.native
+  var search: js.UndefOr[Context] = js.native
 }
 
 object ServiceResult {
@@ -34,7 +34,7 @@ object ServiceResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withResponse(value: AnonIsolines): Self = {
+    def withResponse(value: Isolines): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Response")(value.asInstanceOf[js.Any])
         ret
@@ -46,7 +46,7 @@ object ServiceResult {
         ret
     }
     @scala.inline
-    def withResults(value: AnonItems): Self = {
+    def withResults(value: Items): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
         ret
@@ -58,7 +58,7 @@ object ServiceResult {
         ret
     }
     @scala.inline
-    def withSearch(value: AnonContext): Self = {
+    def withSearch(value: Context): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("search")(value.asInstanceOf[js.Any])
         ret

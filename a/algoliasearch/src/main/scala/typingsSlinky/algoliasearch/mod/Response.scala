@@ -1,7 +1,7 @@
 package typingsSlinky.algoliasearch.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.algoliasearch.AnonAvg
+import typingsSlinky.algoliasearch.anon.Avg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,7 +53,7 @@ trait Response[T] extends js.Object {
   /**
     * Statistics for numerical facets.
     */
-  var facets_stats: js.UndefOr[StringDictionary[AnonAvg]] = js.native
+  var facets_stats: js.UndefOr[StringDictionary[Avg]] = js.native
   /**
     * Contains all the hits matching the query
     */
@@ -279,7 +279,7 @@ object Response {
         ret
     }
     @scala.inline
-    def withFacets_stats(value: StringDictionary[AnonAvg]): Self[T] = {
+    def withFacets_stats(value: StringDictionary[Avg]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("facets_stats")(value.asInstanceOf[js.Any])
         ret

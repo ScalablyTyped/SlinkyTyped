@@ -1,6 +1,6 @@
 package typingsSlinky.hapiHapi.mod
 
-import typingsSlinky.hapiHapi.AnonVhost
+import typingsSlinky.hapiHapi.anon.Vhost
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait ServerRegisterOptions extends js.Object {
   /**
     * modifiers applied to each route added by the plugin:
     */
-  var routes: js.UndefOr[AnonVhost] = js.native
+  var routes: js.UndefOr[Vhost] = js.native
 }
 
 object ServerRegisterOptions {
@@ -43,7 +43,7 @@ object ServerRegisterOptions {
         ret
     }
     @scala.inline
-    def withRoutes(value: AnonVhost): Self = {
+    def withRoutes(value: Vhost): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(value.asInstanceOf[js.Any])
         ret

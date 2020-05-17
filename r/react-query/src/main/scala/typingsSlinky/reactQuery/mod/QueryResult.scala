@@ -11,3 +11,12 @@ import scala.scalajs.js.annotation._
 */
 trait QueryResult[TResult] extends js.Object
 
+object QueryResult {
+  @scala.inline
+  implicit def apply[TResult](value: QueryErrorResult[TResult]): QueryResult[TResult] = value.asInstanceOf[QueryResult[TResult]]
+  @scala.inline
+  implicit def apply[TResult](value: QueryLoadingResult[TResult]): QueryResult[TResult] = value.asInstanceOf[QueryResult[TResult]]
+  @scala.inline
+  implicit def apply[TResult](value: QuerySuccessResult[TResult]): QueryResult[TResult] = value.asInstanceOf[QueryResult[TResult]]
+}
+

@@ -1,6 +1,7 @@
 package typingsSlinky.graphql
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.graphql.anon.Directives
 import typingsSlinky.graphql.astMod.DocumentNode
 import typingsSlinky.graphql.definitionMod.GraphQLFieldResolver
 import typingsSlinky.graphql.definitionMod.GraphQLTypeResolver
@@ -31,8 +32,8 @@ object executionMod extends js.Object {
     fieldResolver: js.UndefOr[Maybe[GraphQLFieldResolver[_, _, StringDictionary[_]]]],
     typeResolver: js.UndefOr[Maybe[GraphQLTypeResolver[_, _, StringDictionary[_]]]]
   ): PromiseOrValue[ExecutionResult[TData]] = js.native
-  def getDirectiveValues(directiveDef: GraphQLDirective, node: AnonDirectives): js.UndefOr[StringDictionary[js.Any]] = js.native
-  def getDirectiveValues(directiveDef: GraphQLDirective, node: AnonDirectives, variableValues: Maybe[StringDictionary[_]]): js.UndefOr[StringDictionary[js.Any]] = js.native
+  def getDirectiveValues(directiveDef: GraphQLDirective, node: Directives): js.UndefOr[StringDictionary[js.Any]] = js.native
+  def getDirectiveValues(directiveDef: GraphQLDirective, node: Directives, variableValues: Maybe[StringDictionary[_]]): js.UndefOr[StringDictionary[js.Any]] = js.native
   def responsePathAsArray(path: Path): js.Array[String | Double] = js.native
 }
 

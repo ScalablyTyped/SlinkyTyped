@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains the request from the system to create a print task. This object is available from the PrintTaskRequestedEventArgs object passed to the PrintTaskRequested event. */
-@JSGlobal("Windows.Graphics.Printing.PrintTaskRequest")
 @js.native
-abstract class PrintTaskRequest () extends js.Object {
+trait PrintTaskRequest extends js.Object {
   /** Gets a DateTime value that indicates how long an app has to respond to the PrintTaskRequested event. If the system has not received a response from the PrintTaskRequested event handler by the time the deadline is reached, then the print task is ignored. */
   var deadline: js.Date = js.native
   /**
@@ -22,5 +21,43 @@ abstract class PrintTaskRequest () extends js.Object {
     * @return The PrintTaskRequestedDeferral for a print task.
     */
   def getDeferral(): PrintTaskRequestedDeferral = js.native
+}
+
+object PrintTaskRequest {
+  @scala.inline
+  def apply(
+    createPrintTask: (String, PrintTaskSourceRequestedHandler) => PrintTask,
+    deadline: js.Date,
+    getDeferral: () => PrintTaskRequestedDeferral
+  ): PrintTaskRequest = {
+    val __obj = js.Dynamic.literal(createPrintTask = js.Any.fromFunction2(createPrintTask), deadline = deadline.asInstanceOf[js.Any], getDeferral = js.Any.fromFunction0(getDeferral))
+    __obj.asInstanceOf[PrintTaskRequest]
+  }
+  @scala.inline
+  implicit class PrintTaskRequestOps[Self <: PrintTaskRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreatePrintTask(value: (String, PrintTaskSourceRequestedHandler) => PrintTask): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPrintTask")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDeadline(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetDeferral(value: () => PrintTaskRequestedDeferral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeferral")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

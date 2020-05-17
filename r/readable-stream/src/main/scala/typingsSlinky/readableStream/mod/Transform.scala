@@ -1,7 +1,7 @@
 package typingsSlinky.readableStream.mod
 
 import typingsSlinky.node.streamMod.TransformCallback
-import typingsSlinky.readableStream.AnonAfterTransform
+import typingsSlinky.readableStream.anon.AfterTransform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Transform () extends Duplex {
   def this(options: TransformOptions) = this()
-  var _transformState: AnonAfterTransform = js.native
+  var _transformState: AfterTransform = js.native
   def _flush(
     callback: (js.Function2[/* error */ js.UndefOr[js.Error], /* data */ js.UndefOr[js.Any], Unit]) | TransformCallback
   ): Unit = js.native

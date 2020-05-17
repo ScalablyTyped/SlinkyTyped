@@ -1,19 +1,19 @@
 organization := "org.scalablytyped.slinky"
 name := "html-minifier"
-version := "3.5-dt-20200226Z-9f5145"
-scalaVersion := "2.13.1"
+version := "3.5-dt-20200226Z-02f4da"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "clean-css" % "4.2-dt-20200226Z-6016a2",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-6c3110",
-  "org.scalablytyped.slinky" %%% "relateurl" % "v0.2.6-dt-20200227Z-aa0285",
-  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-cd3c83",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e",
-  "org.scalablytyped.slinky" %%% "uglify-js" % "3.9-dt-20200413Z-a34c26")
+  "org.scalablytyped.slinky" %%% "clean-css" % "4.2-dt-20200226Z-69bac8",
+  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
+  "org.scalablytyped.slinky" %%% "relateurl" % "v0.2.6-dt-20200227Z-f6a145",
+  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-53abfb",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb",
+  "org.scalablytyped.slinky" %%% "uglify-js" % "3.9-dt-20200413Z-c67f3d")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

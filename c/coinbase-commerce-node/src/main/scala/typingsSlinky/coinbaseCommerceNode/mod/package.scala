@@ -22,16 +22,6 @@ package object mod {
     */
   type CreateCheckout = typingsSlinky.coinbaseCommerceNode.mod.BaseCheckout with (typingsSlinky.coinbaseCommerceNode.mod.FixedPrice | typingsSlinky.coinbaseCommerceNode.mod.NoPrice)
   /**
-    * Fiat currency.
-    */
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.USD
-    - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.GBP
-    - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.EUR
-    - java.lang.String
-  */
-  type FiatCurrency = typingsSlinky.coinbaseCommerceNode.mod._FiatCurrency | java.lang.String
-  /**
     * Key-value object.
     */
   type KeyVal = org.scalablytyped.runtime.StringDictionary[js.Any]

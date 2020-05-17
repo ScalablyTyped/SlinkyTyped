@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientFileManager.ToolbarUpdating event.
   */
-@JSGlobal("ASPxClientFileManagerToolbarUpdatingEventArgs")
 @js.native
-class ASPxClientFileManagerToolbarUpdatingEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientFileManagerToolbarUpdatingEventArgs class with the specified setting.
-    * @param activeAreaName The active file manager area. Initializes the ASPxClientFileManagerToolbarUpdatingEventArgs.activeAreaName property.
-    */
-  def this(activeAreaName: String) = this()
+trait ASPxClientFileManagerToolbarUpdatingEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the name of the currently active file manager area.
     */
   var activeAreaName: String = js.native
+}
+
+object ASPxClientFileManagerToolbarUpdatingEventArgs {
+  @scala.inline
+  def apply(activeAreaName: String): ASPxClientFileManagerToolbarUpdatingEventArgs = {
+    val __obj = js.Dynamic.literal(activeAreaName = activeAreaName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientFileManagerToolbarUpdatingEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientFileManagerToolbarUpdatingEventArgsOps[Self <: ASPxClientFileManagerToolbarUpdatingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveAreaName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeAreaName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

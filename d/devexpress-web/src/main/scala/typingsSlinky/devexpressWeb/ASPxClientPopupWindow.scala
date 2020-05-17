@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of a popup control's PopupWindow object.
   */
-@JSGlobal("ASPxClientPopupWindow")
 @js.native
-class ASPxClientPopupWindow () extends js.Object {
+trait ASPxClientPopupWindow extends js.Object {
   /**
     * Gets the index of the current popup window within the popup control's ASPxPopupControl.Windows collection.
     */
@@ -76,5 +75,127 @@ class ASPxClientPopupWindow () extends js.Object {
     * @param value A string value that specifies the window's header text.
     */
   def SetHeaderText(value: String): Unit = js.native
+}
+
+object ASPxClientPopupWindow {
+  @scala.inline
+  def apply(
+    GetFooterImageUrl: () => String,
+    GetFooterNavigateUrl: () => String,
+    GetFooterText: () => String,
+    GetHeaderImageUrl: () => String,
+    GetHeaderNavigateUrl: () => String,
+    GetHeaderText: () => String,
+    SetFooterImageUrl: String => Unit,
+    SetFooterNavigateUrl: String => Unit,
+    SetFooterText: String => Unit,
+    SetHeaderImageUrl: String => Unit,
+    SetHeaderNavigateUrl: String => Unit,
+    SetHeaderText: String => Unit,
+    index: Double,
+    name: String,
+    popupControl: ASPxClientPopupControl
+  ): ASPxClientPopupWindow = {
+    val __obj = js.Dynamic.literal(GetFooterImageUrl = js.Any.fromFunction0(GetFooterImageUrl), GetFooterNavigateUrl = js.Any.fromFunction0(GetFooterNavigateUrl), GetFooterText = js.Any.fromFunction0(GetFooterText), GetHeaderImageUrl = js.Any.fromFunction0(GetHeaderImageUrl), GetHeaderNavigateUrl = js.Any.fromFunction0(GetHeaderNavigateUrl), GetHeaderText = js.Any.fromFunction0(GetHeaderText), SetFooterImageUrl = js.Any.fromFunction1(SetFooterImageUrl), SetFooterNavigateUrl = js.Any.fromFunction1(SetFooterNavigateUrl), SetFooterText = js.Any.fromFunction1(SetFooterText), SetHeaderImageUrl = js.Any.fromFunction1(SetHeaderImageUrl), SetHeaderNavigateUrl = js.Any.fromFunction1(SetHeaderNavigateUrl), SetHeaderText = js.Any.fromFunction1(SetHeaderText), index = index.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], popupControl = popupControl.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientPopupWindow]
+  }
+  @scala.inline
+  implicit class ASPxClientPopupWindowOps[Self <: ASPxClientPopupWindow] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetFooterImageUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetFooterImageUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFooterNavigateUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetFooterNavigateUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFooterText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetFooterText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHeaderImageUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetHeaderImageUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHeaderNavigateUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetHeaderNavigateUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHeaderText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetHeaderText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetFooterImageUrl(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetFooterImageUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFooterNavigateUrl(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetFooterNavigateUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFooterText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetFooterText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetHeaderImageUrl(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetHeaderImageUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetHeaderNavigateUrl(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetHeaderNavigateUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetHeaderText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetHeaderText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPopupControl(value: ASPxClientPopupControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

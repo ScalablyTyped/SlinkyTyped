@@ -1,6 +1,7 @@
 package typingsSlinky.fullcalendarVue.optionsMod
 
-import typingsSlinky.fullcalendarVue.AnonAllDay
+import org.scalajs.dom.raw.Event
+import typingsSlinky.fullcalendarVue.anon.AllDay
 import typingsSlinky.fullcalendarVue.fullcalendarVueStrings.ISO
 import typingsSlinky.fullcalendarVue.fullcalendarVueStrings.auto
 import typingsSlinky.fullcalendarVue.fullcalendarVueStrings.day
@@ -10,7 +11,6 @@ import typingsSlinky.fullcalendarVue.fullcalendarVueStrings.popover
 import typingsSlinky.fullcalendarVue.fullcalendarVueStrings.timeGridDay
 import typingsSlinky.fullcalendarVue.fullcalendarVueStrings.timeGridWeek
 import typingsSlinky.fullcalendarVue.fullcalendarVueStrings.week
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,7 +72,7 @@ trait CalendarProps extends js.Object {
   var eventDurationEditable: js.UndefOr[Boolean] = js.native
   var eventLimit: js.UndefOr[Boolean | Double] = js.native
   var eventLimitClick: js.UndefOr[
-    popover | week | day | timeGridWeek | timeGridDay | String | (js.Function1[/* arg */ AnonAllDay, Unit])
+    popover | week | day | timeGridWeek | timeGridDay | String | (js.Function1[/* arg */ AllDay, Unit])
   ] = js.native
   var eventLimitText: js.UndefOr[String | (js.Function1[/* eventCnt */ Double, String])] = js.native
   var eventLongPressDelay: js.UndefOr[Double] = js.native
@@ -105,8 +105,8 @@ trait CalendarProps extends js.Object {
   var longPressDelay: js.UndefOr[Double] = js.native
   var maxTime: js.UndefOr[DurationInput] = js.native
   var minTime: js.UndefOr[DurationInput] = js.native
-  var navLinkDayClick: js.UndefOr[String | (js.Function2[/* date */ js.Date, /* jsEvent */ Event_, Unit])] = js.native
-  var navLinkWeekClick: js.UndefOr[String | (js.Function2[/* weekStart */ js.Any, /* jsEvent */ Event_, Unit])] = js.native
+  var navLinkDayClick: js.UndefOr[String | (js.Function2[/* date */ js.Date, /* jsEvent */ Event, Unit])] = js.native
+  var navLinkWeekClick: js.UndefOr[String | (js.Function2[/* weekStart */ js.Any, /* jsEvent */ Event, Unit])] = js.native
   var navLinks: js.UndefOr[Boolean] = js.native
   var nextDayThreshold: js.UndefOr[DurationInput] = js.native
   var noEventsMessage: js.UndefOr[String] = js.native
@@ -844,14 +844,14 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withEventLimitClickFunction1(value: /* arg */ AnonAllDay => Unit): Self = {
+    def withEventLimitClickFunction1(value: /* arg */ AllDay => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eventLimitClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
     def withEventLimitClick(
-      value: popover | week | day | timeGridWeek | timeGridDay | String | (js.Function1[/* arg */ AnonAllDay, Unit])
+      value: popover | week | day | timeGridWeek | timeGridDay | String | (js.Function1[/* arg */ AllDay, Unit])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eventLimitClick")(value.asInstanceOf[js.Any])
@@ -1272,13 +1272,13 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withNavLinkDayClickFunction2(value: (/* date */ js.Date, /* jsEvent */ Event_) => Unit): Self = {
+    def withNavLinkDayClickFunction2(value: (/* date */ js.Date, /* jsEvent */ Event) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("navLinkDayClick")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withNavLinkDayClick(value: String | (js.Function2[/* date */ js.Date, /* jsEvent */ Event_, Unit])): Self = {
+    def withNavLinkDayClick(value: String | (js.Function2[/* date */ js.Date, /* jsEvent */ Event, Unit])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("navLinkDayClick")(value.asInstanceOf[js.Any])
         ret
@@ -1290,13 +1290,13 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withNavLinkWeekClickFunction2(value: (/* weekStart */ js.Any, /* jsEvent */ Event_) => Unit): Self = {
+    def withNavLinkWeekClickFunction2(value: (/* weekStart */ js.Any, /* jsEvent */ Event) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("navLinkWeekClick")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withNavLinkWeekClick(value: String | (js.Function2[/* weekStart */ js.Any, /* jsEvent */ Event_, Unit])): Self = {
+    def withNavLinkWeekClick(value: String | (js.Function2[/* weekStart */ js.Any, /* jsEvent */ Event, Unit])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("navLinkWeekClick")(value.asInstanceOf[js.Any])
         ret

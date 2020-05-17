@@ -3,11 +3,11 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.SVGElement
 import org.scalajs.dom.raw.SVGGElement
-import typingsSlinky.devextreme.AnonPointColor
+import typingsSlinky.devextreme.anon.PointColor
 import typingsSlinky.devextreme.devextremeStrings.allArgumentPoints
 import typingsSlinky.devextreme.devextremeStrings.none
 import typingsSlinky.devextreme.mod.DevExpress.core.template
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,14 +15,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxPieChartLegend extends BaseChartLegend {
   /** Specifies the text for a hint that appears when a user hovers the mouse pointer over a legend item. */
-  var customizeHint: js.UndefOr[js.Function1[/* pointInfo */ AnonPointColor, String]] = js.native
+  var customizeHint: js.UndefOr[js.Function1[/* pointInfo */ PointColor, String]] = js.native
   /** Allows you to change the order, text, and visibility of legend items. */
   @JSName("customizeItems")
   var customizeItems_dxPieChartLegend: js.UndefOr[
     js.Function1[/* items */ js.Array[PieChartLegendItem], js.Array[PieChartLegendItem]]
   ] = js.native
   /** Specifies a callback function that returns the text to be displayed by a legend item. */
-  var customizeText: js.UndefOr[js.Function1[/* pointInfo */ AnonPointColor, String]] = js.native
+  var customizeText: js.UndefOr[js.Function1[/* pointInfo */ PointColor, String]] = js.native
   /** Specifies what chart elements to highlight when a corresponding item in the legend is hovered over. */
   var hoverMode: js.UndefOr[none | allArgumentPoints] = js.native
   /** Specifies an SVG element that serves as a custom legend item marker. */
@@ -49,7 +49,7 @@ object dxPieChartLegend {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCustomizeHint(value: /* pointInfo */ AnonPointColor => String): Self = {
+    def withCustomizeHint(value: /* pointInfo */ PointColor => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeHint")(js.Any.fromFunction1(value))
         ret
@@ -73,7 +73,7 @@ object dxPieChartLegend {
         ret
     }
     @scala.inline
-    def withCustomizeText(value: /* pointInfo */ AnonPointColor => String): Self = {
+    def withCustomizeText(value: /* pointInfo */ PointColor => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
         ret

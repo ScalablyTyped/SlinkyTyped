@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -204,7 +204,7 @@ object IgGridResponsive {
         ret
     }
     @scala.inline
-    def withResponsiveColumnHidden(value: (/* event */ Event_, /* ui */ ResponsiveColumnHiddenEventUIParam) => Unit): Self = {
+    def withResponsiveColumnHidden(value: (/* event */ Event, /* ui */ ResponsiveColumnHiddenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveColumnHidden")(js.Any.fromFunction2(value))
         ret
@@ -216,7 +216,7 @@ object IgGridResponsive {
         ret
     }
     @scala.inline
-    def withResponsiveColumnHiding(value: (/* event */ Event_, /* ui */ ResponsiveColumnHidingEventUIParam) => Unit): Self = {
+    def withResponsiveColumnHiding(value: (/* event */ Event, /* ui */ ResponsiveColumnHidingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveColumnHiding")(js.Any.fromFunction2(value))
         ret
@@ -228,7 +228,7 @@ object IgGridResponsive {
         ret
     }
     @scala.inline
-    def withResponsiveColumnShowing(value: (/* event */ Event_, /* ui */ ResponsiveColumnShowingEventUIParam) => Unit): Self = {
+    def withResponsiveColumnShowing(value: (/* event */ Event, /* ui */ ResponsiveColumnShowingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveColumnShowing")(js.Any.fromFunction2(value))
         ret
@@ -240,7 +240,7 @@ object IgGridResponsive {
         ret
     }
     @scala.inline
-    def withResponsiveColumnShown(value: (/* event */ Event_, /* ui */ ResponsiveColumnShownEventUIParam) => Unit): Self = {
+    def withResponsiveColumnShown(value: (/* event */ Event, /* ui */ ResponsiveColumnShownEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveColumnShown")(js.Any.fromFunction2(value))
         ret
@@ -252,7 +252,7 @@ object IgGridResponsive {
         ret
     }
     @scala.inline
-    def withResponsiveModeChanged(value: (/* event */ Event_, /* ui */ ResponsiveModeChangedEventUIParam) => Unit): Self = {
+    def withResponsiveModeChanged(value: (/* event */ Event, /* ui */ ResponsiveModeChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveModeChanged")(js.Any.fromFunction2(value))
         ret

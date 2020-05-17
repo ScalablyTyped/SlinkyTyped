@@ -1,6 +1,6 @@
 package typingsSlinky.pendoIoBrowser.pendo
 
-import typingsSlinky.pendoIoBrowser.AnonDelay
+import typingsSlinky.pendoIoBrowser.anon.Delay
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait InitOptions extends Identity {
   var events: js.UndefOr[EventCallbacks] = js.native
   var excludeAllText: js.UndefOr[Boolean] = js.native
   var excludeTitle: js.UndefOr[Boolean] = js.native
-  var guides: js.UndefOr[AnonDelay] = js.native
+  var guides: js.UndefOr[Delay] = js.native
 }
 
 object InitOptions {
@@ -88,7 +88,7 @@ object InitOptions {
         ret
     }
     @scala.inline
-    def withGuides(value: AnonDelay): Self = {
+    def withGuides(value: Delay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("guides")(value.asInstanceOf[js.Any])
         ret

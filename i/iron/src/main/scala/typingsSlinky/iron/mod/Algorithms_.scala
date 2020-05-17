@@ -1,21 +1,21 @@
 package typingsSlinky.iron.mod
 
-import typingsSlinky.iron.AnonIvBits
-import typingsSlinky.iron.AnonKeyBits
+import typingsSlinky.iron.anon.IvBits
+import typingsSlinky.iron.anon.KeyBits
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Algorithms_ extends js.Object {
-  var `aes-128-ctr`: AnonIvBits = js.native
-  var `aes-256-cbc`: AnonIvBits = js.native
-  var sha256: AnonKeyBits = js.native
+  var `aes-128-ctr`: IvBits = js.native
+  var `aes-256-cbc`: IvBits = js.native
+  var sha256: KeyBits = js.native
 }
 
 object Algorithms_ {
   @scala.inline
-  def apply(`aes-128-ctr`: AnonIvBits, `aes-256-cbc`: AnonIvBits, sha256: AnonKeyBits): Algorithms_ = {
+  def apply(`aes-128-ctr`: IvBits, `aes-256-cbc`: IvBits, sha256: KeyBits): Algorithms_ = {
     val __obj = js.Dynamic.literal(sha256 = sha256.asInstanceOf[js.Any])
     __obj.updateDynamic("aes-128-ctr")(`aes-128-ctr`.asInstanceOf[js.Any])
     __obj.updateDynamic("aes-256-cbc")(`aes-256-cbc`.asInstanceOf[js.Any])
@@ -28,19 +28,19 @@ object Algorithms_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def `withAes-128-ctr`(value: AnonIvBits): Self = {
+    def `withAes-128-ctr`(value: IvBits): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("aes-128-ctr")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withAes-256-cbc`(value: AnonIvBits): Self = {
+    def `withAes-256-cbc`(value: IvBits): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("aes-256-cbc")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSha256(value: AnonKeyBits): Self = {
+    def withSha256(value: KeyBits): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sha256")(value.asInstanceOf[js.Any])
         ret

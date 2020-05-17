@@ -1,5 +1,6 @@
 package typingsSlinky.antdMobileRn
 
+import typingsSlinky.antdMobileRn.anon.BarTintColor
 import typingsSlinky.antdMobileRn.tabBarPropsTypeMod.TabBarProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -20,7 +21,7 @@ object tabbarIosMod extends js.Object {
   @js.native
   object default extends js.Object {
     var Item: js.Any = js.native
-    var defaultProps: AnonBarTintColor = js.native
+    var defaultProps: BarTintColor = js.native
   }
   
 }

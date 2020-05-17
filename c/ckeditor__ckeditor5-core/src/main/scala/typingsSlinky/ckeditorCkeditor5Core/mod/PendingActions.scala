@@ -1,6 +1,6 @@
 package typingsSlinky.ckeditorCkeditor5Core.mod
 
-import typingsSlinky.ckeditorCkeditor5Core.Observablemessagestring
+import typingsSlinky.ckeditorCkeditor5Core.anon.Observablemessagestring
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

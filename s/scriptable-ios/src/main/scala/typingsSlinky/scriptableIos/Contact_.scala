@@ -16,16 +16,8 @@ import scala.scalajs.js.annotation._
   * `Contact.persistChanges()` to persist the changes.
   * @see https://docs.scriptable.app/contact/#-new-contact
   */
-@JSGlobal("Contact")
 @js.native
-/**
-  * _Contact in the address book._
-  *
-  * In order to add the contact to your address book, you must queue it for insertion using `Contact.add()`. When you're done making changes to the address book you should call
-  * `Contact.persistChanges()` to persist the changes.
-  * @see https://docs.scriptable.app/contact/#-new-contact
-  */
-class Contact_ () extends js.Object {
+trait Contact_ extends js.Object {
   /**
     * _Birthday._
     * @see https://docs.scriptable.app/contact/#birthday
@@ -303,5 +295,267 @@ class Contact_ () extends js.Object {
     * @see https://docs.scriptable.app/contact/#urladdresses
     */
   var urlAddresses: js.Array[StringDictionary[String]] = js.native
+}
+
+object Contact_ {
+  @scala.inline
+  def apply(
+    birthday: js.Date,
+    dates: js.Array[StringDictionary[_]],
+    departmentName: String,
+    emailAddresses: js.Array[EmailAddresses],
+    familyName: String,
+    givenName: String,
+    identifier: String,
+    image: Image,
+    isBirthdayAvailable: Boolean,
+    isDatesAvailable: Boolean,
+    isDepartmentNameAvailable: Boolean,
+    isEmailAddressesAvailable: Boolean,
+    isFamilyNameAvailable: Boolean,
+    isGiveNameAvailable: Boolean,
+    isImageAvailable: Boolean,
+    isJobTitleAvailable: Boolean,
+    isMiddleNameAvailable: Boolean,
+    isNamePrefixAvailable: Boolean,
+    isNicknameAvailable: Boolean,
+    isNoteAvailable: Boolean,
+    isOrganizationNameAvailable: Boolean,
+    isPhoneNumbersAvailable: Boolean,
+    isPostalAddressesAvailable: Boolean,
+    isSocialProfilesAvailable: Boolean,
+    isURLAddressesAvailable: Boolean,
+    jobTitle: String,
+    middleName: String,
+    namePrefix: String,
+    nickname: String,
+    note: String,
+    organizationName: String,
+    phoneNumbers: js.Array[PhoneNumbers],
+    postalAddresses: js.Array[PostalAddresses],
+    socialProfiles: js.Array[SocialProfiles],
+    urlAddresses: js.Array[StringDictionary[String]]
+  ): Contact_ = {
+    val __obj = js.Dynamic.literal(birthday = birthday.asInstanceOf[js.Any], dates = dates.asInstanceOf[js.Any], departmentName = departmentName.asInstanceOf[js.Any], emailAddresses = emailAddresses.asInstanceOf[js.Any], familyName = familyName.asInstanceOf[js.Any], givenName = givenName.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], isBirthdayAvailable = isBirthdayAvailable.asInstanceOf[js.Any], isDatesAvailable = isDatesAvailable.asInstanceOf[js.Any], isDepartmentNameAvailable = isDepartmentNameAvailable.asInstanceOf[js.Any], isEmailAddressesAvailable = isEmailAddressesAvailable.asInstanceOf[js.Any], isFamilyNameAvailable = isFamilyNameAvailable.asInstanceOf[js.Any], isGiveNameAvailable = isGiveNameAvailable.asInstanceOf[js.Any], isImageAvailable = isImageAvailable.asInstanceOf[js.Any], isJobTitleAvailable = isJobTitleAvailable.asInstanceOf[js.Any], isMiddleNameAvailable = isMiddleNameAvailable.asInstanceOf[js.Any], isNamePrefixAvailable = isNamePrefixAvailable.asInstanceOf[js.Any], isNicknameAvailable = isNicknameAvailable.asInstanceOf[js.Any], isNoteAvailable = isNoteAvailable.asInstanceOf[js.Any], isOrganizationNameAvailable = isOrganizationNameAvailable.asInstanceOf[js.Any], isPhoneNumbersAvailable = isPhoneNumbersAvailable.asInstanceOf[js.Any], isPostalAddressesAvailable = isPostalAddressesAvailable.asInstanceOf[js.Any], isSocialProfilesAvailable = isSocialProfilesAvailable.asInstanceOf[js.Any], isURLAddressesAvailable = isURLAddressesAvailable.asInstanceOf[js.Any], jobTitle = jobTitle.asInstanceOf[js.Any], middleName = middleName.asInstanceOf[js.Any], namePrefix = namePrefix.asInstanceOf[js.Any], nickname = nickname.asInstanceOf[js.Any], note = note.asInstanceOf[js.Any], organizationName = organizationName.asInstanceOf[js.Any], phoneNumbers = phoneNumbers.asInstanceOf[js.Any], postalAddresses = postalAddresses.asInstanceOf[js.Any], socialProfiles = socialProfiles.asInstanceOf[js.Any], urlAddresses = urlAddresses.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Contact_]
+  }
+  @scala.inline
+  implicit class Contact_Ops[Self <: Contact_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBirthday(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("birthday")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDates(value: js.Array[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDepartmentName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("departmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmailAddresses(value: js.Array[EmailAddresses]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFamilyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGivenName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("givenName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImage(value: Image): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsBirthdayAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isBirthdayAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsDatesAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDatesAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsDepartmentNameAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDepartmentNameAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsEmailAddressesAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmailAddressesAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsFamilyNameAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFamilyNameAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsGiveNameAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGiveNameAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsImageAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isImageAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsJobTitleAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isJobTitleAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsMiddleNameAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMiddleNameAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsNamePrefixAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isNamePrefixAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsNicknameAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isNicknameAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsNoteAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isNoteAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsOrganizationNameAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOrganizationNameAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPhoneNumbersAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPhoneNumbersAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPostalAddressesAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPostalAddressesAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsSocialProfilesAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSocialProfilesAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsURLAddressesAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isURLAddressesAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJobTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMiddleName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNamePrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNickname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nickname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNote(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrganizationName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organizationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPhoneNumbers(value: js.Array[PhoneNumbers]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumbers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPostalAddresses(value: js.Array[PostalAddresses]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSocialProfiles(value: js.Array[SocialProfiles]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socialProfiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrlAddresses(value: js.Array[StringDictionary[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

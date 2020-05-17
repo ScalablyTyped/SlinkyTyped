@@ -1,6 +1,6 @@
 package typingsSlinky.antd.affixMod
 
-import typingsSlinky.antd.AnonTarget
+import typingsSlinky.antd.anon.Target
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends Affix
 @JSImport("antd/lib/affix", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonTarget = js.native
+  var defaultProps: Target = js.native
 }
 

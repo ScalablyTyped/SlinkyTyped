@@ -12,9 +12,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * The Titanium binding of an Android menu item.
 		 */
-@JSGlobal("Titanium.Android.MenuItem")
 @js.native
-class MenuItem () extends Proxy {
+trait MenuItem extends Proxy {
   /**
   			 * Briefly describes what performing an action (such as a click) on the view will do.
   			 */

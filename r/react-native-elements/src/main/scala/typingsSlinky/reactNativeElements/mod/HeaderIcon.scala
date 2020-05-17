@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait HeaderIcon
   extends IconObject
-     with _HeaderSubComponent {
+     with HeaderSubComponent {
   var icon: js.UndefOr[String] = js.native
   var text: js.UndefOr[String] = js.native
 }

@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A list section is a container within a list view used to organize list items.
 		 */
-@JSGlobal("Titanium.UI.ListSection")
 @js.native
-class ListSection () extends Proxy {
+trait ListSection extends Proxy {
   /**
   			 * Title of this section footer.
   			 */

@@ -2,7 +2,7 @@ package typingsSlinky.cesium.mod
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.cesium.AnonCreditContainer
+import typingsSlinky.cesium.anon.CreditContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 class CesiumWidget protected () extends js.Object {
   def this(container: String) = this()
   def this(container: Element) = this()
-  def this(container: String, options: AnonCreditContainer) = this()
-  def this(container: Element, options: AnonCreditContainer) = this()
+  def this(container: String, options: CreditContainer) = this()
+  def this(container: Element, options: CreditContainer) = this()
   val camera: Camera = js.native
   var canvas: HTMLCanvasElement = js.native
   var clock: Clock = js.native

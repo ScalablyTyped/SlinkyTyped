@@ -1,22 +1,22 @@
 package typingsSlinky.dockerode.mod
 
-import typingsSlinky.dockerode.AnonDriverConfig
-import typingsSlinky.dockerode.AnonPropagation
-import typingsSlinky.dockerode.AnonSizeBytes
+import typingsSlinky.dockerode.anon.DriverConfig
+import typingsSlinky.dockerode.anon.Propagation
+import typingsSlinky.dockerode.anon.SizeBytes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MountSettings extends js.Object {
-  var BindOptions: js.UndefOr[AnonPropagation] = js.native
+  var BindOptions: js.UndefOr[Propagation] = js.native
   var Consistency: js.UndefOr[MountConsistency] = js.native
   var ReadOnly: js.UndefOr[Boolean] = js.native
   var Source: String = js.native
   var Target: String = js.native
-  var TmpfsOptions: js.UndefOr[AnonSizeBytes] = js.native
+  var TmpfsOptions: js.UndefOr[SizeBytes] = js.native
   var Type: MountType = js.native
-  var VolumeOptions: js.UndefOr[AnonDriverConfig] = js.native
+  var VolumeOptions: js.UndefOr[DriverConfig] = js.native
 }
 
 object MountSettings {
@@ -50,7 +50,7 @@ object MountSettings {
         ret
     }
     @scala.inline
-    def withBindOptions(value: AnonPropagation): Self = {
+    def withBindOptions(value: Propagation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("BindOptions")(value.asInstanceOf[js.Any])
         ret
@@ -86,7 +86,7 @@ object MountSettings {
         ret
     }
     @scala.inline
-    def withTmpfsOptions(value: AnonSizeBytes): Self = {
+    def withTmpfsOptions(value: SizeBytes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TmpfsOptions")(value.asInstanceOf[js.Any])
         ret
@@ -98,7 +98,7 @@ object MountSettings {
         ret
     }
     @scala.inline
-    def withVolumeOptions(value: AnonDriverConfig): Self = {
+    def withVolumeOptions(value: DriverConfig): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeOptions")(value.asInstanceOf[js.Any])
         ret

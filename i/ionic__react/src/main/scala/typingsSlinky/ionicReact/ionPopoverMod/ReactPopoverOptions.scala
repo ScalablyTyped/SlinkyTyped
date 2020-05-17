@@ -1,11 +1,11 @@
 package typingsSlinky.ionicReact.ionPopoverMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
 import typingsSlinky.ionicCore.mod.Mode
 import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
 import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.AnimationBuilder
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait ReactPopoverOptions extends js.Object {
   var cssClass: js.UndefOr[String | js.Array[String]] = js.native
   var delegate: js.UndefOr[FrameworkDelegate] = js.native
   var enterAnimation: js.UndefOr[AnimationBuilder] = js.native
-  var event: js.UndefOr[Event_] = js.native
+  var event: js.UndefOr[Event] = js.native
   var id: js.UndefOr[String] = js.native
   var keyboardClose: js.UndefOr[Boolean] = js.native
   var leaveAnimation: js.UndefOr[AnimationBuilder] = js.native
@@ -115,7 +115,7 @@ object ReactPopoverOptions {
         ret
     }
     @scala.inline
-    def withEvent(value: Event_): Self = {
+    def withEvent(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
         ret

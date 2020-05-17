@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonBaseFontSizeNumber
+import typingsSlinky.cathoQuantum.anon.BaseFontSizeNumber
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.button
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.circle
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.large
@@ -31,7 +31,7 @@ object Skeleton {
     @scala.inline
     def size(value: xsmall | small | medium | large): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonBaseFontSizeNumber): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: BaseFontSizeNumber): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: rect | circle | text | button | typingsSlinky.cathoQuantum.cathoQuantumStrings.tag): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline

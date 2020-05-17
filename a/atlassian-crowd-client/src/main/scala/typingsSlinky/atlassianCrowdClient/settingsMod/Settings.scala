@@ -1,13 +1,13 @@
 package typingsSlinky.atlassianCrowdClient.settingsMod
 
-import typingsSlinky.atlassianCrowdClient.AnonPassword
+import typingsSlinky.atlassianCrowdClient.anon.Password
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Settings extends js.Object {
-  val application: AnonPassword = js.native
+  val application: Password = js.native
   val attributesEncoder: js.UndefOr[js.Function1[/* obj */ js.Any, String]] = js.native
   val attributesParser: js.UndefOr[js.Function1[/* json */ String, _]] = js.native
   val baseUrl: String = js.native
@@ -18,7 +18,7 @@ trait Settings extends js.Object {
 
 object Settings {
   @scala.inline
-  def apply(application: AnonPassword, baseUrl: String): Settings = {
+  def apply(application: Password, baseUrl: String): Settings = {
     val __obj = js.Dynamic.literal(application = application.asInstanceOf[js.Any], baseUrl = baseUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Settings]
   }
@@ -29,7 +29,7 @@ object Settings {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withApplication(value: AnonPassword): Self = {
+    def withApplication(value: Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("application")(value.asInstanceOf[js.Any])
         ret

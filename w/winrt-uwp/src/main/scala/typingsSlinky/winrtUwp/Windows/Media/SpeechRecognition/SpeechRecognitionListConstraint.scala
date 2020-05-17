@@ -1,26 +1,13 @@
 package typingsSlinky.winrtUwp.Windows.Media.SpeechRecognition
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A constraint for a SpeechRecognizer object based on a list of words or phrases. When initialized, this object is added to the Constraints collection. */
-@JSGlobal("Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint")
 @js.native
-class SpeechRecognitionListConstraint protected () extends js.Object {
-  /**
-    * Creates an instance of the SpeechRecognitionListConstraint class from an array of words or phrases.
-    * @param commands A string array of words or phrases that make up the constraint.
-    */
-  def this(commands: IIterable[String]) = this()
-  /**
-    * Creates an instance of the SpeechRecognitionListConstraint class from an array of words or phrases and a tag.
-    * @param commands A string array of words or phrases that make up the constraint.
-    * @param tag The tag to assign to the constraint.
-    */
-  def this(commands: IIterable[String], tag: String) = this()
+trait SpeechRecognitionListConstraint extends js.Object {
   /** Gets the array of words or phrases that make up the constraint. */
   var commands: IVector[String] = js.native
   /** Gets or sets whether the constraint can be used by the speech recognizer to perform recognition. */
@@ -31,5 +18,58 @@ class SpeechRecognitionListConstraint protected () extends js.Object {
   var tag: String = js.native
   /** Gets the type of the constraint. */
   var `type`: SpeechRecognitionConstraintType = js.native
+}
+
+object SpeechRecognitionListConstraint {
+  @scala.inline
+  def apply(
+    commands: IVector[String],
+    isEnabled: Boolean,
+    probability: SpeechRecognitionConstraintProbability,
+    tag: String,
+    `type`: SpeechRecognitionConstraintType
+  ): SpeechRecognitionListConstraint = {
+    val __obj = js.Dynamic.literal(commands = commands.asInstanceOf[js.Any], isEnabled = isEnabled.asInstanceOf[js.Any], probability = probability.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SpeechRecognitionListConstraint]
+  }
+  @scala.inline
+  implicit class SpeechRecognitionListConstraintOps[Self <: SpeechRecognitionListConstraint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommands(value: IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProbability(value: SpeechRecognitionConstraintProbability): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("probability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: SpeechRecognitionConstraintType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

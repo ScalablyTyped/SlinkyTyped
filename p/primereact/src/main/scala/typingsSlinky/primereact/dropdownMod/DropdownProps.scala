@@ -1,9 +1,9 @@
 package typingsSlinky.primereact.dropdownMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,9 +29,9 @@ trait DropdownProps extends js.Object {
   var `lazy`: js.UndefOr[Boolean] = js.native
   var maxLength: js.UndefOr[Double] = js.native
   var name: js.UndefOr[String] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onContextMenu: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onMouseDown: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onContextMenu: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onMouseDown: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var optionLabel: js.UndefOr[String] = js.native
   var options: js.UndefOr[js.Array[_]] = js.native
   var panelClassName: js.UndefOr[String] = js.native
@@ -288,7 +288,7 @@ object DropdownProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonValue => Unit): Self = {
+    def withOnChange(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -300,7 +300,7 @@ object DropdownProps {
         ret
     }
     @scala.inline
-    def withOnContextMenu(value: /* event */ Event_ => Unit): Self = {
+    def withOnContextMenu(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
         ret
@@ -312,7 +312,7 @@ object DropdownProps {
         ret
     }
     @scala.inline
-    def withOnMouseDown(value: /* event */ Event_ => Unit): Self = {
+    def withOnMouseDown(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.Any.fromFunction1(value))
         ret

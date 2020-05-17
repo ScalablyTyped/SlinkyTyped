@@ -1,7 +1,7 @@
 package typingsSlinky.electronPackager.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.electronPackager.AnonName
+import typingsSlinky.electronPackager.anon.Name
 import typingsSlinky.electronPackager.electronPackagerBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -129,7 +129,7 @@ trait Options extends js.Object {
     */
   var prebuiltAsar: js.UndefOr[String] = js.native
   /** The URL protocol schemes the app supports. */
-  var protocols: js.UndefOr[js.Array[AnonName]] = js.native
+  var protocols: js.UndefOr[js.Array[Name]] = js.native
   /**
     * Runs the package manager command to remove all of the packages specified in the devDependencies section of package.json from the outputted Electron app.
     */
@@ -517,7 +517,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withProtocols(value: js.Array[AnonName]): Self = {
+    def withProtocols(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("protocols")(value.asInstanceOf[js.Any])
         ret

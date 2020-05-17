@@ -1,6 +1,6 @@
 package typingsSlinky.workboxCore.setCacheNameDetailsMod
 
-import typingsSlinky.workboxCore.PartialCacheNameDetails
+import typingsSlinky.workboxCore.anon.PartialCacheNameDetails
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

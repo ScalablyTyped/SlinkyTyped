@@ -12,3 +12,14 @@ import scala.scalajs.js.annotation._
 */
 trait pointCloudRenderersPointCloudRenderer extends js.Object
 
+object pointCloudRenderersPointCloudRenderer {
+  @scala.inline
+  implicit def apply(value: PointCloudClassBreaksRenderer): pointCloudRenderersPointCloudRenderer = value.asInstanceOf[pointCloudRenderersPointCloudRenderer]
+  @scala.inline
+  implicit def apply(value: PointCloudRGBRenderer): pointCloudRenderersPointCloudRenderer = value.asInstanceOf[pointCloudRenderersPointCloudRenderer]
+  @scala.inline
+  implicit def apply(value: PointCloudStretchRenderer): pointCloudRenderersPointCloudRenderer = value.asInstanceOf[pointCloudRenderersPointCloudRenderer]
+  @scala.inline
+  implicit def apply(value: PointCloudUniqueValueRenderer): pointCloudRenderersPointCloudRenderer = value.asInstanceOf[pointCloudRenderersPointCloudRenderer]
+}
+

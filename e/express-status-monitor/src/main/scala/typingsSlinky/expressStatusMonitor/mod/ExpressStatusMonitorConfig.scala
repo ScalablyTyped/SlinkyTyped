@@ -1,6 +1,6 @@
 package typingsSlinky.expressStatusMonitor.mod
 
-import typingsSlinky.expressStatusMonitor.AnonCpu
+import typingsSlinky.expressStatusMonitor.anon.Cpu
 import typingsSlinky.socketIo.mod.Server
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ExpressStatusMonitorConfig extends js.Object {
-  var chartVisibility: js.UndefOr[AnonCpu] = js.native
+  var chartVisibility: js.UndefOr[Cpu] = js.native
   var healthChecks: js.UndefOr[js.Array[HealthCheck]] = js.native
   var ignoreStartsWith: js.UndefOr[String] = js.native
   var path: js.UndefOr[String] = js.native
@@ -33,7 +33,7 @@ object ExpressStatusMonitorConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChartVisibility(value: AnonCpu): Self = {
+    def withChartVisibility(value: Cpu): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("chartVisibility")(value.asInstanceOf[js.Any])
         ret

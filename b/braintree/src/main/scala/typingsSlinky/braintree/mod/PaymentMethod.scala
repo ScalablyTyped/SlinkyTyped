@@ -16,3 +16,22 @@ import scala.scalajs.js.annotation._
 */
 trait PaymentMethod extends js.Object
 
+object PaymentMethod {
+  @scala.inline
+  implicit def apply(value: AndroidPayCard): PaymentMethod = value.asInstanceOf[PaymentMethod]
+  @scala.inline
+  implicit def apply(value: ApplePayCard): PaymentMethod = value.asInstanceOf[PaymentMethod]
+  @scala.inline
+  implicit def apply(value: CreditCard): PaymentMethod = value.asInstanceOf[PaymentMethod]
+  @scala.inline
+  implicit def apply(value: MasterpassCard): PaymentMethod = value.asInstanceOf[PaymentMethod]
+  @scala.inline
+  implicit def apply(value: PayPalAccount): PaymentMethod = value.asInstanceOf[PaymentMethod]
+  @scala.inline
+  implicit def apply(value: SamsungPayCard): PaymentMethod = value.asInstanceOf[PaymentMethod]
+  @scala.inline
+  implicit def apply(value: VenmoAccount): PaymentMethod = value.asInstanceOf[PaymentMethod]
+  @scala.inline
+  implicit def apply(value: VisaCheckoutCard): PaymentMethod = value.asInstanceOf[PaymentMethod]
+}
+

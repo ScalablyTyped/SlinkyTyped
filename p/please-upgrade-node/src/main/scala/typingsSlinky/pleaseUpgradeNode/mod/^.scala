@@ -1,6 +1,6 @@
 package typingsSlinky.pleaseUpgradeNode.mod
 
-import typingsSlinky.pleaseUpgradeNode.PartialOptions
+import typingsSlinky.pleaseUpgradeNode.anon.PartialOptions
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`

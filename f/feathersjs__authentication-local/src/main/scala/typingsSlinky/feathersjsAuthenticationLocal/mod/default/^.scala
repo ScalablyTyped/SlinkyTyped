@@ -1,8 +1,8 @@
 package typingsSlinky.feathersjsAuthenticationLocal.mod.default
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.feathersjsAuthenticationLocal.PartialFeathersAuthentica
-import typingsSlinky.feathersjsAuthenticationLocal.Typeofself
+import typingsSlinky.feathersjsAuthenticationLocal.anon.PartialFeathersAuthentica
+import typingsSlinky.feathersjsAuthenticationLocal.anon.Typeofself
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

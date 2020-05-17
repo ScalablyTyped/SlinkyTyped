@@ -2,8 +2,8 @@ package typingsSlinky.rmcTabs.tabPaneMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.rmcTabs.AnonFixX
-import typingsSlinky.rmcTabs.PropsTypechildrenReactNod
+import typingsSlinky.rmcTabs.anon.FixX
+import typingsSlinky.rmcTabs.anon.PropsTypechildrenReactNod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,6 +24,6 @@ class TabPane ()
 @JSImport("rmc-tabs/lib/TabPane", "TabPane")
 @js.native
 object TabPane extends js.Object {
-  var defaultProps: AnonFixX = js.native
+  var defaultProps: FixX = js.native
 }
 

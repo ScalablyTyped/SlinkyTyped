@@ -1,8 +1,8 @@
 package typingsSlinky.azureSb.mod.Azure.ServiceBus
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.azureSb.AnonBody
-import typingsSlinky.azureSb.AnonPushChannel
+import typingsSlinky.azureSb.anon.Body
+import typingsSlinky.azureSb.anon.PushChannel
 import typingsSlinky.azureSb.azureSbStrings.adm
 import typingsSlinky.azureSb.azureSbStrings.apns
 import typingsSlinky.azureSb.azureSbStrings.gcm
@@ -21,9 +21,9 @@ trait NotificationHubInstallation extends js.Object {
   val lastUpdate: js.UndefOr[String] = js.native
   var platform: apns | wns | mpns | adm | gcm = js.native
   var pushChannel: String = js.native
-  var secondaryTile: js.UndefOr[StringDictionary[AnonPushChannel]] = js.native
+  var secondaryTile: js.UndefOr[StringDictionary[PushChannel]] = js.native
   var tags: js.UndefOr[js.Array[String]] = js.native
-  var templates: js.UndefOr[StringDictionary[AnonBody]] = js.native
+  var templates: js.UndefOr[StringDictionary[Body]] = js.native
 }
 
 object NotificationHubInstallation {
@@ -105,7 +105,7 @@ object NotificationHubInstallation {
         ret
     }
     @scala.inline
-    def withSecondaryTile(value: StringDictionary[AnonPushChannel]): Self = {
+    def withSecondaryTile(value: StringDictionary[PushChannel]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryTile")(value.asInstanceOf[js.Any])
         ret
@@ -129,7 +129,7 @@ object NotificationHubInstallation {
         ret
     }
     @scala.inline
-    def withTemplates(value: StringDictionary[AnonBody]): Self = {
+    def withTemplates(value: StringDictionary[Body]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("templates")(value.asInstanceOf[js.Any])
         ret

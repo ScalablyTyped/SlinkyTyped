@@ -12,9 +12,6 @@ import scala.scalajs.js.annotation._
   * @classdesc Manages creation of {@link pc.LayoutGroupComponent}s.
   * @param {pc.Application} app - The application.
   */
-@JSGlobal("pc.LayoutGroupComponentSystem")
 @js.native
-class LayoutGroupComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait LayoutGroupComponentSystem extends ComponentSystem
 

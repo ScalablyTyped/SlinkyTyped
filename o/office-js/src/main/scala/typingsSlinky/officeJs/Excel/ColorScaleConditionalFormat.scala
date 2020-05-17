@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ColorScaleConditionalFormatData
 import typingsSlinky.officeJs.Excel.Interfaces.ColorScaleConditionalFormatLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ColorScaleConditionalFormatUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@JSGlobal("Excel.ColorScaleConditionalFormat")
 @js.native
-class ColorScaleConditionalFormat () extends ClientObject {
+trait ColorScaleConditionalFormat extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ColorScaleConditionalFormat: RequestContext = js.native
@@ -43,7 +42,7 @@ class ColorScaleConditionalFormat () extends ClientObject {
     */
   def load(): ColorScaleConditionalFormat = js.native
   def load(options: ColorScaleConditionalFormatLoadOptions): ColorScaleConditionalFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ColorScaleConditionalFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ColorScaleConditionalFormat = js.native
   def load(propertyNames: String): ColorScaleConditionalFormat = js.native
   def load(propertyNames: js.Array[String]): ColorScaleConditionalFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

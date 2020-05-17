@@ -1,18 +1,18 @@
 package typingsSlinky.elasticElasticsearch.poolMod
 
-import typingsSlinky.elasticElasticsearch.AnonApikey
+import typingsSlinky.elasticElasticsearch.anon.Apikey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ApiKeyAuth extends js.Object {
-  var apiKey: String | AnonApikey = js.native
+  var apiKey: String | Apikey = js.native
 }
 
 object ApiKeyAuth {
   @scala.inline
-  def apply(apiKey: String | AnonApikey): ApiKeyAuth = {
+  def apply(apiKey: String | Apikey): ApiKeyAuth = {
     val __obj = js.Dynamic.literal(apiKey = apiKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApiKeyAuth]
   }
@@ -23,7 +23,7 @@ object ApiKeyAuth {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withApiKey(value: String | AnonApikey): Self = {
+    def withApiKey(value: String | Apikey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(value.asInstanceOf[js.Any])
         ret

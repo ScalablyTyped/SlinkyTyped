@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitSearchActionset
+import typingsSlinky.tabris.anon.OmitSearchActionset
 import typingsSlinky.tabris.tabrisStrings.message
 import typingsSlinky.tabris.tabrisStrings.proposals
 import typingsSlinky.tabris.tabrisStrings.text

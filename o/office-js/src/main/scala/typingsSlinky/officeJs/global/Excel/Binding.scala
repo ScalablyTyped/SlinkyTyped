@@ -1,0 +1,17 @@
+package typingsSlinky.officeJs.global.Excel
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Represents an Office.js binding that is defined in the workbook.
+  *
+  * [Api set: ExcelApi 1.1]
+  */
+@JSGlobal("Excel.Binding")
+@js.native
+class Binding ()
+  extends typingsSlinky.officeJs.Excel.Binding
+

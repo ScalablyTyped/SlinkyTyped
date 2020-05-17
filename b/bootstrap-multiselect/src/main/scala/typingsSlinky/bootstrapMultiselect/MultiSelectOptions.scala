@@ -1,12 +1,12 @@
 package typingsSlinky.bootstrapMultiselect
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLOptionElement
 import org.scalajs.dom.raw.HTMLSelectElement
 import typingsSlinky.bootstrapMultiselect.bootstrapMultiselectStrings.both
 import typingsSlinky.bootstrapMultiselect.bootstrapMultiselectStrings.text
 import typingsSlinky.bootstrapMultiselect.bootstrapMultiselectStrings.value
-import typingsSlinky.std.Event_
 import typingsSlinky.std.HTMLOptionsCollection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -176,22 +176,22 @@ trait MultiSelectOptions extends js.Object {
     * A callback called after the dropdown has been closed.
     * The onDropdownHidden option is not available when using Twitter Bootstrap 2.3.
     */
-  var onDropdownHidden: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onDropdownHidden: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   /**
     * A callback called when the dropdown is closed.
     * The onDropdownHide option is not available when using Twitter Bootstrap 2.3.
     */
-  var onDropdownHide: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onDropdownHide: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   /**
     * A callback called when the dropdown is shown.
     * The onDropdownShow option is not available when using Twitter Bootstrap 2.3.
     */
-  var onDropdownShow: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onDropdownShow: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   /**
     * A callback called after the dropdown has been shown.
     * The onDropdownShown option is not available when using Twitter Bootstrap 2.3.
     */
-  var onDropdownShown: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onDropdownShown: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   /**
     * A function which is triggered when the multiselect is finished initializing.
     */
@@ -594,7 +594,7 @@ object MultiSelectOptions {
         ret
     }
     @scala.inline
-    def withOnDropdownHidden(value: /* event */ Event_ => Unit): Self = {
+    def withOnDropdownHidden(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDropdownHidden")(js.Any.fromFunction1(value))
         ret
@@ -606,7 +606,7 @@ object MultiSelectOptions {
         ret
     }
     @scala.inline
-    def withOnDropdownHide(value: /* event */ Event_ => Unit): Self = {
+    def withOnDropdownHide(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDropdownHide")(js.Any.fromFunction1(value))
         ret
@@ -618,7 +618,7 @@ object MultiSelectOptions {
         ret
     }
     @scala.inline
-    def withOnDropdownShow(value: /* event */ Event_ => Unit): Self = {
+    def withOnDropdownShow(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDropdownShow")(js.Any.fromFunction1(value))
         ret
@@ -630,7 +630,7 @@ object MultiSelectOptions {
         ret
     }
     @scala.inline
-    def withOnDropdownShown(value: /* event */ Event_ => Unit): Self = {
+    def withOnDropdownShown(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDropdownShown")(js.Any.fromFunction1(value))
         ret

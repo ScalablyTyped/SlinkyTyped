@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ActivityDefinition[TContext, TEvent /* <: EventObject */] extends ActionObject[TContext, TEvent] {
+trait ActivityDefinition[TContext, TEvent /* <: EventObject */]
+  extends ActionObject[TContext, TEvent]
+     with Activity[TContext, TEvent] {
   var id: String = js.native
 }
 

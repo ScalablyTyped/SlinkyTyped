@@ -1,7 +1,7 @@
 package typingsSlinky.log4javascript.mod
 
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.log4javascript.AnonName
+import typingsSlinky.log4javascript.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ class AjaxAppender protected () extends Appender {
   	 * Returns an array of the additional headers that are sent with each HTTP request. Each array item is an object with
   	 * properties name and value.
   	 */
-  def getHeaders(): js.Array[AnonName] = js.native
+  def getHeaders(): js.Array[Name] = js.native
   /**
   	 * Returns the post variable name whose value will the formatted log message(s) for each request.
   	 */

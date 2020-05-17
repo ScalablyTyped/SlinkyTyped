@@ -1,10 +1,10 @@
 package typingsSlinky.rcTable
 
 import typingsSlinky.rcTable.interfaceMod.AlignType
+import typingsSlinky.rcTable.interfaceMod.Component
 import typingsSlinky.rcTable.interfaceMod.ExpandableType
+import typingsSlinky.rcTable.interfaceMod.FixedType
 import typingsSlinky.rcTable.interfaceMod.TableLayout
-import typingsSlinky.rcTable.interfaceMod._Component
-import typingsSlinky.rcTable.interfaceMod._FixedType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,498 +12,498 @@ import scala.scalajs.js.annotation._
 object rcTableStrings {
   @js.native
   sealed trait a
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait abbr
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait address
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait area
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait article
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait aside
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait audio
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait auto extends TableLayout
   
   @js.native
   sealed trait b
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait base
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait bdi
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait bdo
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait big
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait blockquote
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait body
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait br
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait button
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait canvas
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait caption
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait center extends AlignType
   
   @js.native
   sealed trait cite
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait code
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait col
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait colgroup
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait data
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait datalist
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait dd
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait del
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait details
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait dfn
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait dialog
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait div
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait dl
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait dt
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait em
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait embed
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait fieldset
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait figcaption
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait figure
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait fixed extends TableLayout
   
   @js.native
   sealed trait footer
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait form
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait h1
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait h2
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait h3
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait h4
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait h5
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait h6
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait head
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait header
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait hgroup
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait hr
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait html
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait i
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait iframe
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait img
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait input
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait ins
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait kbd
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait keygen
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait label
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait left
     extends AlignType
-       with _FixedType
+       with FixedType
   
   @js.native
   sealed trait legend
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait li
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait link
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait ltr extends js.Object
   
   @js.native
   sealed trait main
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait map
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait mark
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait menu
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait menuitem
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait meta
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait meter
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait nav
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait nest extends ExpandableType
   
   @js.native
   sealed trait noscript
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait `object`
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait ol
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait optgroup
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait option
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait output
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait p
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait param
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait picture
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait pre
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait progress
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait q
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait right
     extends AlignType
-       with _FixedType
+       with FixedType
   
   @js.native
   sealed trait row extends ExpandableType
   
   @js.native
   sealed trait rp
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait rt
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait rtl extends js.Object
   
   @js.native
   sealed trait ruby
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait s
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait samp
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait script
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait section
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait select
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait slot
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait small
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait source
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait span
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait strong
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait style
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait sub
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait summary
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait sup
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait table
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait tbody
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait td
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait template
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait textarea
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait tfoot
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait th
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait thead
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait time
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait title
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait tr
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait track
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait u
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait ul
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait `var`
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait video
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait wbr
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @js.native
   sealed trait webview
-    extends _Component[js.Any]
+    extends Component[js.Any]
   
   @scala.inline
   def a: a = "a".asInstanceOf[a]

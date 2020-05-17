@@ -1,6 +1,6 @@
 package typingsSlinky.facebookJsSdk.facebook
 
-import typingsSlinky.facebookJsSdk.AnonName
+import typingsSlinky.facebookJsSdk.anon.Name
 import typingsSlinky.facebookJsSdk.facebookJsSdkStrings.app_non_users
 import typingsSlinky.facebookJsSdk.facebookJsSdkStrings.app_users
 import typingsSlinky.facebookJsSdk.facebookJsSdkStrings.apprequests
@@ -16,7 +16,7 @@ trait GameRequestDialogParams extends DialogParams {
   var action_type: js.UndefOr[send | askfor | turn] = js.native
   var data: js.UndefOr[String] = js.native
   var exclude_ids: js.UndefOr[js.Array[String]] = js.native
-  var filters: js.UndefOr[app_users | app_non_users | js.Array[AnonName]] = js.native
+  var filters: js.UndefOr[app_users | app_non_users | js.Array[Name]] = js.native
   var max_recipients: js.UndefOr[Double] = js.native
   var message: String = js.native
   var method: apprequests = js.native
@@ -87,7 +87,7 @@ object GameRequestDialogParams {
         ret
     }
     @scala.inline
-    def withFilters(value: app_users | app_non_users | js.Array[AnonName]): Self = {
+    def withFilters(value: app_users | app_non_users | js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
         ret

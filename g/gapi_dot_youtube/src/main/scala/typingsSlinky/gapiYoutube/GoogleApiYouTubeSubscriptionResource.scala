@@ -1,5 +1,8 @@
 package typingsSlinky.gapiYoutube
 
+import typingsSlinky.gapiYoutube.anon.ChannelIdChannelTitle
+import typingsSlinky.gapiYoutube.anon.ChannelIdDescription
+import typingsSlinky.gapiYoutube.anon.NewItemCount
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +12,7 @@ trait GoogleApiYouTubeSubscriptionResource extends js.Object {
   /**
     *
     */
-  var contentDetails: AnonNewItemCount = js.native
+  var contentDetails: NewItemCount = js.native
   /**
     * The ETag of the subscription resource.
     */
@@ -25,22 +28,22 @@ trait GoogleApiYouTubeSubscriptionResource extends js.Object {
   /**
     * The snippet object contains basic details about the subscription, including its title and the channel that the user subscribed to.
     */
-  var snippet: AnonChannelIdChannelTitle = js.native
+  var snippet: ChannelIdChannelTitle = js.native
   /**
     *
     */
-  var subscriberSnippet: AnonChannelIdDescription = js.native
+  var subscriberSnippet: ChannelIdDescription = js.native
 }
 
 object GoogleApiYouTubeSubscriptionResource {
   @scala.inline
   def apply(
-    contentDetails: AnonNewItemCount,
+    contentDetails: NewItemCount,
     etag: String,
     id: String,
     kind: String,
-    snippet: AnonChannelIdChannelTitle,
-    subscriberSnippet: AnonChannelIdDescription
+    snippet: ChannelIdChannelTitle,
+    subscriberSnippet: ChannelIdDescription
   ): GoogleApiYouTubeSubscriptionResource = {
     val __obj = js.Dynamic.literal(contentDetails = contentDetails.asInstanceOf[js.Any], etag = etag.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], snippet = snippet.asInstanceOf[js.Any], subscriberSnippet = subscriberSnippet.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleApiYouTubeSubscriptionResource]
@@ -52,7 +55,7 @@ object GoogleApiYouTubeSubscriptionResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContentDetails(value: AnonNewItemCount): Self = {
+    def withContentDetails(value: NewItemCount): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(value.asInstanceOf[js.Any])
         ret
@@ -76,13 +79,13 @@ object GoogleApiYouTubeSubscriptionResource {
         ret
     }
     @scala.inline
-    def withSnippet(value: AnonChannelIdChannelTitle): Self = {
+    def withSnippet(value: ChannelIdChannelTitle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSubscriberSnippet(value: AnonChannelIdDescription): Self = {
+    def withSubscriberSnippet(value: ChannelIdDescription): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subscriberSnippet")(value.asInstanceOf[js.Any])
         ret

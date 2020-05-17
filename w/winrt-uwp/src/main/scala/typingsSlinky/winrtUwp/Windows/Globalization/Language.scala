@@ -6,14 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A class that provides information related to BCP-47 language tags such as the language name and the script. */
-@JSGlobal("Windows.Globalization.Language")
 @js.native
-class Language protected () extends js.Object {
-  /**
-    * Creates a Language object.
-    * @param languageTag A BCP-47 language tag. See Remarks.
-    */
-  def this(languageTag: String) = this()
+trait Language extends js.Object {
   /** Gets a localized string that is suitable for display to the user for identifying the language. */
   var displayName: String = js.native
   /** Gets the normalized BCP-47 language tag for this language. */
@@ -30,23 +24,55 @@ class Language protected () extends js.Object {
   def getExtensionSubtags(singleton: String): IVectorView[String] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Globalization.Language")
-@js.native
-object Language extends js.Object {
-  /** Gets the BCP-47 language tag for the currently enabled keyboard layout or Input Method Editor (IME). */
-  var currentInputMethodLanguageTag: String = js.native
-  /**
-    * Determines whether a BCP-47 language tag is well-formed.
-    * @param languageTag A BCP-47 language tag.
-    * @return True if the language tag is well-formed as defined by BCP-47, except when the language tag can never be valid according to BCP-47. Otherwise it returns false. If this method returns true, an application can safely construct a language by using this tag. If it returns false, attempting to construct a language for the given tag will throw an exception.
-    */
-  def isWellFormed(languageTag: String): Boolean = js.native
-  /**
-    * Tries to set the normalized BCP-47 language tag of this language.
-    * @param languageTag The normalized BCP-47 language tag.
-    * @return true if the value is successfully set, otherwise false.
-    */
-  def trySetInputMethodLanguageTag(languageTag: String): Boolean = js.native
+object Language {
+  @scala.inline
+  def apply(
+    displayName: String,
+    getExtensionSubtags: String => IVectorView[String],
+    languageTag: String,
+    nativeName: String,
+    script: String
+  ): Language = {
+    val __obj = js.Dynamic.literal(displayName = displayName.asInstanceOf[js.Any], getExtensionSubtags = js.Any.fromFunction1(getExtensionSubtags), languageTag = languageTag.asInstanceOf[js.Any], nativeName = nativeName.asInstanceOf[js.Any], script = script.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Language]
+  }
+  @scala.inline
+  implicit class LanguageOps[Self <: Language] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetExtensionSubtags(value: String => IVectorView[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtensionSubtags")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLanguageTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNativeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScript(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

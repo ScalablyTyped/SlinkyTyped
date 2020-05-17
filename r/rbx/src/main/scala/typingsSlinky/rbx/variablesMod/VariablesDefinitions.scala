@@ -1,6 +1,6 @@
 package typingsSlinky.rbx.variablesMod
 
-import typingsSlinky.rbx.ReadonlyArraystringnumber
+import typingsSlinky.rbx.anon.ReadonlyArraystringnumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

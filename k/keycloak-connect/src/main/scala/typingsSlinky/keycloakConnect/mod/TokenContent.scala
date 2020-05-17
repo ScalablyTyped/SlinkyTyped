@@ -1,6 +1,6 @@
 package typingsSlinky.keycloakConnect.mod
 
-import typingsSlinky.keycloakConnect.AnonRoles
+import typingsSlinky.keycloakConnect.anon.Roles
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TokenContent extends js.Object {
   var exp: Double = js.native
-  var realm_access: js.UndefOr[AnonRoles] = js.native
+  var realm_access: js.UndefOr[Roles] = js.native
   var resource_access: js.UndefOr[js.Any] = js.native
 }
 
@@ -31,7 +31,7 @@ object TokenContent {
         ret
     }
     @scala.inline
-    def withRealm_access(value: AnonRoles): Self = {
+    def withRealm_access(value: Roles): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("realm_access")(value.asInstanceOf[js.Any])
         ret

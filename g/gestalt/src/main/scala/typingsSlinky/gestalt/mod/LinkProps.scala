@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.gestalt.AnonEvent
+import typingsSlinky.gestalt.anon.Event
 import typingsSlinky.gestalt.gestaltStrings.`null`
 import typingsSlinky.gestalt.gestaltStrings.blank
 import typingsSlinky.gestalt.gestaltStrings.self
@@ -15,7 +15,7 @@ trait LinkProps extends js.Object {
   var children: js.UndefOr[TagMod[Any]] = js.native
   var href: String = js.native
   var `inline`: js.UndefOr[Boolean] = js.native
-  var onClick: js.UndefOr[js.Function1[/* args */ AnonEvent, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* args */ Event, Unit]] = js.native
   var target: js.UndefOr[`null` | self | blank] = js.native
 }
 
@@ -68,7 +68,7 @@ object LinkProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* args */ AnonEvent => Unit): Self = {
+    def withOnClick(value: /* args */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

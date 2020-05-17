@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabServices.messagesMod.KernelMessage
 
-import typingsSlinky.jupyterlabServices.AnonWait
+import typingsSlinky.jupyterlabServices.anon.Wait
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.clear_output
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.iopub
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
@@ -16,16 +16,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IClearOutputMsg
   extends IIOPubMessage[clear_output]
-     with _Message {
+     with Message {
   @JSName("content")
-  var content_IClearOutputMsg: AnonWait = js.native
+  var content_IClearOutputMsg: Wait = js.native
 }
 
 object IClearOutputMsg {
   @scala.inline
   def apply(
     channel: iopub,
-    content: AnonWait,
+    content: Wait,
     header: IHeader[clear_output],
     metadata: JSONObject,
     parent_header: IHeader[MessageType] | js.Object
@@ -40,7 +40,7 @@ object IClearOutputMsg {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContent(value: AnonWait): Self = {
+    def withContent(value: Wait): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

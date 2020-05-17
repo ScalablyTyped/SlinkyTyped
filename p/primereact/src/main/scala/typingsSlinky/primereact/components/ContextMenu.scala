@@ -1,10 +1,10 @@
 package typingsSlinky.primereact.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.contextMenuMod.ContextMenuProps
 import typingsSlinky.primereact.menuItemMod.MenuItem
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,9 +33,9 @@ object ContextMenu {
     @scala.inline
     def model(value: js.Array[MenuItem]): this.type = set("model", value.asInstanceOf[js.Any])
     @scala.inline
-    def onHide(value: /* e */ Event_ => Unit): this.type = set("onHide", js.Any.fromFunction1(value))
+    def onHide(value: /* e */ Event => Unit): this.type = set("onHide", js.Any.fromFunction1(value))
     @scala.inline
-    def onShow(value: /* e */ Event_ => Unit): this.type = set("onShow", js.Any.fromFunction1(value))
+    def onShow(value: /* e */ Event => Unit): this.type = set("onShow", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }

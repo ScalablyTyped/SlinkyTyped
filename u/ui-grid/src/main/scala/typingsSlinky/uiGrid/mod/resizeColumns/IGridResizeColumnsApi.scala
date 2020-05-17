@@ -1,6 +1,6 @@
 package typingsSlinky.uiGrid.mod.resizeColumns
 
-import typingsSlinky.uiGrid.AnonColumnSizeChanged
+import typingsSlinky.uiGrid.anon.ColumnSizeChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IGridResizeColumnsApi extends js.Object {
   // Events
-  var on: AnonColumnSizeChanged = js.native
+  var on: ColumnSizeChanged = js.native
 }
 
 object IGridResizeColumnsApi {
   @scala.inline
-  def apply(on: AnonColumnSizeChanged): IGridResizeColumnsApi = {
+  def apply(on: ColumnSizeChanged): IGridResizeColumnsApi = {
     val __obj = js.Dynamic.literal(on = on.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGridResizeColumnsApi]
   }
@@ -24,7 +24,7 @@ object IGridResizeColumnsApi {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOn(value: AnonColumnSizeChanged): Self = {
+    def withOn(value: ColumnSizeChanged): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
         ret

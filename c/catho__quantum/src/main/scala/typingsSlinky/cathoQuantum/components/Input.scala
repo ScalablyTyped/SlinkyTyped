@@ -4,11 +4,11 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonBaseFontSizeColors
-import typingsSlinky.cathoQuantum.AnonMaxLength
-import typingsSlinky.cathoQuantum.AnonMinLength
-import typingsSlinky.cathoQuantum.AnonValue
-import typingsSlinky.cathoQuantum.AnonValueString
+import typingsSlinky.cathoQuantum.anon.BaseFontSizeColors
+import typingsSlinky.cathoQuantum.anon.MaxLength
+import typingsSlinky.cathoQuantum.anon.MinLength
+import typingsSlinky.cathoQuantum.anon.Value
+import typingsSlinky.cathoQuantum.anon.ValueString
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.email
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.number
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.password
@@ -61,15 +61,15 @@ object Input {
     @scala.inline
     def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonBaseFontSizeColors): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: BaseFontSizeColors): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: email | text | tel | number | password | search): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def validateFunction2(value: (/* params */ AnonValue, /* cpf */ js.UndefOr[String]) => String): this.type = set("validate", js.Any.fromFunction2(value))
+    def validateFunction2(value: (/* params */ Value, /* cpf */ js.UndefOr[String]) => String): this.type = set("validate", js.Any.fromFunction2(value))
     @scala.inline
     def validateFunction1(
       value: js.UndefOr[
-          (/* params */ AnonMaxLength) | (/* params */ AnonMinLength) | (/* params */ AnonValue) | AnonValueString
+          (/* params */ MaxLength) | (/* params */ MinLength) | (/* params */ Value) | ValueString
         ] => String
     ): this.type = set("validate", js.Any.fromFunction1(value))
     @scala.inline

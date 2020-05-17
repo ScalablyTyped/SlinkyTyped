@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MinimalPattern extends js.Object
+trait MinimalPattern extends Pattern
 

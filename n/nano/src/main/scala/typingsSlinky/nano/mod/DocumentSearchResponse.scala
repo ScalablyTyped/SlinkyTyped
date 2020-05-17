@@ -1,6 +1,6 @@
 package typingsSlinky.nano.mod
 
-import typingsSlinky.nano.AnonDoc
+import typingsSlinky.nano.anon.Doc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,14 +15,14 @@ trait DocumentSearchResponse[V] extends js.Object {
   // facet range results
   var ranges: js.UndefOr[js.Object] = js.native
   //  Array of search results
-  var rows: js.Array[AnonDoc[V]] = js.native
+  var rows: js.Array[Doc[V]] = js.native
   // Number of documents in the search resykts
   var total_rows: Double = js.native
 }
 
 object DocumentSearchResponse {
   @scala.inline
-  def apply[V](bookmark: String, rows: js.Array[AnonDoc[V]], total_rows: Double): DocumentSearchResponse[V] = {
+  def apply[V](bookmark: String, rows: js.Array[Doc[V]], total_rows: Double): DocumentSearchResponse[V] = {
     val __obj = js.Dynamic.literal(bookmark = bookmark.asInstanceOf[js.Any], rows = rows.asInstanceOf[js.Any], total_rows = total_rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentSearchResponse[V]]
   }
@@ -39,7 +39,7 @@ object DocumentSearchResponse {
         ret
     }
     @scala.inline
-    def withRows(value: js.Array[AnonDoc[V]]): Self[V] = {
+    def withRows(value: js.Array[Doc[V]]): Self[V] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
         ret

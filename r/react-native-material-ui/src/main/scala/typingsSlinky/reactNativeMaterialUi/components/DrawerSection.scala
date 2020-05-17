@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonItem
+import typingsSlinky.reactNativeMaterialUi.anon.Item
 import typingsSlinky.reactNativeMaterialUi.mod.Drawer.Section
 import typingsSlinky.reactNativeMaterialUi.mod.DrawerSectionItem
 import typingsSlinky.reactNativeMaterialUi.mod.DrawerSectionProps
@@ -22,7 +22,7 @@ object DrawerSection {
     @scala.inline
     def divider(value: Boolean): this.type = set("divider", value.asInstanceOf[js.Any])
     @scala.inline
-    def style(value: AnonItem): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: Item): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }

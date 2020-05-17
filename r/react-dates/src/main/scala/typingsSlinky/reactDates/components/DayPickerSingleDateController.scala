@@ -3,9 +3,9 @@ package typingsSlinky.reactDates.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactDates.AnonDate
-import typingsSlinky.reactDates.AnonFocused
-import typingsSlinky.reactDates.AnonIsVisible
+import typingsSlinky.reactDates.anon.Date
+import typingsSlinky.reactDates.anon.Focused
+import typingsSlinky.reactDates.anon.IsVisible
 import typingsSlinky.reactDates.mod.CalendarInfoPositionShape
 import typingsSlinky.reactDates.mod.DayPickerSingleDateControllerCls
 import typingsSlinky.reactDates.mod.DayPickerSingleDateControllerShape
@@ -81,7 +81,7 @@ object DayPickerSingleDateController {
     @scala.inline
     def onBlur(value: () => Unit): this.type = set("onBlur", js.Any.fromFunction0(value))
     @scala.inline
-    def onClose(value: /* final */ AnonDate => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* final */ Date => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
     def onNextMonthClick(value: /* newCurrentMonth */ momentObj => Unit): this.type = set("onNextMonthClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -99,7 +99,7 @@ object DayPickerSingleDateController {
     @scala.inline
     def renderDayContents(value: /* day */ momentObj => String | ReactElement): this.type = set("renderDayContents", js.Any.fromFunction1(value))
     @scala.inline
-    def renderMonthElement(value: /* props */ AnonIsVisible => String | ReactElement): this.type = set("renderMonthElement", js.Any.fromFunction1(value))
+    def renderMonthElement(value: /* props */ IsVisible => String | ReactElement): this.type = set("renderMonthElement", js.Any.fromFunction1(value))
     @scala.inline
     def renderMonthText(value: /* day */ momentObj => String | ReactElement): this.type = set("renderMonthText", js.Any.fromFunction1(value))
     @scala.inline
@@ -116,7 +116,7 @@ object DayPickerSingleDateController {
   
   def withProps(p: DayPickerSingleDateControllerShape): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(focused: Boolean, onDateChange: js.UndefOr[momentObj] => Unit, onFocusChange: AnonFocused => Unit): Builder = {
+  def apply(focused: Boolean, onDateChange: js.UndefOr[momentObj] => Unit, onFocusChange: Focused => Unit): Builder = {
     val __props = js.Dynamic.literal(focused = focused.asInstanceOf[js.Any], onDateChange = js.Any.fromFunction1(onDateChange), onFocusChange = js.Any.fromFunction1(onFocusChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[DayPickerSingleDateControllerShape]))
   }

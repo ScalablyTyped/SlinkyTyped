@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.anon.DownDegrees
 import typingsSlinky.babylonjs.mathLikeMod.IPlaneLike
 import typingsSlinky.babylonjs.mathViewportMod.Viewport
 import typingsSlinky.babylonjs.typesMod.DeepImmutable
@@ -1894,8 +1895,8 @@ object mathVectorMod extends js.Object {
       * @param result defines the target matrix
       * @param rightHanded defines if the matrix must be in right-handed mode (false by default)
       */
-    def PerspectiveFovWebVRToRef(fov: AnonDownDegrees, znear: Double, zfar: Double, result: Matrix): Unit = js.native
-    def PerspectiveFovWebVRToRef(fov: AnonDownDegrees, znear: Double, zfar: Double, result: Matrix, rightHanded: Boolean): Unit = js.native
+    def PerspectiveFovWebVRToRef(fov: DownDegrees, znear: Double, zfar: Double, result: Matrix): Unit = js.native
+    def PerspectiveFovWebVRToRef(fov: DownDegrees, znear: Double, zfar: Double, result: Matrix, rightHanded: Boolean): Unit = js.native
     /**
       * Creates a left-handed perspective projection matrix
       * @param width defines the viewport width

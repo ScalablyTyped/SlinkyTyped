@@ -3,7 +3,7 @@ package typingsSlinky.reactInstantsearchCore.mod
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.react.mod.StatelessComponent
-import typingsSlinky.reactInstantsearchCore.PartialCurrentRefinements
+import typingsSlinky.reactInstantsearchCore.anon.PartialCurrentRefinements
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

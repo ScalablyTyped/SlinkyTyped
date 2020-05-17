@@ -1,6 +1,6 @@
 package typingsSlinky.webpackbar.mod
 
-import typingsSlinky.webpackbar.AnonFile
+import typingsSlinky.webpackbar.anon.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait Status extends js.Object {
   val name: String = js.native
   /** @default -1 */
   val progress: Double = js.native
-  val request: Null | AnonFile = js.native
+  val request: Null | File = js.native
   /** @default null */
   val start: (js.Tuple2[Double, Double]) | Null = js.native
 }
@@ -86,7 +86,7 @@ object Status {
         ret
     }
     @scala.inline
-    def withRequest(value: AnonFile): Self = {
+    def withRequest(value: File): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
         ret

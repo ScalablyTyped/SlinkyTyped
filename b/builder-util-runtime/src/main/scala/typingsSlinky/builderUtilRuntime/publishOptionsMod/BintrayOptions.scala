@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait BintrayOptions
-  extends PublishConfiguration
-     with _AllPublishOptions {
+  extends AllPublishOptions
+     with PublishConfiguration {
   /**
     * The Bintray package name.
     */

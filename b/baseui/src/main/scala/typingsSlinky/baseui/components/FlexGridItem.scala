@@ -34,7 +34,7 @@ object FlexGridItem {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, Ref[js.Any]] {
     @scala.inline
     def $styleFunction1(value: BlockProps => StyleObject): this.type = set("$style", js.Any.fromFunction1(value))
     @scala.inline

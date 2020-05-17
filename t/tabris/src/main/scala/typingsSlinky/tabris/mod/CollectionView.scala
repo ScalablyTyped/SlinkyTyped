@@ -2,7 +2,7 @@ package typingsSlinky.tabris.mod
 
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
-import typingsSlinky.tabris.AnonAnimate
+import typingsSlinky.tabris.anon.Animate
 import typingsSlinky.tabris.tabrisStrings.auto
 import typingsSlinky.tabris.tabrisStrings.cellHeight
 import typingsSlinky.tabris.tabrisStrings.cellType
@@ -196,7 +196,7 @@ class CollectionView[CellWidgetType /* <: Widget */] () extends Composite[CellWi
     * @param options An additional object to control the animation. Set to `{animate: false}` to scroll without an animation. The `animate` property defaults to `true` when no options object is given.
     */
   def reveal(index: Double): Unit = js.native
-  def reveal(index: Double, options: AnonAnimate): Unit = js.native
+  def reveal(index: Double, options: Animate): Unit = js.native
   /**
     * A callback used to update a given cell widget to display the item with the given index. This callback
     * will be called by the framework.

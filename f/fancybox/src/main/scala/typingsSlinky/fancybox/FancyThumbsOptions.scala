@@ -51,7 +51,7 @@ object FancyThumbsOptions {
         ret
     }
     @scala.inline
-    def withAxis(value: x | y): Self = {
+    def withAxis(value: typingsSlinky.fancybox.fancyboxStrings.x | y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
         ret

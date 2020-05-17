@@ -3,7 +3,7 @@ package typingsSlinky.baseui.components
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonCloseSource
+import typingsSlinky.baseui.anon.CloseSource
 import typingsSlinky.baseui.baseuiStrings.alertdialog
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -35,7 +35,7 @@ object Modal {
     @scala.inline
     def mountNode(value: HTMLElement): this.type = set("mountNode", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClose(value: /* args */ AnonCloseSource => _): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* args */ CloseSource => _): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: ModalOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline

@@ -42,7 +42,9 @@ object WithBindKeyboardProps {
         ret
     }
     @scala.inline
-    def withAxis(value: x | `x-reverse` | y | `y-reverse`): Self = {
+    def withAxis(
+      value: typingsSlinky.reactSwipeableViewsUtils.reactSwipeableViewsUtilsStrings.x | `x-reverse` | y | `y-reverse`
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
         ret

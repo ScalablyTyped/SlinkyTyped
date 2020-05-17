@@ -1,13 +1,13 @@
 package typingsSlinky.sortablejs.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
+import typingsSlinky.std.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MoveEvent extends Event_ {
+trait MoveEvent extends Event {
   var dragged: HTMLElement = js.native
   var draggedRect: DOMRect = js.native
   var from: HTMLElement = js.native

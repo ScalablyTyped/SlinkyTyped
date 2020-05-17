@@ -1,0 +1,65 @@
+package typingsSlinky.awsSdkClientCodecommitNode.listPullRequestsExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesAuthorDoesNotExistExceptionMod.AuthorDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidAuthorArnExceptionMod.InvalidAuthorArnException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidContinuationTokenExceptionMod.InvalidContinuationTokenException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidMaxResultsExceptionMod.InvalidMaxResultsException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPullRequestStatusExceptionMod.InvalidPullRequestStatusException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPullRequestStatusExceptionMod.InvalidPullRequestStatusException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidAuthorArnExceptionMod.InvalidAuthorArnException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesAuthorDoesNotExistExceptionMod.AuthorDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidMaxResultsExceptionMod.InvalidMaxResultsException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidContinuationTokenExceptionMod.InvalidContinuationTokenException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+*/
+trait ListPullRequestsExceptionsUnion extends js.Object
+
+object ListPullRequestsExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: AuthorDoesNotExistException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionIntegrityChecksFailedException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyAccessDeniedException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyDisabledException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyNotFoundException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyUnavailableException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidAuthorArnException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidContinuationTokenException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidMaxResultsException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidPullRequestStatusException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidRepositoryNameException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryDoesNotExistException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameRequiredException): ListPullRequestsExceptionsUnion = value.asInstanceOf[ListPullRequestsExceptionsUnion]
+}
+

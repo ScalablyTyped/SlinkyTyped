@@ -1,9 +1,9 @@
 package typingsSlinky.sax.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.sax.AnonBody
-import typingsSlinky.sax.AnonName
-import typingsSlinky.sax.AnonPrefix
+import typingsSlinky.sax.anon.Body
+import typingsSlinky.sax.anon.Name
+import typingsSlinky.sax.anon.Prefix
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +28,10 @@ class SAXParser () extends js.Object {
   // Methods
   def end(): Unit = js.native
   def flush(): Unit = js.native
-  def onattribute(attr: AnonName): Unit = js.native
+  def onattribute(attr: Name): Unit = js.native
   def oncdata(cdata: String): Unit = js.native
   def onclosecdata(): Unit = js.native
-  def onclosenamespace(ns: AnonPrefix): Unit = js.native
+  def onclosenamespace(ns: Prefix): Unit = js.native
   def onclosetag(tagName: String): Unit = js.native
   def oncomment(comment: String): Unit = js.native
   def ondoctype(doctype: String): Unit = js.native
@@ -39,10 +39,10 @@ class SAXParser () extends js.Object {
   // Events
   def onerror(e: js.Error): Unit = js.native
   def onopencdata(): Unit = js.native
-  def onopennamespace(ns: AnonPrefix): Unit = js.native
+  def onopennamespace(ns: Prefix): Unit = js.native
   def onopentag(tag: QualifiedTag): Unit = js.native
   def onopentag(tag: Tag): Unit = js.native
-  def onprocessinginstruction(node: AnonBody): Unit = js.native
+  def onprocessinginstruction(node: Body): Unit = js.native
   def onready(): Unit = js.native
   def onscript(script: String): Unit = js.native
   def ontext(t: String): Unit = js.native

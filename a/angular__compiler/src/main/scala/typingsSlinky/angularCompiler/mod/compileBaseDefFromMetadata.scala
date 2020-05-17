@@ -1,6 +1,5 @@
 package typingsSlinky.angularCompiler.mod
 
-import typingsSlinky.angularCompiler.AnonExpressionType
 import typingsSlinky.angularCompiler.bindingParserMod.BindingParser
 import typingsSlinky.angularCompiler.viewCompilerMod.R3BaseRefMetaData
 import scala.scalajs.js
@@ -14,6 +13,6 @@ object compileBaseDefFromMetadata extends js.Object {
     meta: R3BaseRefMetaData,
     constantPool: typingsSlinky.angularCompiler.constantPoolMod.ConstantPool,
     bindingParser: BindingParser
-  ): AnonExpressionType = js.native
+  ): typingsSlinky.angularCompiler.anon.ExpressionType = js.native
 }
 

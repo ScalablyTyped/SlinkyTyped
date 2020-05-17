@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.babylonjs.PartialuseInstancesboolea
+import typingsSlinky.babylonjs.anon.PartialuseInstancesboolea
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.artyomJs
 
+import typingsSlinky.artyomJs.anon.FatalityPromiseCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,7 @@ trait ArtyomProperties extends js.Object {
   var continuous: js.UndefOr[Boolean] = js.native
   var debug: js.UndefOr[Boolean] = js.native
   var executionKeyword: js.UndefOr[String] = js.native
-  var helpers: js.UndefOr[AnonFatalityPromiseCallback] = js.native
+  var helpers: js.UndefOr[FatalityPromiseCallback] = js.native
   var lang: String = js.native
   var listen: Boolean = js.native
   var mode: js.UndefOr[String] = js.native
@@ -84,7 +85,7 @@ object ArtyomProperties {
         ret
     }
     @scala.inline
-    def withHelpers(value: AnonFatalityPromiseCallback): Self = {
+    def withHelpers(value: FatalityPromiseCallback): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("helpers")(value.asInstanceOf[js.Any])
         ret

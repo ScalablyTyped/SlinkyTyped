@@ -4,22 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.ForInStatementSyntax")
 @js.native
-class ForInStatementSyntax protected ()
-  extends SyntaxNode
-     with IIterationStatementSyntax {
-  def this(
-    forKeyword: ISyntaxToken,
-    openParenToken: ISyntaxToken,
-    variableDeclaration: VariableDeclarationSyntax,
-    left: IExpressionSyntax,
-    inKeyword: ISyntaxToken,
-    expression: IExpressionSyntax,
-    closeParenToken: ISyntaxToken,
-    statement: IStatementSyntax,
-    parsedInStrictMode: Boolean
-  ) = this()
+trait ForInStatementSyntax
+  extends IIterationStatementSyntax
+     with SyntaxNode {
   var closeParenToken: ISyntaxToken = js.native
   var expression: IExpressionSyntax = js.native
   var forKeyword: ISyntaxToken = js.native
@@ -48,20 +36,5 @@ class ForInStatementSyntax protected ()
   def withOpenParenToken(openParenToken: ISyntaxToken): ForInStatementSyntax = js.native
   def withStatement(statement: IStatementSyntax): ForInStatementSyntax = js.native
   def withVariableDeclaration(variableDeclaration: VariableDeclarationSyntax): ForInStatementSyntax = js.native
-}
-
-/* static members */
-@JSGlobal("TypeScript.ForInStatementSyntax")
-@js.native
-object ForInStatementSyntax extends js.Object {
-  def create(
-    forKeyword: ISyntaxToken,
-    openParenToken: ISyntaxToken,
-    inKeyword: ISyntaxToken,
-    expression: IExpressionSyntax,
-    closeParenToken: ISyntaxToken,
-    statement: IStatementSyntax
-  ): ForInStatementSyntax = js.native
-  def create1(expression: IExpressionSyntax, statement: IStatementSyntax): ForInStatementSyntax = js.native
 }
 

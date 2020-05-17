@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object PlaceSearch {
-  type Poi = typingsSlinky.amapJsApiPlaceSearch.AMap.PlaceSearch.PoiBase | typingsSlinky.amapJsApiPlaceSearch.AMap.PlaceSearch.PoiExt
-  type PoiExt = typingsSlinky.amapJsApiPlaceSearch.AnonAdcode with typingsSlinky.amapJsApiPlaceSearch.AMap.PlaceSearch.PoiBase with (typingsSlinky.amapJsApiPlaceSearch.AnonIndoordata | typingsSlinky.amapJsApiPlaceSearch.AnonIndoormap) with (typingsSlinky.amapJsApiPlaceSearch.AnonCinema | typingsSlinky.amapJsApiPlaceSearch.AnonDeeptype | typingsSlinky.amapJsApiPlaceSearch.AnonScenic | typingsSlinky.amapJsApiPlaceSearch.AnonHotel)
+  type PoiExt = typingsSlinky.amapJsApiPlaceSearch.anon.Adcode with typingsSlinky.amapJsApiPlaceSearch.AMap.PlaceSearch.PoiBase with (typingsSlinky.amapJsApiPlaceSearch.anon.Indoordata | typingsSlinky.amapJsApiPlaceSearch.anon.Indoormap) with (typingsSlinky.amapJsApiPlaceSearch.anon.Cinema | typingsSlinky.amapJsApiPlaceSearch.anon.Deeptype | typingsSlinky.amapJsApiPlaceSearch.anon.Scenic | typingsSlinky.amapJsApiPlaceSearch.anon.Hotel)
   type SelectChangeEvent[N /* <: java.lang.String */, E] = typingsSlinky.amapJsApi.AMap.Event_[
     N, 
-    typingsSlinky.amapJsApiPlaceSearch.AMap.PlaceSearch.SelectChangeEventData with typingsSlinky.amapJsApiPlaceSearch.AnonEvent[E]
+    typingsSlinky.amapJsApiPlaceSearch.AMap.PlaceSearch.SelectChangeEventData with typingsSlinky.amapJsApiPlaceSearch.anon.Event[E]
   ]
 }

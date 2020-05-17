@@ -5,7 +5,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.baseui.AnonCloseSource
+import typingsSlinky.baseui.anon.CloseSource
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.bottom
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -27,7 +27,7 @@ trait DrawerProps extends js.Object {
   var isOpen: js.UndefOr[Boolean] = js.native
   var mountNode: js.UndefOr[HTMLElement] = js.native
   var onBackdropClick: js.UndefOr[js.Function1[/* event */ SyntheticMouseEvent[HTMLElement], _]] = js.native
-  var onClose: js.UndefOr[js.Function1[/* args */ AnonCloseSource, _]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* args */ CloseSource, _]] = js.native
   var onEscapeKeyDown: js.UndefOr[js.Function1[/* event */ SyntheticKeyboardEvent[HTMLElement], _]] = js.native
   var overrides: js.UndefOr[DrawerOverrides] = js.native
   var renderAll: js.UndefOr[Boolean] = js.native
@@ -150,7 +150,7 @@ object DrawerProps {
         ret
     }
     @scala.inline
-    def withOnClose(value: /* args */ AnonCloseSource => _): Self = {
+    def withOnClose(value: /* args */ CloseSource => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
         ret

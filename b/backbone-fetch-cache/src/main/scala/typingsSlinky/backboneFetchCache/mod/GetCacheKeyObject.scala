@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GetCacheKeyObject extends _GetCacheKeyOptions {
+trait GetCacheKeyObject extends GetCacheKeyOptions {
   var getCacheKey: js.UndefOr[js.Function1[/* opts */ js.UndefOr[GetCacheOptions], String]] = js.native
   var url: js.UndefOr[js.Function0[String]] = js.native
 }

@@ -1,8 +1,8 @@
 package typingsSlinky.overlayscrollbars.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.overlayscrollbars.AnonXNumber
-import typingsSlinky.std.Event_
+import typingsSlinky.overlayscrollbars.anon.XNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,11 +16,11 @@ trait Compatibility extends js.Object {
   def mBtn(event: MouseEvent): Double = js.native
   def mO(): js.Any = js.native
   def now(): Double = js.native
-  def page(event: MouseEvent): AnonXNumber = js.native
-  def prvD(event: Event_): Unit = js.native
+  def page(event: MouseEvent): XNumber = js.native
+  def prvD(event: Event): Unit = js.native
   def rAF(): js.Function1[/* callback */ js.Function1[/* repeated */ js.Any, _], Double] = js.native
   def rO(): js.Any = js.native
-  def stpP(event: Event_): Unit = js.native
+  def stpP(event: Event): Unit = js.native
   def `type`(obj: js.Any): String = js.native
   def wH(): Double = js.native
   def wW(): Double = js.native
@@ -36,11 +36,11 @@ object Compatibility {
     mBtn: MouseEvent => Double,
     mO: () => js.Any,
     now: () => Double,
-    page: MouseEvent => AnonXNumber,
-    prvD: Event_ => Unit,
+    page: MouseEvent => XNumber,
+    prvD: Event => Unit,
     rAF: () => js.Function1[/* callback */ js.Function1[/* repeated */ js.Any, _], Double],
     rO: () => js.Any,
-    stpP: Event_ => Unit,
+    stpP: Event => Unit,
     `type`: js.Any => String,
     wH: () => Double,
     wW: () => Double
@@ -98,13 +98,13 @@ object Compatibility {
         ret
     }
     @scala.inline
-    def withPage(value: MouseEvent => AnonXNumber): Self = {
+    def withPage(value: MouseEvent => XNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPrvD(value: Event_ => Unit): Self = {
+    def withPrvD(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("prvD")(js.Any.fromFunction1(value))
         ret
@@ -122,7 +122,7 @@ object Compatibility {
         ret
     }
     @scala.inline
-    def withStpP(value: Event_ => Unit): Self = {
+    def withStpP(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stpP")(js.Any.fromFunction1(value))
         ret

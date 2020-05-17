@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.mod.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.AnonCA_
+import typingsSlinky.jsrsasign.anon.CA_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class BasicConstraints ()
   extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509.BasicConstraints {
-  def this(params: AnonCA_) = this()
+  def this(params: CA_) = this()
 }
 

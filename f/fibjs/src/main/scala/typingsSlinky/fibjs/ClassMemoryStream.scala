@@ -4,15 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_MemoryStream")
 @js.native
-/**
-	 * 
-	 * @brief MemoryStream 构造函数
-	 * 
-	 * 
-	 */
-class ClassMemoryStream () extends ClassSeekableStream {
+trait ClassMemoryStream extends ClassSeekableStream {
   /**
   	 * 
   	 * @brief 清空内存文件数据，复位指针

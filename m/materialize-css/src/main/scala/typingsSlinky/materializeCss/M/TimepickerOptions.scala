@@ -1,7 +1,7 @@
 package typingsSlinky.materializeCss.M
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.PartialInternationalizati
+import typingsSlinky.materializeCss.anon.PartialInternationalizati
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

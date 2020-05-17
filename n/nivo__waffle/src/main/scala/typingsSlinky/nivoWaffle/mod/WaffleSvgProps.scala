@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.nivoColors.mod.InheritedColorProp
-import typingsSlinky.nivoCore.AnonDictkey
-import typingsSlinky.nivoCore.AnonId
+import typingsSlinky.nivoCore.anon.Dictkey
+import typingsSlinky.nivoCore.anon.Id
 import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.Colors
 import typingsSlinky.nivoCore.mod.GetColor
@@ -24,11 +24,11 @@ trait WaffleSvgProps extends js.Object {
   var colors: js.UndefOr[Colors] = js.native
   var columns: Double = js.native
   var data: js.Array[js.Object] = js.native
-  var defs: js.UndefOr[js.Array[AnonDictkey]] = js.native
+  var defs: js.UndefOr[js.Array[Dictkey]] = js.native
   var emptyColor: js.UndefOr[String] = js.native
   var emptyOpacity: js.UndefOr[Double] = js.native
   var enableLabels: js.UndefOr[Boolean] = js.native
-  var fill: js.UndefOr[js.Array[AnonId[WaffleDatum]]] = js.native
+  var fill: js.UndefOr[js.Array[Id[WaffleDatum]]] = js.native
   var fillDirection: js.UndefOr[WaffleFillDirection] = js.native
   var isInteractive: js.UndefOr[Boolean] = js.native
   var margin: js.UndefOr[Box] = js.native
@@ -154,7 +154,7 @@ object WaffleSvgProps {
         ret
     }
     @scala.inline
-    def withDefs(value: js.Array[AnonDictkey]): Self = {
+    def withDefs(value: js.Array[Dictkey]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defs")(value.asInstanceOf[js.Any])
         ret
@@ -202,7 +202,7 @@ object WaffleSvgProps {
         ret
     }
     @scala.inline
-    def withFill(value: js.Array[AnonId[WaffleDatum]]): Self = {
+    def withFill(value: js.Array[Id[WaffleDatum]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
         ret

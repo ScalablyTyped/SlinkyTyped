@@ -2,7 +2,6 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonGrid
 import typingsSlinky.baseui.layoutGridMod.ALIGNMENT
 import typingsSlinky.baseui.layoutGridMod.BEHAVIOR
 import typingsSlinky.baseui.layoutGridMod.GridProps
@@ -39,7 +38,7 @@ object Grid {
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any
     ): this.type = set("gridUnit", value.asInstanceOf[js.Any])
     @scala.inline
-    def overrides(value: AnonGrid): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: typingsSlinky.baseui.anon.Grid): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

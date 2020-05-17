@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.all
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.top
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.visible
@@ -134,8 +133,4 @@ trait IdentifyParameters
     */
   var width: Double = js.native
 }
-
-@JSGlobal("__esri.IdentifyParameters")
-@js.native
-object IdentifyParameters extends TopLevel[IdentifyParametersConstructor]
 

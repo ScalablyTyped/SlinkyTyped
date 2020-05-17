@@ -6,12 +6,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides response data for a request to acquire a downloadable content (DLC) package license. */
-@JSGlobal("Windows.Services.Store.StoreAcquireLicenseResult")
 @js.native
-abstract class StoreAcquireLicenseResult () extends js.Object {
+trait StoreAcquireLicenseResult extends js.Object {
   /** Gets the error code for the request, if the operation encountered an error. */
   var extendedError: WinRTError = js.native
   /** Gets an object that represents the downloadable content (DLC) package license. */
   var storePackageLicense: StorePackageLicense = js.native
+}
+
+object StoreAcquireLicenseResult {
+  @scala.inline
+  def apply(extendedError: WinRTError, storePackageLicense: StorePackageLicense): StoreAcquireLicenseResult = {
+    val __obj = js.Dynamic.literal(extendedError = extendedError.asInstanceOf[js.Any], storePackageLicense = storePackageLicense.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StoreAcquireLicenseResult]
+  }
+  @scala.inline
+  implicit class StoreAcquireLicenseResultOps[Self <: StoreAcquireLicenseResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExtendedError(value: WinRTError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStorePackageLicense(value: StorePackageLicense): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storePackageLicense")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

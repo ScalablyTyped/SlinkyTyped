@@ -1,11 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonItemIndex
+import typingsSlinky.devextreme.anon.ItemIndex
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +38,7 @@ trait dxAccordionOptions extends CollectionWidgetOptions[dxAccordion] {
   /** Specifies whether the widget can expand several items or only a single item at once. */
   var multiple: js.UndefOr[Boolean] = js.native
   /** A function that is executed when an accordion item's title is clicked or tapped. */
-  var onItemTitleClick: js.UndefOr[(js.Function1[/* e */ AnonItemIndex, _]) | String] = js.native
+  var onItemTitleClick: js.UndefOr[(js.Function1[/* e */ ItemIndex, _]) | String] = js.native
   /** Specifies whether to repaint only those elements whose data changed. */
   var repaintChangesOnly: js.UndefOr[Boolean] = js.native
 }
@@ -161,13 +161,13 @@ object dxAccordionOptions {
         ret
     }
     @scala.inline
-    def withOnItemTitleClickFunction1(value: /* e */ AnonItemIndex => _): Self = {
+    def withOnItemTitleClickFunction1(value: /* e */ ItemIndex => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemTitleClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnItemTitleClick(value: (js.Function1[/* e */ AnonItemIndex, _]) | String): Self = {
+    def withOnItemTitleClick(value: (js.Function1[/* e */ ItemIndex, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemTitleClick")(value.asInstanceOf[js.Any])
         ret

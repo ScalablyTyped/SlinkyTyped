@@ -1,6 +1,5 @@
 package typingsSlinky.mathjax.MathJax
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +35,62 @@ trait Message extends js.Object {
   def filterText(text: String, n: Double): String = js.native
 }
 
-@JSGlobal("MathJax.Message")
-@js.native
-object Message extends TopLevel[Message]
+object Message {
+  @scala.inline
+  def apply(
+    Clear: (Double, Double) => Unit,
+    File: String => Double,
+    Log: () => String,
+    Remove: () => Unit,
+    Set: (String, Double, Double) => Double,
+    filterText: (String, Double) => String
+  ): Message = {
+    val __obj = js.Dynamic.literal(Clear = js.Any.fromFunction2(Clear), File = js.Any.fromFunction1(File), Log = js.Any.fromFunction0(Log), Remove = js.Any.fromFunction0(Remove), Set = js.Any.fromFunction3(Set), filterText = js.Any.fromFunction2(filterText))
+    __obj.asInstanceOf[Message]
+  }
+  @scala.inline
+  implicit class MessageOps[Self <: Message] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClear(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Clear")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFile(value: String => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("File")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLog(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Log")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Remove")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: (String, Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Set")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withFilterText(value: (String, Double) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterText")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
+}
 

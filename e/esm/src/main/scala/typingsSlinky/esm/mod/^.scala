@@ -1,6 +1,6 @@
 package typingsSlinky.esm.mod
 
-import typingsSlinky.esm.PartialOptions
+import typingsSlinky.esm.anon.PartialOptions
 import typingsSlinky.node.NodeModule
 import typingsSlinky.node.NodeRequire
 import scala.scalajs.js

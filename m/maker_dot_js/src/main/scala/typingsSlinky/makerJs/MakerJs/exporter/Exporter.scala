@@ -2,7 +2,6 @@ package typingsSlinky.makerJs.MakerJs.exporter
 
 import typingsSlinky.makerJs.MakerJs.IModel
 import typingsSlinky.makerJs.MakerJs.IPath
-import typingsSlinky.makerJs.MakerJs.IPathOriginFunctionMap
 import typingsSlinky.makerJs.MakerJs.IPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,35 +11,8 @@ import scala.scalajs.js.annotation._
   * Class to traverse an item 's models or paths and ultimately render each path.
   * @private
   */
-@JSGlobal("MakerJs.exporter.Exporter")
 @js.native
-class Exporter protected () extends js.Object {
-  /**
-    * @param map Object containing properties: property name is the type of path, e.g. "line", "circle"; property value
-    * is a function to render a path. Function parameters are path and point.
-    * @param fixPoint Optional function to modify a point prior to export. Function parameter is a point; function must return a point.
-    * @param fixPath Optional function to modify a path prior to output. Function parameters are path and offset point; function must return a path.
-    */
-  def this(map: IPathOriginFunctionMap) = this()
-  def this(map: IPathOriginFunctionMap, fixPoint: js.Function1[/* pointToFix */ IPoint, IPoint]) = this()
-  def this(
-    map: IPathOriginFunctionMap,
-    fixPoint: js.Function1[/* pointToFix */ IPoint, IPoint],
-    fixPath: js.Function2[/* pathToFix */ IPath, /* origin */ IPoint, IPath]
-  ) = this()
-  def this(
-    map: IPathOriginFunctionMap,
-    fixPoint: js.Function1[/* pointToFix */ IPoint, IPoint],
-    fixPath: js.Function2[/* pathToFix */ IPath, /* origin */ IPoint, IPath],
-    beginModel: js.Function2[/* id */ String, /* modelContext */ IModel, Unit]
-  ) = this()
-  def this(
-    map: IPathOriginFunctionMap,
-    fixPoint: js.Function1[/* pointToFix */ IPoint, IPoint],
-    fixPath: js.Function2[/* pathToFix */ IPath, /* origin */ IPoint, IPath],
-    beginModel: js.Function2[/* id */ String, /* modelContext */ IModel, Unit],
-    endModel: js.Function1[/* modelContext */ IModel, Unit]
-  ) = this()
+trait Exporter extends js.Object {
   var beginModel: js.Any = js.native
   var endModel: js.Any = js.native
   var fixPath: js.Any = js.native
@@ -67,5 +39,78 @@ class Exporter protected () extends js.Object {
     * @param offset The offset position of the path.
     */
   def exportPath(id: String, pathToExport: IPath, offset: IPoint, layer: String): Unit = js.native
+}
+
+object Exporter {
+  @scala.inline
+  def apply(
+    beginModel: js.Any,
+    endModel: js.Any,
+    exportItem: (String, js.Any, IPoint) => Unit,
+    exportModel: (String, IModel, IPoint) => Unit,
+    exportPath: (String, IPath, IPoint, String) => Unit,
+    fixPath: js.Any,
+    fixPoint: js.Any,
+    map: js.Any
+  ): Exporter = {
+    val __obj = js.Dynamic.literal(beginModel = beginModel.asInstanceOf[js.Any], endModel = endModel.asInstanceOf[js.Any], exportItem = js.Any.fromFunction3(exportItem), exportModel = js.Any.fromFunction3(exportModel), exportPath = js.Any.fromFunction4(exportPath), fixPath = fixPath.asInstanceOf[js.Any], fixPoint = fixPoint.asInstanceOf[js.Any], map = map.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Exporter]
+  }
+  @scala.inline
+  implicit class ExporterOps[Self <: Exporter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeginModel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beginModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndModel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportItem(value: (String, js.Any, IPoint) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportItem")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withExportModel(value: (String, IModel, IPoint) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportModel")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withExportPath(value: (String, IPath, IPoint, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportPath")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withFixPath(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFixPoint(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMap(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

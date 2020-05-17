@@ -5,9 +5,9 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNavigationStack.AnonHorizontal
-import typingsSlinky.reactNavigationStack.AnonTintColor
-import typingsSlinky.reactNavigationStack.TextPropschildrenstring
+import typingsSlinky.reactNavigationStack.anon.Horizontal
+import typingsSlinky.reactNavigationStack.anon.TextPropschildrenstring
+import typingsSlinky.reactNavigationStack.anon.TintColor
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.inverted
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.normal
 import scala.scalajs.js
@@ -18,11 +18,11 @@ import scala.scalajs.js.annotation._
 trait NavigationStackOptions extends js.Object {
   var disableKeyboardHandling: js.UndefOr[Boolean] = js.native
   var gestureDirection: js.UndefOr[inverted | normal] = js.native
-  var gestureResponseDistance: js.UndefOr[AnonHorizontal] = js.native
+  var gestureResponseDistance: js.UndefOr[Horizontal] = js.native
   var gesturesEnabled: js.UndefOr[Boolean] = js.native
   var header: js.UndefOr[(js.Function1[/* props */ HeaderProps, TagMod[Any]]) | Null] = js.native
   var headerBackAllowFontScaling: js.UndefOr[Boolean] = js.native
-  var headerBackImage: js.UndefOr[js.Function1[/* props */ AnonTintColor, TagMod[Any]]] = js.native
+  var headerBackImage: js.UndefOr[js.Function1[/* props */ TintColor, TagMod[Any]]] = js.native
   var headerBackTitle: js.UndefOr[String | Null] = js.native
   var headerBackTitleStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
   var headerBackground: js.UndefOr[js.Function0[TagMod[Any]] | TagMod[Any]] = js.native
@@ -83,7 +83,7 @@ object NavigationStackOptions {
         ret
     }
     @scala.inline
-    def withGestureResponseDistance(value: AnonHorizontal): Self = {
+    def withGestureResponseDistance(value: Horizontal): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gestureResponseDistance")(value.asInstanceOf[js.Any])
         ret
@@ -137,7 +137,7 @@ object NavigationStackOptions {
         ret
     }
     @scala.inline
-    def withHeaderBackImage(value: /* props */ AnonTintColor => TagMod[Any]): Self = {
+    def withHeaderBackImage(value: /* props */ TintColor => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerBackImage")(js.Any.fromFunction1(value))
         ret

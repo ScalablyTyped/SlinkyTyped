@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SanitizeElementHookEvent extends _HookEvent {
+trait SanitizeElementHookEvent extends HookEvent {
   var allowedTags: StringDictionary[Boolean] = js.native
   var tagName: String = js.native
 }

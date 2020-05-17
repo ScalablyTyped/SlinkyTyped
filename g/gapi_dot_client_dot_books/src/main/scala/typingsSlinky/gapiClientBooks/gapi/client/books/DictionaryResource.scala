@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBooks.AnonCpksver
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBooks.anon.Cpksver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DictionaryResource extends js.Object {
   /** Returns a list of offline dictionary metadata available */
-  def listOfflineMetadata(request: AnonCpksver): Request_[Metadata] = js.native
+  def listOfflineMetadata(request: Cpksver): Request[Metadata] = js.native
 }
 
 object DictionaryResource {
   @scala.inline
-  def apply(listOfflineMetadata: AnonCpksver => Request_[Metadata]): DictionaryResource = {
+  def apply(listOfflineMetadata: Cpksver => Request[Metadata]): DictionaryResource = {
     val __obj = js.Dynamic.literal(listOfflineMetadata = js.Any.fromFunction1(listOfflineMetadata))
     __obj.asInstanceOf[DictionaryResource]
   }
@@ -25,7 +25,7 @@ object DictionaryResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withListOfflineMetadata(value: AnonCpksver => Request_[Metadata]): Self = {
+    def withListOfflineMetadata(value: Cpksver => Request[Metadata]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("listOfflineMetadata")(js.Any.fromFunction1(value))
         ret

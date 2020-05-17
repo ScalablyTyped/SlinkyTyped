@@ -1,7 +1,7 @@
 package typingsSlinky.stompit.connectFailoverMod
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.stompit.AnonAbort
+import typingsSlinky.stompit.anon.Abort
 import typingsSlinky.stompit.connectMod.ConnectOptions
 import typingsSlinky.stompit.stompitStrings.connect
 import typingsSlinky.stompit.stompitStrings.connecting
@@ -22,7 +22,7 @@ trait ConnectFailover extends EventEmitter {
       /* server */ Server, 
       Unit
     ]
-  ): AnonAbort = js.native
+  ): Abort = js.native
   def getReconnectDelay(reconnects: Double): Double = js.native
   @JSName("on")
   def on_connect(event: connect, listener: js.Function1[/* server */ ConnectState, Unit]): this.type = js.native

@@ -1,13 +1,13 @@
 package typingsSlinky.qiniuJs.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.qiniuJs.AnonType
+import typingsSlinky.qiniuJs.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ExtendedInfo extends /* key */ StringDictionary[AnonType | Double | String] {
+trait ExtendedInfo extends /* key */ StringDictionary[Type | Double | String] {
   var code: Double = js.native
   var error: String = js.native
 }

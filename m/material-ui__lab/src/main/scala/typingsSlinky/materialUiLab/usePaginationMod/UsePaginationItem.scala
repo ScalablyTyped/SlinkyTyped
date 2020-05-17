@@ -1,6 +1,7 @@
 package typingsSlinky.materialUiLab.usePaginationMod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import typingsSlinky.materialUiLab.materialUiLabStrings.`end-ellipsis`
 import typingsSlinky.materialUiLab.materialUiLabStrings.`start-ellipsis`
@@ -10,7 +11,6 @@ import typingsSlinky.materialUiLab.materialUiLabStrings.next
 import typingsSlinky.materialUiLab.materialUiLabStrings.page
 import typingsSlinky.materialUiLab.materialUiLabStrings.previous
 import typingsSlinky.react.mod.ReactEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ object UsePaginationItem {
   @scala.inline
   def apply(
     disabled: Boolean,
-    onClick: SyntheticEvent[Event_, Element] => Unit,
+    onClick: SyntheticEvent[Event, Element] => Unit,
     page: Double,
     selected: Boolean,
     `type`: page | first | last | next | previous | `start-ellipsis` | `end-ellipsis`
@@ -50,7 +50,7 @@ object UsePaginationItem {
         ret
     }
     @scala.inline
-    def withOnClick(value: SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnClick(value: SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

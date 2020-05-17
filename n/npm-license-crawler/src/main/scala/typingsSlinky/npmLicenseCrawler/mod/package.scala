@@ -10,5 +10,5 @@ package object mod {
     /* licenses */ typingsSlinky.npmLicenseCrawler.mod.Licenses, 
     scala.Unit
   ]
-  type Licenses = org.scalablytyped.runtime.StringDictionary[typingsSlinky.npmLicenseCrawler.AnonLicenseUrl]
+  type Licenses = org.scalablytyped.runtime.StringDictionary[typingsSlinky.npmLicenseCrawler.anon.LicenseUrl]
 }

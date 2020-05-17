@@ -1,0 +1,37 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.awt
+
+import typingsSlinky.activexLibreoffice.com_.sun.star.lang.EventObject
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** specifies a text event. */
+@js.native
+trait TextEvent extends EventObject {
+  /** This is a dummy field only. Please ignore. */
+  var dummy1: Double = js.native
+}
+
+object TextEvent {
+  @scala.inline
+  def apply(Source: XInterface, dummy1: Double): TextEvent = {
+    val __obj = js.Dynamic.literal(Source = Source.asInstanceOf[js.Any], dummy1 = dummy1.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TextEvent]
+  }
+  @scala.inline
+  implicit class TextEventOps[Self <: TextEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDummy1(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dummy1")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

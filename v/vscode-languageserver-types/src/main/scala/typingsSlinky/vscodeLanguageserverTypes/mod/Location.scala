@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Location extends js.Object {
+trait Location
+  extends Declaration
+     with Definition {
   var range: Range = js.native
   var uri: DocumentUri = js.native
 }

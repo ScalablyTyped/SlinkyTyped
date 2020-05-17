@@ -13,3 +13,16 @@ import scala.scalajs.js.annotation._
 */
 trait BindingOrAssignmentElementTarget extends js.Object
 
+object BindingOrAssignmentElementTarget {
+  @scala.inline
+  implicit def apply(value: BindingOrAssignmentPattern): BindingOrAssignmentElementTarget = value.asInstanceOf[BindingOrAssignmentElementTarget]
+  @scala.inline
+  implicit def apply(value: ElementAccessExpression): BindingOrAssignmentElementTarget = value.asInstanceOf[BindingOrAssignmentElementTarget]
+  @scala.inline
+  implicit def apply(value: Identifier): BindingOrAssignmentElementTarget = value.asInstanceOf[BindingOrAssignmentElementTarget]
+  @scala.inline
+  implicit def apply(value: OmittedExpression): BindingOrAssignmentElementTarget = value.asInstanceOf[BindingOrAssignmentElementTarget]
+  @scala.inline
+  implicit def apply(value: PropertyAccessExpression): BindingOrAssignmentElementTarget = value.asInstanceOf[BindingOrAssignmentElementTarget]
+}
+

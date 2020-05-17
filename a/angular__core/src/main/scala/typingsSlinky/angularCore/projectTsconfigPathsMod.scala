@@ -1,5 +1,6 @@
 package typingsSlinky.angularCore
 
+import typingsSlinky.angularCore.anon.BuildPaths
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +10,6 @@ import scala.scalajs.js.annotation._
 object projectTsconfigPathsMod extends js.Object {
   def getProjectTsConfigPaths(
     tree: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Tree */ js.Any
-  ): AnonBuildPaths = js.native
+  ): BuildPaths = js.native
 }
 

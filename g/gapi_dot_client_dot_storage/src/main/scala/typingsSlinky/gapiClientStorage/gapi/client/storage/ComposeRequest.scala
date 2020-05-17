@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientStorage.gapi.client.storage
 
-import typingsSlinky.gapiClientStorage.AnonGeneration
+import typingsSlinky.gapiClientStorage.anon.Generation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait ComposeRequest extends js.Object {
   /** The kind of item this is. */
   var kind: js.UndefOr[String] = js.native
   /** The list of source objects that will be concatenated into a single object. */
-  var sourceObjects: js.UndefOr[js.Array[AnonGeneration]] = js.native
+  var sourceObjects: js.UndefOr[js.Array[Generation]] = js.native
 }
 
 object ComposeRequest {
@@ -52,7 +52,7 @@ object ComposeRequest {
         ret
     }
     @scala.inline
-    def withSourceObjects(value: js.Array[AnonGeneration]): Self = {
+    def withSourceObjects(value: js.Array[Generation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sourceObjects")(value.asInstanceOf[js.Any])
         ret

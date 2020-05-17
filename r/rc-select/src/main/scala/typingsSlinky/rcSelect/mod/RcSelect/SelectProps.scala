@@ -1,11 +1,11 @@
 package typingsSlinky.rcSelect.mod.RcSelect
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.Node
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ trait SelectProps extends js.Object {
   var onChange: js.UndefOr[js.Function2[/* value */ String, /* label */ String, Unit]] = js.native
   var onDeselect: js.UndefOr[js.Function2[/* value */ String, ReactComponentClass[OptionProps], Unit]] = js.native
   var onFocus: js.UndefOr[js.Function0[Unit]] = js.native
-  var onInputKeyDown: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var onInputKeyDown: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   var onPopupScroll: js.UndefOr[js.Function0[Unit]] = js.native
   var onSearch: js.UndefOr[js.Function0[Unit]] = js.native
   var onSelect: js.UndefOr[js.Function2[/* value */ String, ReactComponentClass[OptionProps], Unit]] = js.native
@@ -399,7 +399,7 @@ object SelectProps {
         ret
     }
     @scala.inline
-    def withOnInputKeyDown(value: /* e */ Event_ => Unit): Self = {
+    def withOnInputKeyDown(value: /* e */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInputKeyDown")(js.Any.fromFunction1(value))
         ret

@@ -9,6 +9,6 @@ package object mod {
   type ExtendOptions[Base] = typingsSlinky.coreObject.coreObjectStrings.ExtendOptions with org.scalablytyped.runtime.TopLevel[Base] with (typingsSlinky.std.Record[java.lang.String, _])
   /** The `this` type for any methods on the options passed to `Base.extend()` */
   type ExtendThisType[Base, Ext] = typingsSlinky.std.ThisType[
-    (typingsSlinky.coreObject.utilsMod.Mix[Base, Ext]) with typingsSlinky.coreObject.AnonSuper[Base]
+    (typingsSlinky.coreObject.utilsMod.Mix[Base, Ext]) with typingsSlinky.coreObject.anon.Super[Base]
   ]
 }

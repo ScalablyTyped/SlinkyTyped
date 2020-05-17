@@ -1,0 +1,134 @@
+package typingsSlinky.gapiClientDfareporting.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Active extends js.Object {
+  /** Whether the schedule is active or not. Must be set to either true or false. */
+  var active: js.UndefOr[Boolean] = js.native
+  /** Defines every how many days, weeks or months the report should be run. Needs to be set when "repeats" is either "DAILY", "WEEKLY" or "MONTHLY". */
+  var every: js.UndefOr[Double] = js.native
+  /** The expiration date when the scheduled report stops running. */
+  var expirationDate: js.UndefOr[String] = js.native
+  /**
+    * The interval for which the report is repeated. Note:
+    * - "DAILY" also requires field "every" to be set.
+    * - "WEEKLY" also requires fields "every" and "repeatsOnWeekDays" to be set.
+    * - "MONTHLY" also requires fields "every" and "runsOnDayOfMonth" to be set.
+    */
+  var repeats: js.UndefOr[String] = js.native
+  /** List of week days "WEEKLY" on which scheduled reports should run. */
+  var repeatsOnWeekDays: js.UndefOr[js.Array[String]] = js.native
+  /**
+    * Enum to define for "MONTHLY" scheduled reports whether reports should be repeated on the same day of the month as "startDate" or the same day of the
+    * week of the month.
+    * Example: If 'startDate' is Monday, April 2nd 2012 (2012-04-02), "DAY_OF_MONTH" would run subsequent reports on the 2nd of every Month, and
+    * "WEEK_OF_MONTH" would run subsequent reports on the first Monday of the month.
+    */
+  var runsOnDayOfMonth: js.UndefOr[String] = js.native
+  /** Start date of date range for which scheduled reports should be run. */
+  var startDate: js.UndefOr[String] = js.native
+}
+
+object Active {
+  @scala.inline
+  def apply(): Active = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[Active]
+  }
+  @scala.inline
+  implicit class ActiveOps[Self <: Active] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvery(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("every")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("every")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpirationDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpirationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepeats(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepeats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepeatsOnWeekDays(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatsOnWeekDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepeatsOnWeekDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatsOnWeekDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunsOnDayOfMonth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runsOnDayOfMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRunsOnDayOfMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runsOnDayOfMonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

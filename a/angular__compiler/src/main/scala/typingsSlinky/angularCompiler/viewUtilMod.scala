@@ -1,6 +1,7 @@
 package typingsSlinky.angularCompiler
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.angularCompiler.anon.Key
 import typingsSlinky.angularCompiler.apiMod.R3QueryMetadata
 import typingsSlinky.angularCompiler.astMod.Interpolation
 import typingsSlinky.angularCompiler.constantPoolMod.ConstantPool
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation._
 object viewUtilMod extends js.Object {
   @js.native
   class DefinitionMap () extends js.Object {
-    var values: js.Array[AnonKey] = js.native
+    var values: js.Array[Key] = js.native
     def set(key: String): Unit = js.native
     def set(key: String, value: Expression): Unit = js.native
     def toLiteralMap(): LiteralMapExpr = js.native

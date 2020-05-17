@@ -19,48 +19,8 @@ class Document protected () extends MaybeDocument {
     key: DocumentKey,
     version: SnapshotVersion,
     options: DocumentOptions,
-    objectValue: js.UndefOr[scala.Nothing],
-    proto: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.firestoreV1ApiClientInterfaces.Document */ js.Any
-  ) = this()
-  def this(
-    key: DocumentKey,
-    version: SnapshotVersion,
-    options: DocumentOptions,
     objectValue: ObjectValue,
     proto: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.firestoreV1ApiClientInterfaces.Document */ js.Any
-  ) = this()
-  def this(
-    key: DocumentKey,
-    version: SnapshotVersion,
-    options: DocumentOptions,
-    objectValue: js.UndefOr[scala.Nothing],
-    proto: js.UndefOr[scala.Nothing],
-    converter: js.Function1[
-        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.firestoreV1ApiClientInterfaces.Value */ /* value */ js.Any, 
-        FieldValue
-      ]
-  ) = this()
-  def this(
-    key: DocumentKey,
-    version: SnapshotVersion,
-    options: DocumentOptions,
-    objectValue: js.UndefOr[scala.Nothing],
-    proto: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.firestoreV1ApiClientInterfaces.Document */ js.Any,
-    converter: js.Function1[
-        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.firestoreV1ApiClientInterfaces.Value */ /* value */ js.Any, 
-        FieldValue
-      ]
-  ) = this()
-  def this(
-    key: DocumentKey,
-    version: SnapshotVersion,
-    options: DocumentOptions,
-    objectValue: ObjectValue,
-    proto: js.UndefOr[scala.Nothing],
-    converter: js.Function1[
-        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.firestoreV1ApiClientInterfaces.Value */ /* value */ js.Any, 
-        FieldValue
-      ]
   ) = this()
   def this(
     key: DocumentKey,

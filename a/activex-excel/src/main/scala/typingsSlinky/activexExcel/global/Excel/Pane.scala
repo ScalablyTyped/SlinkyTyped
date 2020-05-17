@@ -1,0 +1,11 @@
+package typingsSlinky.activexExcel.global.Excel
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("Excel.Pane")
+@js.native
+class Pane protected ()
+  extends typingsSlinky.activexExcel.Excel.Pane
+

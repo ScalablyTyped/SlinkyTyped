@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +9,4 @@ import scala.scalajs.js.annotation._
 trait AudioDestinationNode extends AudioNode {
   val maxChannelCount: Double = js.native
 }
-
-@JSGlobal("AudioDestinationNode")
-@js.native
-object AudioDestinationNode
-  extends Instantiable0[org.scalajs.dom.raw.AudioDestinationNode]
 

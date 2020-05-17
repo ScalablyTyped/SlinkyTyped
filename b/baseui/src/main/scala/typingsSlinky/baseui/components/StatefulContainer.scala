@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonItem
+import typingsSlinky.baseui.anon.Item
 import typingsSlinky.baseui.baseuiStrings.click
 import typingsSlinky.baseui.baseuiStrings.focus
 import typingsSlinky.baseui.baseuiStrings.mouseEnter
@@ -42,7 +42,7 @@ object StatefulContainer {
     @scala.inline
     def onActiveDescendantChange(value: /* id */ js.UndefOr[String] => Unit): this.type = set("onActiveDescendantChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onItemSelect(value: /* args */ AnonItem => js.Any): this.type = set("onItemSelect", js.Any.fromFunction1(value))
+    def onItemSelect(value: /* args */ Item => js.Any): this.type = set("onItemSelect", js.Any.fromFunction1(value))
     @scala.inline
     def removeMenuFromNesting(value: /* ref */ Ref[HTMLElement] => Unit): this.type = set("removeMenuFromNesting", js.Any.fromFunction1(value))
     @scala.inline

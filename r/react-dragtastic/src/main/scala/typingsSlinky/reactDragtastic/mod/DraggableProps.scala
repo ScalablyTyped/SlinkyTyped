@@ -1,7 +1,7 @@
 package typingsSlinky.reactDragtastic.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reactDragtastic.StateisActivebooleanevent
+import typingsSlinky.reactDragtastic.anon.StateisActivebooleanevent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

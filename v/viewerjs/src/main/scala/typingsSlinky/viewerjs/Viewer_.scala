@@ -1,16 +1,11 @@
 package typingsSlinky.viewerjs
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.viewerjs.Viewer.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Viewer")
 @js.native
-class Viewer_ protected () extends js.Object {
-  def this(element: Element) = this()
-  def this(element: Element, options: Options) = this()
+trait Viewer_ extends js.Object {
   def destroy(): Viewer = js.native
   def exit(): Viewer = js.native
   def full(): Viewer = js.native

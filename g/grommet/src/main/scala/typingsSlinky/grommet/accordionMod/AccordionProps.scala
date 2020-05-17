@@ -1,6 +1,6 @@
 package typingsSlinky.grommet.accordionMod
 
-import typingsSlinky.grommet.AnonTabContents
+import typingsSlinky.grommet.anon.TabContents
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
 import typingsSlinky.grommet.utilsMod.AnimateType
@@ -18,7 +18,7 @@ trait AccordionProps extends js.Object {
   var animate: js.UndefOr[AnimateType] = js.native
   var gridArea: js.UndefOr[GridAreaType] = js.native
   var margin: js.UndefOr[MarginType] = js.native
-  var messages: js.UndefOr[AnonTabContents] = js.native
+  var messages: js.UndefOr[TabContents] = js.native
   var multiple: js.UndefOr[Boolean] = js.native
   var onActive: js.UndefOr[js.Function1[/* activeIndexes */ js.Array[Double], Unit]] = js.native
 }
@@ -108,7 +108,7 @@ object AccordionProps {
         ret
     }
     @scala.inline
-    def withMessages(value: AnonTabContents): Self = {
+    def withMessages(value: TabContents): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
         ret

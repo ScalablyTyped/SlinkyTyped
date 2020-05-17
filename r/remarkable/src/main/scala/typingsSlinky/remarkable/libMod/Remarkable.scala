@@ -1,17 +1,17 @@
 package typingsSlinky.remarkable.libMod
 
-import typingsSlinky.remarkable.Anon0
-import typingsSlinky.remarkable.Anon1
-import typingsSlinky.remarkable.AnonRuler
+import typingsSlinky.remarkable.anon.Ruler
+import typingsSlinky.remarkable.anon.`0`
+import typingsSlinky.remarkable.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Remarkable extends js.Object {
-  var block: Anon0 = js.native
-  var core: Anon1 = js.native
-  var `inline`: AnonRuler = js.native
+  var block: `0` = js.native
+  var core: `1` = js.native
+  var `inline`: Ruler = js.native
   var renderer: typingsSlinky.remarkable.rendererMod.^ = js.native
   /**
     * Batch loader for components rules states, and options.

@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.cardFooterMod
 
-import typingsSlinky.antDesignReactNative.PickCardStylefooterConten
+import typingsSlinky.antDesignReactNative.anon.PickCardStylefooterConten
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle

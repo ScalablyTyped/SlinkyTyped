@@ -1,6 +1,6 @@
 package typingsSlinky.vsoNodeApi.galleryInterfacesMod
 
-import typingsSlinky.vsoNodeApi.AnonKeyValue
+import typingsSlinky.vsoNodeApi.anon.KeyValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,8 +16,8 @@ trait ExtensionDraft extends js.Object {
   var payload: ExtensionPayload = js.native
   var product: String = js.native
   var publisherName: String = js.native
-  var validationErrors: js.Array[AnonKeyValue] = js.native
-  var validationWarnings: js.Array[AnonKeyValue] = js.native
+  var validationErrors: js.Array[KeyValue] = js.native
+  var validationWarnings: js.Array[KeyValue] = js.native
 }
 
 object ExtensionDraft {
@@ -32,8 +32,8 @@ object ExtensionDraft {
     payload: ExtensionPayload,
     product: String,
     publisherName: String,
-    validationErrors: js.Array[AnonKeyValue],
-    validationWarnings: js.Array[AnonKeyValue]
+    validationErrors: js.Array[KeyValue],
+    validationWarnings: js.Array[KeyValue]
   ): ExtensionDraft = {
     val __obj = js.Dynamic.literal(assets = assets.asInstanceOf[js.Any], createdDate = createdDate.asInstanceOf[js.Any], draftState = draftState.asInstanceOf[js.Any], extensionName = extensionName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], lastUpdated = lastUpdated.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any], product = product.asInstanceOf[js.Any], publisherName = publisherName.asInstanceOf[js.Any], validationErrors = validationErrors.asInstanceOf[js.Any], validationWarnings = validationWarnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtensionDraft]
@@ -99,13 +99,13 @@ object ExtensionDraft {
         ret
     }
     @scala.inline
-    def withValidationErrors(value: js.Array[AnonKeyValue]): Self = {
+    def withValidationErrors(value: js.Array[KeyValue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationErrors")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withValidationWarnings(value: js.Array[AnonKeyValue]): Self = {
+    def withValidationWarnings(value: js.Array[KeyValue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationWarnings")(value.asInstanceOf[js.Any])
         ret

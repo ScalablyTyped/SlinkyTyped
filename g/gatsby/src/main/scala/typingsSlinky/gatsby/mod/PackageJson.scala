@@ -1,6 +1,6 @@
 package typingsSlinky.gatsby.mod
 
-import typingsSlinky.gatsby.AnonEmail
+import typingsSlinky.gatsby.anon.Email
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait PackageJson extends js.Object {
-  var author: js.UndefOr[String | AnonEmail] = js.native
+  var author: js.UndefOr[String | Email] = js.native
   var bundledDependencies: js.UndefOr[js.Array[String]] = js.native
   var dependencies: js.UndefOr[Record[String, String]] = js.native
   var description: js.UndefOr[String] = js.native
@@ -35,7 +35,7 @@ object PackageJson {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuthor(value: String | AnonEmail): Self = {
+    def withAuthor(value: String | Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
         ret

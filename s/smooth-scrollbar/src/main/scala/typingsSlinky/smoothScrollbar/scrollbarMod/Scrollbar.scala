@@ -1,12 +1,12 @@
 package typingsSlinky.smoothScrollbar.scrollbarMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.smoothScrollbar.PartialScrollIntoViewOpti
-import typingsSlinky.smoothScrollbar.PartialScrollToOptions
-import typingsSlinky.smoothScrollbar.PartialSetPositionOptions
+import typingsSlinky.smoothScrollbar.anon.PartialScrollIntoViewOpti
+import typingsSlinky.smoothScrollbar.anon.PartialScrollToOptions
+import typingsSlinky.smoothScrollbar.anon.PartialSetPositionOptions
 import typingsSlinky.smoothScrollbar.data2dMod.Data2d
 import typingsSlinky.smoothScrollbar.trackMod.TrackController
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,8 +26,8 @@ trait Scrollbar extends js.Object {
   val track: TrackController = js.native
   def addListener(fn: ScrollListener): Unit = js.native
   def addMomentum(x: Double, y: Double): Unit = js.native
-  def addTransformableMomentum(x: Double, y: Double, fromEvent: Event_): Unit = js.native
-  def addTransformableMomentum(x: Double, y: Double, fromEvent: Event_, callback: AddTransformableMomentumCallback): Unit = js.native
+  def addTransformableMomentum(x: Double, y: Double, fromEvent: Event): Unit = js.native
+  def addTransformableMomentum(x: Double, y: Double, fromEvent: Event, callback: AddTransformableMomentumCallback): Unit = js.native
   def destroy(): Unit = js.native
   def getSize(): ScrollbarSize = js.native
   def isVisible(elem: HTMLElement): Boolean = js.native

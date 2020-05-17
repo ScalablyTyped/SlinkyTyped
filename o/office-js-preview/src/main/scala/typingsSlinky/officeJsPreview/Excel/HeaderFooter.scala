@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.HeaderFooterData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.HeaderFooterLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.HeaderFooterUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +13,8 @@ import scala.scalajs.js.annotation._
 /**
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.HeaderFooter")
 @js.native
-class HeaderFooter () extends ClientObject {
+trait HeaderFooter extends ClientObject {
   /**
     *
     * Gets or sets the center footer of the worksheet.
@@ -74,7 +73,7 @@ class HeaderFooter () extends ClientObject {
     */
   def load(): HeaderFooter = js.native
   def load(options: HeaderFooterLoadOptions): HeaderFooter = js.native
-  def load(propertyNamesAndPaths: AnonExpand): HeaderFooter = js.native
+  def load(propertyNamesAndPaths: Expand): HeaderFooter = js.native
   def load(propertyNames: String): HeaderFooter = js.native
   def load(propertyNames: js.Array[String]): HeaderFooter = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

@@ -1,8 +1,8 @@
 package typingsSlinky.reactOverlays.dropdownMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait DropdownProps extends js.Object {
     * A callback fired when the Dropdown wishes to change visibility. Called with the requested
     * `show` value, the DOM event, and the source that fired it: `'click'`,`'keydown'`,`'rootClose'`, or `'select'`.
     */
-  var onToggle: js.UndefOr[js.Function2[/* isOpen */ Boolean, /* event */ SyntheticEvent[Event_, _], Unit]] = js.native
+  var onToggle: js.UndefOr[js.Function2[/* isOpen */ Boolean, /* event */ SyntheticEvent[Event, _], Unit]] = js.native
   /**
     * Whether or not the Dropdown is visible
     */
@@ -95,7 +95,7 @@ object DropdownProps {
         ret
     }
     @scala.inline
-    def withOnToggle(value: (/* isOpen */ Boolean, /* event */ SyntheticEvent[Event_, _]) => Unit): Self = {
+    def withOnToggle(value: (/* isOpen */ Boolean, /* event */ SyntheticEvent[Event, _]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onToggle")(js.Any.fromFunction2(value))
         ret

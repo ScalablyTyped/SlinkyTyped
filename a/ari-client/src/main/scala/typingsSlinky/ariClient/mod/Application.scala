@@ -1,7 +1,7 @@
 package typingsSlinky.ariClient.mod
 
-import typingsSlinky.ariClient.Anon0
-import typingsSlinky.ariClient.AnonFilterIndexableObject
+import typingsSlinky.ariClient.anon.FilterIndexableObject
+import typingsSlinky.ariClient.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +18,9 @@ trait Application extends Resource {
   var name: String = js.native
   def filter(): js.Promise[Application] = js.native
   def filter(callback: js.Function2[/* err */ js.Error, /* application */ this.type, Unit]): Unit = js.native
-  def filter(params: AnonFilterIndexableObject): js.Promise[Application] = js.native
+  def filter(params: FilterIndexableObject): js.Promise[Application] = js.native
   def filter(
-    params: AnonFilterIndexableObject,
+    params: FilterIndexableObject,
     callback: js.Function2[/* err */ js.Error, /* application */ this.type, Unit]
   ): Unit = js.native
   def get(): js.Promise[Application] = js.native
@@ -28,9 +28,9 @@ trait Application extends Resource {
   def list(): js.Promise[js.Array[Application]] = js.native
   /* Methods */
   def list(callback: js.Function2[/* err */ js.Error, /* applications */ js.Array[this.type], Unit]): Unit = js.native
-  def subscribe(params: Anon0): js.Promise[Application] = js.native
-  def subscribe(params: Anon0, callback: js.Function2[/* err */ js.Error, /* application */ this.type, Unit]): Unit = js.native
-  def unsubscribe(params: Anon0): js.Promise[Application] = js.native
-  def unsubscribe(params: Anon0, callback: js.Function2[/* err */ js.Error, /* application */ this.type, Unit]): Unit = js.native
+  def subscribe(params: `0`): js.Promise[Application] = js.native
+  def subscribe(params: `0`, callback: js.Function2[/* err */ js.Error, /* application */ this.type, Unit]): Unit = js.native
+  def unsubscribe(params: `0`): js.Promise[Application] = js.native
+  def unsubscribe(params: `0`, callback: js.Function2[/* err */ js.Error, /* application */ this.type, Unit]): Unit = js.native
 }
 

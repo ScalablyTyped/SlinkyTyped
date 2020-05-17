@@ -12,14 +12,8 @@ trait UpdateAuthProviderRequest extends js.Object
 
 object UpdateAuthProviderRequest {
   @scala.inline
-  def SAMLUpdateAuthProviderRequest(): UpdateAuthProviderRequest = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[UpdateAuthProviderRequest]
-  }
+  implicit def apply(value: OIDCUpdateAuthProviderRequest): UpdateAuthProviderRequest = value.asInstanceOf[UpdateAuthProviderRequest]
   @scala.inline
-  def OIDCUpdateAuthProviderRequest(): UpdateAuthProviderRequest = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[UpdateAuthProviderRequest]
-  }
+  implicit def apply(value: SAMLUpdateAuthProviderRequest): UpdateAuthProviderRequest = value.asInstanceOf[UpdateAuthProviderRequest]
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.reactPlacesAutocomplete.mod
 
 import typingsSlinky.googlemaps.google.maps.places.PredictionSubstring
 import typingsSlinky.googlemaps.google.maps.places.PredictionTerm
-import typingsSlinky.reactPlacesAutocomplete.AnonMainText
+import typingsSlinky.reactPlacesAutocomplete.anon.MainText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait Suggestion extends js.Object {
   var active: Boolean = js.native
   var description: String = js.native
-  var formattedSuggestion: AnonMainText = js.native
+  var formattedSuggestion: MainText = js.native
   var id: String = js.native
   var index: Double = js.native
   var matchedSubstrings: js.Array[PredictionSubstring] = js.native
@@ -25,7 +25,7 @@ object Suggestion {
   def apply(
     active: Boolean,
     description: String,
-    formattedSuggestion: AnonMainText,
+    formattedSuggestion: MainText,
     id: String,
     index: Double,
     matchedSubstrings: js.Array[PredictionSubstring],
@@ -55,7 +55,7 @@ object Suggestion {
         ret
     }
     @scala.inline
-    def withFormattedSuggestion(value: AnonMainText): Self = {
+    def withFormattedSuggestion(value: MainText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formattedSuggestion")(value.asInstanceOf[js.Any])
         ret

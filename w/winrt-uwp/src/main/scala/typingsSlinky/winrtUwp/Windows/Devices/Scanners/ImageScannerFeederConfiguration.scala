@@ -9,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the Feeder scan source of the scanner. */
-@JSGlobal("Windows.Devices.Scanners.ImageScannerFeederConfiguration")
 @js.native
-abstract class ImageScannerFeederConfiguration () extends js.Object {
+trait ImageScannerFeederConfiguration extends js.Object {
   /** Gets the actual horizontal and vertical scan resolution for the scanner's Feeder, in DPI. */
   var actualResolution: ImageScannerResolution = js.native
   /** Gets or sets the automatic crop mode. */
@@ -103,5 +102,281 @@ abstract class ImageScannerFeederConfiguration () extends js.Object {
     * @return Indicates the scanner can scan with pageSize and pageOrientation values.
     */
   def isPageSizeSupported(pageSize: PrintMediaSize, pageOrientation: PrintOrientation): Boolean = js.native
+}
+
+object ImageScannerFeederConfiguration {
+  @scala.inline
+  def apply(
+    actualResolution: ImageScannerResolution,
+    autoCroppingMode: ImageScannerAutoCroppingMode,
+    autoDetectPageSize: Boolean,
+    brightness: Double,
+    brightnessStep: Double,
+    canAutoDetectPageSize: Boolean,
+    canScanAhead: Boolean,
+    canScanDuplex: Boolean,
+    colorMode: ImageScannerColorMode,
+    contrast: Double,
+    contrastStep: Double,
+    defaultBrightness: Double,
+    defaultColorMode: ImageScannerColorMode,
+    defaultContrast: Double,
+    defaultFormat: ImageScannerFormat,
+    desiredResolution: ImageScannerResolution,
+    duplex: Boolean,
+    format: ImageScannerFormat,
+    isAutoCroppingModeSupported: ImageScannerAutoCroppingMode => Boolean,
+    isColorModeSupported: ImageScannerColorMode => Boolean,
+    isFormatSupported: ImageScannerFormat => Boolean,
+    isPageSizeSupported: (PrintMediaSize, PrintOrientation) => Boolean,
+    maxBrightness: Double,
+    maxContrast: Double,
+    maxNumberOfPages: Double,
+    maxResolution: ImageScannerResolution,
+    maxScanArea: Size,
+    minBrightness: Double,
+    minContrast: Double,
+    minResolution: ImageScannerResolution,
+    minScanArea: Size,
+    opticalResolution: ImageScannerResolution,
+    pageOrientation: PrintOrientation,
+    pageSize: PrintMediaSize,
+    pageSizeDimensions: Size,
+    scanAhead: Boolean,
+    selectedScanRegion: Rect
+  ): ImageScannerFeederConfiguration = {
+    val __obj = js.Dynamic.literal(actualResolution = actualResolution.asInstanceOf[js.Any], autoCroppingMode = autoCroppingMode.asInstanceOf[js.Any], autoDetectPageSize = autoDetectPageSize.asInstanceOf[js.Any], brightness = brightness.asInstanceOf[js.Any], brightnessStep = brightnessStep.asInstanceOf[js.Any], canAutoDetectPageSize = canAutoDetectPageSize.asInstanceOf[js.Any], canScanAhead = canScanAhead.asInstanceOf[js.Any], canScanDuplex = canScanDuplex.asInstanceOf[js.Any], colorMode = colorMode.asInstanceOf[js.Any], contrast = contrast.asInstanceOf[js.Any], contrastStep = contrastStep.asInstanceOf[js.Any], defaultBrightness = defaultBrightness.asInstanceOf[js.Any], defaultColorMode = defaultColorMode.asInstanceOf[js.Any], defaultContrast = defaultContrast.asInstanceOf[js.Any], defaultFormat = defaultFormat.asInstanceOf[js.Any], desiredResolution = desiredResolution.asInstanceOf[js.Any], duplex = duplex.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], isAutoCroppingModeSupported = js.Any.fromFunction1(isAutoCroppingModeSupported), isColorModeSupported = js.Any.fromFunction1(isColorModeSupported), isFormatSupported = js.Any.fromFunction1(isFormatSupported), isPageSizeSupported = js.Any.fromFunction2(isPageSizeSupported), maxBrightness = maxBrightness.asInstanceOf[js.Any], maxContrast = maxContrast.asInstanceOf[js.Any], maxNumberOfPages = maxNumberOfPages.asInstanceOf[js.Any], maxResolution = maxResolution.asInstanceOf[js.Any], maxScanArea = maxScanArea.asInstanceOf[js.Any], minBrightness = minBrightness.asInstanceOf[js.Any], minContrast = minContrast.asInstanceOf[js.Any], minResolution = minResolution.asInstanceOf[js.Any], minScanArea = minScanArea.asInstanceOf[js.Any], opticalResolution = opticalResolution.asInstanceOf[js.Any], pageOrientation = pageOrientation.asInstanceOf[js.Any], pageSize = pageSize.asInstanceOf[js.Any], pageSizeDimensions = pageSizeDimensions.asInstanceOf[js.Any], scanAhead = scanAhead.asInstanceOf[js.Any], selectedScanRegion = selectedScanRegion.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ImageScannerFeederConfiguration]
+  }
+  @scala.inline
+  implicit class ImageScannerFeederConfigurationOps[Self <: ImageScannerFeederConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActualResolution(value: ImageScannerResolution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actualResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoCroppingMode(value: ImageScannerAutoCroppingMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCroppingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoDetectPageSize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDetectPageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBrightness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brightness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBrightnessStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brightnessStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCanAutoDetectPageSize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canAutoDetectPageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCanScanAhead(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canScanAhead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCanScanDuplex(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canScanDuplex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColorMode(value: ImageScannerColorMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContrast(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contrast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContrastStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contrastStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultBrightness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultBrightness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultColorMode(value: ImageScannerColorMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColorMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultContrast(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultContrast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultFormat(value: ImageScannerFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDesiredResolution(value: ImageScannerResolution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDuplex(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duplex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: ImageScannerFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAutoCroppingModeSupported(value: ImageScannerAutoCroppingMode => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAutoCroppingModeSupported")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsColorModeSupported(value: ImageScannerColorMode => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isColorModeSupported")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsFormatSupported(value: ImageScannerFormat => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFormatSupported")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsPageSizeSupported(value: (PrintMediaSize, PrintOrientation) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPageSizeSupported")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withMaxBrightness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBrightness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxContrast(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxContrast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxNumberOfPages(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNumberOfPages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxResolution(value: ImageScannerResolution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxScanArea(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScanArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinBrightness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minBrightness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinContrast(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minContrast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinResolution(value: ImageScannerResolution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinScanArea(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minScanArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpticalResolution(value: ImageScannerResolution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opticalResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageOrientation(value: PrintOrientation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageOrientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: PrintMediaSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageSizeDimensions(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSizeDimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScanAhead(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scanAhead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelectedScanRegion(value: Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedScanRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -194,7 +194,7 @@ object IgTreeGridTooltips {
         ret
     }
     @scala.inline
-    def withTooltipHidden(value: (/* event */ Event_, /* ui */ TooltipHiddenEventUIParam) => Unit): Self = {
+    def withTooltipHidden(value: (/* event */ Event, /* ui */ TooltipHiddenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipHidden")(js.Any.fromFunction2(value))
         ret
@@ -206,7 +206,7 @@ object IgTreeGridTooltips {
         ret
     }
     @scala.inline
-    def withTooltipHiding(value: (/* event */ Event_, /* ui */ TooltipHidingEventUIParam) => Unit): Self = {
+    def withTooltipHiding(value: (/* event */ Event, /* ui */ TooltipHidingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipHiding")(js.Any.fromFunction2(value))
         ret
@@ -218,7 +218,7 @@ object IgTreeGridTooltips {
         ret
     }
     @scala.inline
-    def withTooltipShowing(value: (/* event */ Event_, /* ui */ TooltipShowingEventUIParam) => Unit): Self = {
+    def withTooltipShowing(value: (/* event */ Event, /* ui */ TooltipShowingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipShowing")(js.Any.fromFunction2(value))
         ret
@@ -230,7 +230,7 @@ object IgTreeGridTooltips {
         ret
     }
     @scala.inline
-    def withTooltipShown(value: (/* event */ Event_, /* ui */ TooltipShownEventUIParam) => Unit): Self = {
+    def withTooltipShown(value: (/* event */ Event, /* ui */ TooltipShownEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipShown")(js.Any.fromFunction2(value))
         ret

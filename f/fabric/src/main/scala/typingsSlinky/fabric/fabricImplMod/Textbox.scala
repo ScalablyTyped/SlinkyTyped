@@ -1,7 +1,6 @@
 package typingsSlinky.fabric.fabricImplMod
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.fabric.AnonLine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +28,7 @@ class Textbox protected () extends IText {
   	 * @private
   	 * @type {Array} Line style { line: number, offset: number }
   	 */
-  var _styleMap: js.UndefOr[NumberDictionary[AnonLine]] = js.native
+  var _styleMap: js.UndefOr[NumberDictionary[typingsSlinky.fabric.anon.Line]] = js.native
   /**
   	 * Use this regular expression to split strings in breakable lines
   	 * @private

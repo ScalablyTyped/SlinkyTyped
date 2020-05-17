@@ -11,7 +11,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Texture
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Tint
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
-import typingsSlinky.phaser.Phaser.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,9 +32,8 @@ import scala.scalajs.js.annotation._
   * Although this object has lots of properties such as Alpha, Blend Mode and Tint, none of
   * them are used during rendering unless you take advantage of them in your own render code.
   */
-@JSGlobal("Phaser.GameObjects.Extern")
 @js.native
-class Extern protected ()
+trait Extern
   extends GameObject
      with Alpha
      with BlendMode
@@ -47,11 +45,5 @@ class Extern protected ()
      with Texture
      with Tint
      with Transform
-     with Visible {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs. A Game Object can only belong to one Scene at a time.
-    */
-  def this(scene: Scene) = this()
-}
+     with Visible
 

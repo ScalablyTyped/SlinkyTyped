@@ -1,5 +1,6 @@
 package typingsSlinky.decompressResponse
 
+import typingsSlinky.decompressResponse.anon.Call
 import typingsSlinky.node.httpMod.IncomingMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +13,7 @@ object mod extends js.Object {
   // declare function decompressResponse(response: IncomingMessage): IncomingMessage;
   // export = decompressResponse;
   @JSName("default")
-  var default_Original: AnonCall = js.native
+  var default_Original: Call = js.native
   /**
   	Decompress a HTTP response if needed.
   	@param response - The HTTP incoming stream with compressed data.

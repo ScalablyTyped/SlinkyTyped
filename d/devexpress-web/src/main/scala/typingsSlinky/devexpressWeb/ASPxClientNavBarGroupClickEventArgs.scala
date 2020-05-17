@@ -7,17 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for events which concern clicking on the control's group headers.
   */
-@JSGlobal("ASPxClientNavBarGroupClickEventArgs")
 @js.native
-class ASPxClientNavBarGroupClickEventArgs protected () extends ASPxClientNavBarGroupCancelEventArgs {
-  /**
-    * Initializes a new object of the ASPxClientNavBarGroupClickEventArgs type with the specified settings.
-    * @param processOnServer true to process the event on the server side; false to completely handle it on the client side.
-    * @param group An ASPxClientNavBarGroup object that represents a group related to the event.
-    * @param htmlElement An HTML object that contains the processed navbar group.
-    * @param htmlEvent A DHTML event object that relates to the processed event.
-    */
-  def this(processOnServer: Boolean, group: ASPxClientNavBarGroup, htmlElement: js.Any, htmlEvent: js.Any) = this()
+trait ASPxClientNavBarGroupClickEventArgs extends ASPxClientNavBarGroupCancelEventArgs {
   /**
     * Gets the HTML object that contains the processed group.
     */
@@ -26,5 +17,39 @@ class ASPxClientNavBarGroupClickEventArgs protected () extends ASPxClientNavBarG
     * Gets a DHTML event object that relates to the processed event.
     */
   var htmlEvent: js.Any = js.native
+}
+
+object ASPxClientNavBarGroupClickEventArgs {
+  @scala.inline
+  def apply(
+    cancel: Boolean,
+    group: ASPxClientNavBarGroup,
+    htmlElement: js.Any,
+    htmlEvent: js.Any,
+    processOnServer: Boolean
+  ): ASPxClientNavBarGroupClickEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], group = group.asInstanceOf[js.Any], htmlElement = htmlElement.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientNavBarGroupClickEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientNavBarGroupClickEventArgsOps[Self <: ASPxClientNavBarGroupClickEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHtmlElement(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlEvent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

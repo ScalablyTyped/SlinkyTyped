@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.localizationEditorMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.PartialLocalizationEditor
-import typingsSlinky.fundamentalReact.WeakValidationMapLocaliza
+import typingsSlinky.fundamentalReact.anon.PartialLocalizationEditor
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapLocaliza
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.LocalizationEditor
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

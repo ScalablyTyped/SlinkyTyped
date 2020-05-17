@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait AudioWorkletNodeEventMap extends js.Object {
-  var processorerror: Event_ = js.native
+  var processorerror: org.scalajs.dom.raw.Event = js.native
 }
 
 object AudioWorkletNodeEventMap {
   @scala.inline
-  def apply(processorerror: Event_): AudioWorkletNodeEventMap = {
+  def apply(processorerror: org.scalajs.dom.raw.Event): AudioWorkletNodeEventMap = {
     val __obj = js.Dynamic.literal(processorerror = processorerror.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioWorkletNodeEventMap]
   }
@@ -22,7 +22,7 @@ object AudioWorkletNodeEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withProcessorerror(value: Event_): Self = {
+    def withProcessorerror(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("processorerror")(value.asInstanceOf[js.Any])
         ret

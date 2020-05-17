@@ -6,13 +6,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait IDBRequestEventMap extends js.Object {
-  var error: Event_ = js.native
-  var success: Event_ = js.native
+  var error: org.scalajs.dom.raw.Event = js.native
+  var success: org.scalajs.dom.raw.Event = js.native
 }
 
 object IDBRequestEventMap {
   @scala.inline
-  def apply(error: Event_, success: Event_): IDBRequestEventMap = {
+  def apply(error: org.scalajs.dom.raw.Event, success: org.scalajs.dom.raw.Event): IDBRequestEventMap = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDBRequestEventMap]
   }
@@ -23,13 +23,13 @@ object IDBRequestEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: Event_): Self = {
+    def withError(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSuccess(value: Event_): Self = {
+    def withSuccess(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
         ret

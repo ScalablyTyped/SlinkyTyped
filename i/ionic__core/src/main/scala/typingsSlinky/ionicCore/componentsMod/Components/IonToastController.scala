@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore.componentsMod.Components
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonToastElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonToastElement
 import typingsSlinky.ionicCore.toastInterfaceMod.ToastOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,6 @@ trait IonToastController extends js.Object {
     */
   def dismiss(): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-  def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
   /**

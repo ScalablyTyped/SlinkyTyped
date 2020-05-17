@@ -1,6 +1,6 @@
 package typingsSlinky.primereact.stepsMod
 
-import typingsSlinky.primereact.AnonIndexItem
+import typingsSlinky.primereact.anon.IndexItem
 import typingsSlinky.primereact.menuItemMod.MenuItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait StepsProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   var id: js.UndefOr[String] = js.native
   var model: js.Array[MenuItem] = js.native
-  var onSelect: js.UndefOr[js.Function1[/* e */ AnonIndexItem, Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* e */ IndexItem, Unit]] = js.native
   var readOnly: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[js.Object] = js.native
 }
@@ -72,7 +72,7 @@ object StepsProps {
         ret
     }
     @scala.inline
-    def withOnSelect(value: /* e */ AnonIndexItem => Unit): Self = {
+    def withOnSelect(value: /* e */ IndexItem => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret

@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the ASPxSplitter object.
   */
-@JSGlobal("ASPxClientSplitter")
 @js.native
-class ASPxClientSplitter () extends ASPxClientControl {
+trait ASPxClientSplitter extends ASPxClientControl {
   /**
     * Fires after a pane has been collapsed.
     */
@@ -67,14 +66,126 @@ class ASPxClientSplitter () extends ASPxClientControl {
   def SetAllowResize(allowResize: Boolean): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("ASPxClientSplitter")
-@js.native
-object ASPxClientSplitter extends js.Object {
-  /**
-    * Converts the specified object to the ASPxClientSplitter type. The converted client object specified by the obj parameter.
-    * @param obj The client object to be type cast.
-    */
-  def Cast(obj: js.Any): ASPxClientSplitter = js.native
+object ASPxClientSplitter {
+  @scala.inline
+  def apply(
+    AdjustControl: () => Unit,
+    GetClientVisible: () => Boolean,
+    GetHeight: () => Double,
+    GetLayoutData: () => String,
+    GetMainElement: () => js.Any,
+    GetPane: Double => ASPxClientSplitterPane,
+    GetPaneByName: String => ASPxClientSplitterPane,
+    GetPaneCount: () => Double,
+    GetParentControl: () => js.Any,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    PaneCollapsed: ASPxClientEvent[ASPxClientSplitterPaneEventHandler[ASPxClientSplitter]],
+    PaneCollapsing: ASPxClientEvent[ASPxClientSplitterPaneCancelEventHandler[ASPxClientSplitter]],
+    PaneContentUrlLoaded: ASPxClientEvent[ASPxClientSplitterPaneEventHandler[ASPxClientSplitter]],
+    PaneExpanded: ASPxClientEvent[ASPxClientSplitterPaneEventHandler[ASPxClientSplitter]],
+    PaneExpanding: ASPxClientEvent[ASPxClientSplitterPaneCancelEventHandler[ASPxClientSplitter]],
+    PaneResizeCompleted: ASPxClientEvent[ASPxClientSplitterPaneEventHandler[ASPxClientSplitter]],
+    PaneResized: ASPxClientEvent[ASPxClientSplitterPaneEventHandler[ASPxClientSplitter]],
+    PaneResizing: ASPxClientEvent[ASPxClientSplitterPaneCancelEventHandler[ASPxClientSplitter]],
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetAllowResize: Boolean => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetHeight: Double => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    name: String
+  ): ASPxClientSplitter = {
+    val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetHeight = js.Any.fromFunction0(GetHeight), GetLayoutData = js.Any.fromFunction0(GetLayoutData), GetMainElement = js.Any.fromFunction0(GetMainElement), GetPane = js.Any.fromFunction1(GetPane), GetPaneByName = js.Any.fromFunction1(GetPaneByName), GetPaneCount = js.Any.fromFunction0(GetPaneCount), GetParentControl = js.Any.fromFunction0(GetParentControl), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], PaneCollapsed = PaneCollapsed.asInstanceOf[js.Any], PaneCollapsing = PaneCollapsing.asInstanceOf[js.Any], PaneContentUrlLoaded = PaneContentUrlLoaded.asInstanceOf[js.Any], PaneExpanded = PaneExpanded.asInstanceOf[js.Any], PaneExpanding = PaneExpanding.asInstanceOf[js.Any], PaneResizeCompleted = PaneResizeCompleted.asInstanceOf[js.Any], PaneResized = PaneResized.asInstanceOf[js.Any], PaneResizing = PaneResizing.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetAllowResize = js.Any.fromFunction1(SetAllowResize), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetHeight = js.Any.fromFunction1(SetHeight), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientSplitter]
+  }
+  @scala.inline
+  implicit class ASPxClientSplitterOps[Self <: ASPxClientSplitter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetLayoutData(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetLayoutData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPane(value: Double => ASPxClientSplitterPane): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetPane")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetPaneByName(value: String => ASPxClientSplitterPane): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetPaneByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetPaneCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetPaneCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPaneCollapsed(value: ASPxClientEvent[ASPxClientSplitterPaneEventHandler[ASPxClientSplitter]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaneCollapsed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaneCollapsing(value: ASPxClientEvent[ASPxClientSplitterPaneCancelEventHandler[ASPxClientSplitter]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaneCollapsing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaneContentUrlLoaded(value: ASPxClientEvent[ASPxClientSplitterPaneEventHandler[ASPxClientSplitter]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaneContentUrlLoaded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaneExpanded(value: ASPxClientEvent[ASPxClientSplitterPaneEventHandler[ASPxClientSplitter]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaneExpanded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaneExpanding(value: ASPxClientEvent[ASPxClientSplitterPaneCancelEventHandler[ASPxClientSplitter]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaneExpanding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaneResizeCompleted(value: ASPxClientEvent[ASPxClientSplitterPaneEventHandler[ASPxClientSplitter]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaneResizeCompleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaneResized(value: ASPxClientEvent[ASPxClientSplitterPaneEventHandler[ASPxClientSplitter]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaneResized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaneResizing(value: ASPxClientEvent[ASPxClientSplitterPaneCancelEventHandler[ASPxClientSplitter]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaneResizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetAllowResize(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetAllowResize")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.primereact.editorMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonHtmlValue
-import typingsSlinky.primereact.AnonOldRange
+import typingsSlinky.primereact.anon.HtmlValue
+import typingsSlinky.primereact.anon.OldRange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +14,8 @@ trait EditorProps extends js.Object {
   var headerTemplate: js.UndefOr[ReactElement] = js.native
   var id: js.UndefOr[String] = js.native
   var modules: js.UndefOr[js.Any] = js.native
-  var onSelectionChange: js.UndefOr[js.Function1[/* e */ AnonOldRange, Unit]] = js.native
-  var onTextChange: js.UndefOr[js.Function1[/* e */ AnonHtmlValue, Unit]] = js.native
+  var onSelectionChange: js.UndefOr[js.Function1[/* e */ OldRange, Unit]] = js.native
+  var onTextChange: js.UndefOr[js.Function1[/* e */ HtmlValue, Unit]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var readonly: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[js.Object] = js.native
@@ -96,7 +96,7 @@ object EditorProps {
         ret
     }
     @scala.inline
-    def withOnSelectionChange(value: /* e */ AnonOldRange => Unit): Self = {
+    def withOnSelectionChange(value: /* e */ OldRange => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChange")(js.Any.fromFunction1(value))
         ret
@@ -108,7 +108,7 @@ object EditorProps {
         ret
     }
     @scala.inline
-    def withOnTextChange(value: /* e */ AnonHtmlValue => Unit): Self = {
+    def withOnTextChange(value: /* e */ HtmlValue => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTextChange")(js.Any.fromFunction1(value))
         ret

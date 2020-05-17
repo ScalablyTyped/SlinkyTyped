@@ -1,5 +1,7 @@
 package typingsSlinky.esprimaWalk
 
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventListenerOptions
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
@@ -8,9 +10,7 @@ import org.scalajs.dom.raw.ParentNode
 import typingsSlinky.estree.mod.Program
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.ChildNode
-import typingsSlinky.std.Document_
 import typingsSlinky.std.EventListenerOrEventListenerObject
-import typingsSlinky.std.Event_
 import typingsSlinky.std.GetRootNodeOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -117,7 +117,7 @@ object mod extends js.Object {
     /**
       * Returns the node document. Returns null for documents.
       */
-    val ownerDocument: Document_ | Null = js.native
+    val ownerDocument: Document | Null = js.native
     var parent: js.UndefOr[Node] = js.native
     /**
       * Returns the parent element.
@@ -169,7 +169,7 @@ object mod extends js.Object {
     /**
       * Dispatches a synthetic event event to target and returns true if either event's cancelable attribute value is false or its preventDefault() method was not invoked, and false otherwise.
       */
-    def dispatchEvent(event: Event_): Boolean = js.native
+    def dispatchEvent(event: Event): Boolean = js.native
     /**
       * Returns node's root.
       */

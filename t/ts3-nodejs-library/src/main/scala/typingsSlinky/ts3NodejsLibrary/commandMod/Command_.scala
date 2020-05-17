@@ -1,7 +1,7 @@
 package typingsSlinky.ts3NodejsLibrary.commandMod
 
 import typingsSlinky.std.Record
-import typingsSlinky.ts3NodejsLibrary.PartialQueryResponseTypes
+import typingsSlinky.ts3NodejsLibrary.anon.PartialQueryResponseTypes
 import typingsSlinky.ts3NodejsLibrary.commandMod.Command.ParserCallback
 import typingsSlinky.ts3NodejsLibrary.commandMod.Command.flags
 import typingsSlinky.ts3NodejsLibrary.commandMod.Command.multiOpts

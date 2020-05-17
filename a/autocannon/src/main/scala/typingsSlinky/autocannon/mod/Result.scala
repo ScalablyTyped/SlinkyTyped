@@ -1,6 +1,6 @@
 package typingsSlinky.autocannon.mod
 
-import typingsSlinky.autocannon.Histogramsentnumber
+import typingsSlinky.autocannon.anon.Histogramsentnumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

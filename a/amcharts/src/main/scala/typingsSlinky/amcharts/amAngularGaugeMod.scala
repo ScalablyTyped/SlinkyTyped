@@ -1,5 +1,6 @@
 package typingsSlinky.amcharts
 
+import typingsSlinky.amcharts.anon.Number
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -183,7 +184,7 @@ object amAngularGaugeMod extends js.Object {
       * ]
       */
     @JSName("prefixesOfBigNumbers")
-    var prefixesOfBigNumbers_AmAngularGauge: js.Array[AnonNumber] = js.native
+    var prefixesOfBigNumbers_AmAngularGauge: js.Array[Number] = js.native
     /**
       * Prefixes which are used to make small numbers shorter: 2μ instead of 0.000002, etc.
       * Prefixes are used on value axes and in the legend.
@@ -200,7 +201,7 @@ object amAngularGaugeMod extends js.Object {
       * ]
       */
     @JSName("prefixesOfSmallNumbers")
-    var prefixesOfSmallNumbers_AmAngularGauge: js.Array[AnonNumber] = js.native
+    var prefixesOfSmallNumbers_AmAngularGauge: js.Array[Number] = js.native
     /**
       * If processTimeout is > 0, 1000 data items will be parsed at a time,
       * then the chart will make pause and continue parsing data until it finishes.

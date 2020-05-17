@@ -1,30 +1,29 @@
 package typingsSlinky.webpackServe.mod
 
-import typingsSlinky.webpackServe.AnonCompiler
-import typingsSlinky.webpackServe.AnonCompilerStats
-import typingsSlinky.webpackServe.AnonOptions
-import typingsSlinky.webpackServe.AnonStats
+import typingsSlinky.webpackServe.anon.Compiler
+import typingsSlinky.webpackServe.anon.CompilerStats
+import typingsSlinky.webpackServe.anon.Stats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait EventMap extends js.Object {
-  var `build-finished`: AnonStats = js.native
-  var `build-started`: AnonCompiler = js.native
-  var `compiler-error`: AnonCompilerStats = js.native
-  var `compiler-warning`: AnonCompilerStats = js.native
-  var listening: AnonOptions = js.native
+  var `build-finished`: Stats = js.native
+  var `build-started`: Compiler = js.native
+  var `compiler-error`: CompilerStats = js.native
+  var `compiler-warning`: CompilerStats = js.native
+  var listening: typingsSlinky.webpackServe.anon.Options = js.native
 }
 
 object EventMap {
   @scala.inline
   def apply(
-    `build-finished`: AnonStats,
-    `build-started`: AnonCompiler,
-    `compiler-error`: AnonCompilerStats,
-    `compiler-warning`: AnonCompilerStats,
-    listening: AnonOptions
+    `build-finished`: Stats,
+    `build-started`: Compiler,
+    `compiler-error`: CompilerStats,
+    `compiler-warning`: CompilerStats,
+    listening: typingsSlinky.webpackServe.anon.Options
   ): EventMap = {
     val __obj = js.Dynamic.literal(listening = listening.asInstanceOf[js.Any])
     __obj.updateDynamic("build-finished")(`build-finished`.asInstanceOf[js.Any])
@@ -40,31 +39,31 @@ object EventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def `withBuild-finished`(value: AnonStats): Self = {
+    def `withBuild-finished`(value: Stats): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("build-finished")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withBuild-started`(value: AnonCompiler): Self = {
+    def `withBuild-started`(value: Compiler): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("build-started")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withCompiler-error`(value: AnonCompilerStats): Self = {
+    def `withCompiler-error`(value: CompilerStats): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compiler-error")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withCompiler-warning`(value: AnonCompilerStats): Self = {
+    def `withCompiler-warning`(value: CompilerStats): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compiler-warning")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withListening(value: AnonOptions): Self = {
+    def withListening(value: typingsSlinky.webpackServe.anon.Options): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("listening")(value.asInstanceOf[js.Any])
         ret

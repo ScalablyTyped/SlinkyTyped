@@ -1,6 +1,6 @@
 package typingsSlinky.pendoIoBrowser.pendo
 
-import typingsSlinky.pendoIoBrowser.AnonAutoHeight
+import typingsSlinky.pendoIoBrowser.anon.AutoHeight
 import typingsSlinky.pendoIoBrowser.pendoIoBrowserStrings.button
 import typingsSlinky.pendoIoBrowser.pendoIoBrowserStrings.element
 import typingsSlinky.pendoIoBrowser.pendoIoBrowserStrings.programatic
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GuideStep extends js.Object {
   var advanceMethod: button | programatic | element = js.native
-  var attributes: AnonAutoHeight = js.native
+  var attributes: AutoHeight = js.native
   var contentType: String = js.native
   var contentUrl: js.UndefOr[String] = js.native
   var contentUrlCss: js.UndefOr[String] = js.native
@@ -30,7 +30,7 @@ object GuideStep {
   @scala.inline
   def apply(
     advanceMethod: button | programatic | element,
-    attributes: AnonAutoHeight,
+    attributes: AutoHeight,
     contentType: String,
     elementPathRule: String,
     guideId: String,
@@ -57,7 +57,7 @@ object GuideStep {
         ret
     }
     @scala.inline
-    def withAttributes(value: AnonAutoHeight): Self = {
+    def withAttributes(value: AutoHeight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
         ret

@@ -3,7 +3,7 @@ package typingsSlinky.wavesurferJs.mod
 import org.scalajs.dom.raw.AudioContext
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.ScriptProcessorNode
-import typingsSlinky.wavesurferJs.AnonInstantiable
+import typingsSlinky.wavesurferJs.anon.Instantiable
 import typingsSlinky.wavesurferJs.wavesurferJsStrings.MediaElement
 import typingsSlinky.wavesurferJs.wavesurferJsStrings.MediaElementWebAudio
 import typingsSlinky.wavesurferJs.wavesurferJsStrings.WebAudio
@@ -48,7 +48,7 @@ trait WaveSurferParams extends js.Object {
   var plugins: js.UndefOr[js.Array[PluginDefinition]] = js.native
   var progressColor: js.UndefOr[String] = js.native
   var removeMediaElementOnDestroy: js.UndefOr[Boolean] = js.native
-  var renderer: js.UndefOr[AnonInstantiable] = js.native
+  var renderer: js.UndefOr[Instantiable] = js.native
   var responsive: js.UndefOr[Boolean | Double] = js.native
   var rtl: js.UndefOr[Boolean] = js.native
   var scrollParent: js.UndefOr[Boolean] = js.native
@@ -491,7 +491,7 @@ object WaveSurferParams {
         ret
     }
     @scala.inline
-    def withRenderer(value: AnonInstantiable): Self = {
+    def withRenderer(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
         ret

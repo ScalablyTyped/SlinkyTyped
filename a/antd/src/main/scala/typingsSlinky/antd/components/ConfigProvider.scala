@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.AnonGhost
-import typingsSlinky.antd.AnonValidateMessages
+import typingsSlinky.antd.anon.Ghost
+import typingsSlinky.antd.anon.ValidateMessages
 import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.configProviderMod.ConfigProviderProps
@@ -35,13 +35,13 @@ object ConfigProvider {
     @scala.inline
     def direction(value: ltr | rtl): this.type = set("direction", value.asInstanceOf[js.Any])
     @scala.inline
-    def form(value: AnonValidateMessages): this.type = set("form", value.asInstanceOf[js.Any])
+    def form(value: ValidateMessages): this.type = set("form", value.asInstanceOf[js.Any])
     @scala.inline
     def getPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
     @scala.inline
     def locale(value: Locale): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
-    def pageHeader(value: AnonGhost): this.type = set("pageHeader", value.asInstanceOf[js.Any])
+    def pageHeader(value: Ghost): this.type = set("pageHeader", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline

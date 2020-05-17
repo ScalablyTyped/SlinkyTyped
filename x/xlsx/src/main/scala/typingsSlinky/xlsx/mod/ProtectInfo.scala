@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ProtectInfo extends _WSKeys {
+trait ProtectInfo extends WSKeys {
   /**
     * Filter
     * @default: false

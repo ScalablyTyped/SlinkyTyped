@@ -1,6 +1,6 @@
 package typingsSlinky.massive.mod
 
-import typingsSlinky.massive.PickSearchDefinitionfield
+import typingsSlinky.massive.anon.PickSearchDefinitionfield
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,18 +1,17 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http.Headers
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsHttpProductInfoHeaderValue
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsHttpProductInfoHeaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the value of the User-Agent HTTP header on an HTTP request. */
-@JSGlobal("Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection")
 @js.native
-abstract class HttpProductInfoHeaderValueCollection () extends Array[HttpProductInfoHeaderValue] {
+trait HttpProductInfoHeaderValueCollection extends Array[HttpProductInfoHeaderValue] {
   /** Gets the number of HttpProductInfoHeaderValue objects in the collection. */
   var size: Double = js.native
   /**
@@ -37,19 +36,13 @@ abstract class HttpProductInfoHeaderValueCollection () extends Array[HttpProduct
     * Retrieves the HttpProductInfoHeaderValue items that start at the specified index in the collection.
     * @param startIndex The zero-based index of the start of the HttpProductInfoHeaderValue items in the HttpProductInfoHeaderValueCollection .
     */
-  def getMany(startIndex: Double): AnonItemsHttpProductInfoHeaderValue = js.native
+  def getMany(startIndex: Double): ItemsHttpProductInfoHeaderValue = js.native
   /**
     * Returns an immutable view of the HttpProductInfoHeaderValueCollection .
     * @return The view of the HttpProductInfoHeaderValueCollection .
     */
   def getView(): IVectorView[HttpProductInfoHeaderValue] = js.native
-  def indexOf(value: HttpProductInfoHeaderValue, extra: js.Any*): AnonIndex = js.native
-  /**
-    * Retrieves the index of an HttpProductInfoHeaderValue in the collection.
-    * @param value The HttpProductInfoHeaderValue to find in the HttpProductInfoHeaderValueCollection .
-    */
-  @JSName("indexOf")
-  def indexOf_AnonIndex(value: HttpProductInfoHeaderValue): AnonIndex = js.native
+  def indexOf(value: HttpProductInfoHeaderValue, extra: js.Any*): Index = js.native
   /**
     * Determines whether an element is in the collection.
     * @param item The item to find in the collection.
@@ -57,6 +50,12 @@ abstract class HttpProductInfoHeaderValueCollection () extends Array[HttpProduct
     */
   @JSName("indexOf")
   def indexOf_Boolean(item: HttpProductInfoHeaderValue): Boolean = js.native
+  /**
+    * Retrieves the index of an HttpProductInfoHeaderValue in the collection.
+    * @param value The HttpProductInfoHeaderValue to find in the HttpProductInfoHeaderValueCollection .
+    */
+  @JSName("indexOf")
+  def indexOf_Index(value: HttpProductInfoHeaderValue): Index = js.native
   /**
     * Inserts an HttpProductInfoHeaderValue into the collection at the specified index.
     * @param index The zero-based index at which value should be inserted.

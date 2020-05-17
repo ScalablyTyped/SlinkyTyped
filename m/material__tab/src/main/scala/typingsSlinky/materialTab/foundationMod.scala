@@ -1,7 +1,7 @@
 package typingsSlinky.materialTab
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.materialTab.adapterMod.MDCTabAdapter
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ object foundationMod extends js.Object {
       * Deactivates the Tab
       */
     def deactivate(): Unit = js.native
-    def handleTransitionEnd(evt: Event_): Unit = js.native
+    def handleTransitionEnd(evt: Event): Unit = js.native
     /**
       * Returns the Tab's active state
       */

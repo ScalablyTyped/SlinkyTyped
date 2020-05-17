@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait WhereBinary extends _WhereExpression {
+trait WhereBinary extends WhereExpression {
   var col: String | SelectStatement = js.native
   var op: String = js.native
   var quantifier: String = js.native

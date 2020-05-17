@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientMirror.gapi.client.mirror
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientMirror.AnonAttachmentId
-import typingsSlinky.gapiClientMirror.AnonItemId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientMirror.anon.AttachmentId
+import typingsSlinky.gapiClientMirror.anon.ItemId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,22 +10,22 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AttachmentsResource extends js.Object {
   /** Deletes an attachment from a timeline item. */
-  def delete(request: AnonAttachmentId): Request_[Unit] = js.native
+  def delete(request: AttachmentId): Request[Unit] = js.native
   /** Retrieves an attachment on a timeline item by item ID and attachment ID. */
-  def get(request: AnonAttachmentId): Request_[Attachment] = js.native
+  def get(request: AttachmentId): Request[Attachment] = js.native
   /** Adds a new attachment to a timeline item. */
-  def insert(request: AnonItemId): Request_[Attachment] = js.native
+  def insert(request: ItemId): Request[Attachment] = js.native
   /** Returns a list of attachments for a timeline item. */
-  def list(request: AnonItemId): Request_[AttachmentsListResponse] = js.native
+  def list(request: ItemId): Request[AttachmentsListResponse] = js.native
 }
 
 object AttachmentsResource {
   @scala.inline
   def apply(
-    delete: AnonAttachmentId => Request_[Unit],
-    get: AnonAttachmentId => Request_[Attachment],
-    insert: AnonItemId => Request_[Attachment],
-    list: AnonItemId => Request_[AttachmentsListResponse]
+    delete: AttachmentId => Request[Unit],
+    get: AttachmentId => Request[Attachment],
+    insert: ItemId => Request[Attachment],
+    list: ItemId => Request[AttachmentsListResponse]
   ): AttachmentsResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[AttachmentsResource]
@@ -37,25 +37,25 @@ object AttachmentsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonAttachmentId => Request_[Unit]): Self = {
+    def withDelete(value: AttachmentId => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonAttachmentId => Request_[Attachment]): Self = {
+    def withGet(value: AttachmentId => Request[Attachment]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonItemId => Request_[Attachment]): Self = {
+    def withInsert(value: ItemId => Request[Attachment]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonItemId => Request_[AttachmentsListResponse]): Self = {
+    def withList(value: ItemId => Request[AttachmentsListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

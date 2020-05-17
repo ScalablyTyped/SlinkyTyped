@@ -14,13 +14,15 @@ trait ProjectsCreateForOrgParams extends js.Object {
     * The name of the project.
     */
   var name: String = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
 }
 
 object ProjectsCreateForOrgParams {
   @scala.inline
-  def apply(name: String, org: String): ProjectsCreateForOrgParams = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any])
+  def apply(name: String, org_ : String): ProjectsCreateForOrgParams = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsCreateForOrgParams]
   }
   @scala.inline
@@ -36,7 +38,7 @@ object ProjectsCreateForOrgParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

@@ -3,7 +3,7 @@ package typingsSlinky.primereact.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonEventValue
+import typingsSlinky.primereact.anon.EventValue
 import typingsSlinky.primereact.pickListSubListMod.PickListSubListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,7 +33,7 @@ object PickListSubList {
     @scala.inline
     def onItemClick(value: () => Unit): this.type = set("onItemClick", js.Any.fromFunction0(value))
     @scala.inline
-    def onSelectionChange(value: /* e */ AnonEventValue => Unit): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
+    def onSelectionChange(value: /* e */ EventValue => Unit): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
     @scala.inline
     def selection(value: js.Array[_]): this.type = set("selection", value.asInstanceOf[js.Any])
     @scala.inline

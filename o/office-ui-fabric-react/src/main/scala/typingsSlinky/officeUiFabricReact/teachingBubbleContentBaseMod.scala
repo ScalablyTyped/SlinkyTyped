@@ -2,6 +2,7 @@ package typingsSlinky.officeUiFabricReact
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactRef
+import typingsSlinky.officeUiFabricReact.anon.HasCondensedHeadline
 import typingsSlinky.officeUiFabricReact.teachingBubbleBaseMod.ITeachingBubbleState
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubbleProps
 import typingsSlinky.react.mod.Component
@@ -28,7 +29,7 @@ object teachingBubbleContentBaseMod extends js.Object {
   /* static members */
   @js.native
   object TeachingBubbleContentBase extends js.Object {
-    var defaultProps: AnonHasCondensedHeadline = js.native
+    var defaultProps: HasCondensedHeadline = js.native
   }
   
 }

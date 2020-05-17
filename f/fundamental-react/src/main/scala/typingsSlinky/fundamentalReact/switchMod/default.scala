@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.switchMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.PartialSwitchProps
-import typingsSlinky.fundamentalReact.WeakValidationMapSwitchPr
+import typingsSlinky.fundamentalReact.anon.PartialSwitchProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapSwitchPr
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.Switch
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

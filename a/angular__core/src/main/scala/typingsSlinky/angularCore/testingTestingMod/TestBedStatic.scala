@@ -1,10 +1,10 @@
 package typingsSlinky.angularCore.testingTestingMod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.angularCore.AnonDeps
-import typingsSlinky.angularCore.AnonProviders
-import typingsSlinky.angularCore.AnonUseFactory
-import typingsSlinky.angularCore.AnonUseValue
+import typingsSlinky.angularCore.anon.Deps
+import typingsSlinky.angularCore.anon.Providers
+import typingsSlinky.angularCore.anon.UseFactory
+import typingsSlinky.angularCore.anon.UseValue
 import typingsSlinky.angularCore.mod.Component
 import typingsSlinky.angularCore.mod.Directive
 import typingsSlinky.angularCore.mod.InjectFlags
@@ -30,7 +30,7 @@ trait TestBedStatic
     * Allows overriding default compiler providers and settings
     * which are defined in test_injector.js
     */
-  def configureCompiler(config: AnonProviders): TestBedStatic = js.native
+  def configureCompiler(config: Providers): TestBedStatic = js.native
   /**
     * Allows overriding default providers, directives, pipes, modules of the test injector,
     * which are defined in test_injector.js
@@ -64,9 +64,9 @@ trait TestBedStatic
     *
     * Note: This works for JIT and AOTed components as well.
     */
-  def overrideProvider(token: js.Any, provider: AnonDeps): TestBedStatic = js.native
-  def overrideProvider(token: js.Any, provider: AnonUseFactory): TestBedStatic = js.native
-  def overrideProvider(token: js.Any, provider: AnonUseValue): TestBedStatic = js.native
+  def overrideProvider(token: js.Any, provider: Deps): TestBedStatic = js.native
+  def overrideProvider(token: js.Any, provider: UseFactory): TestBedStatic = js.native
+  def overrideProvider(token: js.Any, provider: UseValue): TestBedStatic = js.native
   def overrideTemplate(component: Type[_], template: String): TestBedStatic = js.native
   /**
     * Overrides the template of the given component, compiling the template

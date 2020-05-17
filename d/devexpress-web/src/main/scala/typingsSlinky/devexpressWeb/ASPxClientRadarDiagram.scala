@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the RadarDiagram class.
   */
-@JSGlobal("ASPxClientRadarDiagram")
 @js.native
-class ASPxClientRadarDiagram () extends ASPxClientXYDiagramBase {
+trait ASPxClientRadarDiagram extends ASPxClientXYDiagramBase {
   /**
     * Converts the diagram coordinates of a point into screen coordinates. An ASPxClientControlCoordinates object, containing information about the point's X and Y coordinates, its visibility state, and the associated pane.
     * @param argument An object, representing the point's argument.
@@ -22,5 +21,39 @@ class ASPxClientRadarDiagram () extends ASPxClientXYDiagramBase {
     * @param y An integer value, representing the Y-coordinate of a point (measured in pixels relative to the top left corner of a chart).
     */
   def PointToDiagram(x: Double, y: Double): ASPxClientDiagramCoordinates = js.native
+}
+
+object ASPxClientRadarDiagram {
+  @scala.inline
+  def apply(
+    DiagramToPoint: (js.Any, js.Any) => ASPxClientControlCoordinates,
+    PointToDiagram: (Double, Double) => ASPxClientDiagramCoordinates,
+    axisX: ASPxClientAxisBase,
+    axisY: ASPxClientAxisBase,
+    chart: ASPxClientWebChart
+  ): ASPxClientRadarDiagram = {
+    val __obj = js.Dynamic.literal(DiagramToPoint = js.Any.fromFunction2(DiagramToPoint), PointToDiagram = js.Any.fromFunction2(PointToDiagram), axisX = axisX.asInstanceOf[js.Any], axisY = axisY.asInstanceOf[js.Any], chart = chart.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientRadarDiagram]
+  }
+  @scala.inline
+  implicit class ASPxClientRadarDiagramOps[Self <: ASPxClientRadarDiagram] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiagramToPoint(value: (js.Any, js.Any) => ASPxClientControlCoordinates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiagramToPoint")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withPointToDiagram(value: (Double, Double) => ASPxClientDiagramCoordinates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PointToDiagram")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.sortablejs
 
 import typingsSlinky.sortablejs.mod.Direction
+import typingsSlinky.sortablejs.mod.PullResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -277,7 +278,7 @@ object sortablejsStrings {
   sealed trait clipRule extends js.Object
   
   @js.native
-  sealed trait clone extends js.Object
+  sealed trait clone extends PullResult
   
   @js.native
   sealed trait color extends js.Object

@@ -5,10 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Rounds numbers to a specified number of significant digits. */
-@JSGlobal("Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder")
 @js.native
-/** Creates a SignificantDigitsNumberRounder object. */
-class SignificantDigitsNumberRounder () extends js.Object {
+trait SignificantDigitsNumberRounder extends js.Object {
   /** Gets or sets the rounding strategy value for this SignificantDigitsNumberRounder object. */
   var roundingAlgorithm: RoundingAlgorithm = js.native
   /** Gets or sets the number of significant digits this SignificantDigitsNumberRounder object uses for rounding. */
@@ -49,5 +47,78 @@ class SignificantDigitsNumberRounder () extends js.Object {
     * @return The rounded unsigned 64 bit integer.
     */
   def roundUInt64(value: Double): Double = js.native
+}
+
+object SignificantDigitsNumberRounder {
+  @scala.inline
+  def apply(
+    roundDouble: Double => Double,
+    roundInt32: Double => Double,
+    roundInt64: Double => Double,
+    roundSingle: Double => Double,
+    roundUInt32: Double => Double,
+    roundUInt64: Double => Double,
+    roundingAlgorithm: RoundingAlgorithm,
+    significantDigits: Double
+  ): SignificantDigitsNumberRounder = {
+    val __obj = js.Dynamic.literal(roundDouble = js.Any.fromFunction1(roundDouble), roundInt32 = js.Any.fromFunction1(roundInt32), roundInt64 = js.Any.fromFunction1(roundInt64), roundSingle = js.Any.fromFunction1(roundSingle), roundUInt32 = js.Any.fromFunction1(roundUInt32), roundUInt64 = js.Any.fromFunction1(roundUInt64), roundingAlgorithm = roundingAlgorithm.asInstanceOf[js.Any], significantDigits = significantDigits.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SignificantDigitsNumberRounder]
+  }
+  @scala.inline
+  implicit class SignificantDigitsNumberRounderOps[Self <: SignificantDigitsNumberRounder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoundDouble(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundDouble")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRoundInt32(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundInt32")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRoundInt64(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundInt64")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRoundSingle(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundSingle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRoundUInt32(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundUInt32")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRoundUInt64(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundUInt64")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRoundingAlgorithm(value: RoundingAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundingAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSignificantDigits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("significantDigits")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

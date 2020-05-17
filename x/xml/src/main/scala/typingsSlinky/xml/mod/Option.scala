@@ -1,6 +1,6 @@
 package typingsSlinky.xml.mod
 
-import typingsSlinky.xml.AnonEncoding
+import typingsSlinky.xml.anon.Encoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Option extends js.Object {
   /**
     * Add default xml declaration (default false)
     */
-  var declaration: js.UndefOr[Boolean | AnonEncoding] = js.native
+  var declaration: js.UndefOr[Boolean | Encoding] = js.native
   /**
     * String used for tab, defaults to no tabs (compressed)
     */
@@ -34,7 +34,7 @@ object Option {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDeclaration(value: Boolean | AnonEncoding): Self = {
+    def withDeclaration(value: Boolean | Encoding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("declaration")(value.asInstanceOf[js.Any])
         ret

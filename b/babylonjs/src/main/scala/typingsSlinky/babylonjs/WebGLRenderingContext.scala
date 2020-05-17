@@ -4,6 +4,9 @@ import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.ImageData
 import org.scalajs.dom.raw.WebGLBuffer
 import org.scalajs.dom.raw.WebGLTexture
+import typingsSlinky.std.WebGLQuery
+import typingsSlinky.std.WebGLTransformFeedback
+import typingsSlinky.std.WebGLVertexArrayObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -113,14 +116,14 @@ trait WebGLRenderingContext extends js.Object {
       Unit
     ]
   ] = js.native
-  def beginQuery(target: Double, query: typingsSlinky.std.WebGLQuery): Unit = js.native
+  def beginQuery(target: Double, query: WebGLQuery): Unit = js.native
   def beginTransformFeedback(primitiveMode: Double): Unit = js.native
   def bindBufferBase(target: Double, index: Double): Unit = js.native
   def bindBufferBase(target: Double, index: Double, buffer: WebGLBuffer): Unit = js.native
   def bindTransformFeedback(target: Double): Unit = js.native
-  def bindTransformFeedback(target: Double, transformFeedback: typingsSlinky.std.WebGLTransformFeedback): Unit = js.native
+  def bindTransformFeedback(target: Double, transformFeedback: WebGLTransformFeedback): Unit = js.native
   def bindVertexArray(): Unit = js.native
-  def bindVertexArray(vao: typingsSlinky.std.WebGLVertexArrayObject): Unit = js.native
+  def bindVertexArray(vao: WebGLVertexArrayObject): Unit = js.native
   def blitFramebuffer(
     srcX0: Double,
     srcY0: Double,
@@ -174,12 +177,12 @@ trait WebGLRenderingContext extends js.Object {
     length: Double
   ): Unit = js.native
   // Queries
-  def createQuery(): typingsSlinky.std.WebGLQuery = js.native
-  def createTransformFeedback(): typingsSlinky.std.WebGLTransformFeedback = js.native
+  def createQuery(): WebGLQuery = js.native
+  def createTransformFeedback(): WebGLTransformFeedback = js.native
   def createVertexArray(): js.Any = js.native
-  def deleteQuery(query: typingsSlinky.std.WebGLQuery): Unit = js.native
-  def deleteTransformFeedback(transformFeedbac: typingsSlinky.std.WebGLTransformFeedback): Unit = js.native
-  def deleteVertexArray(vao: typingsSlinky.std.WebGLVertexArrayObject): Unit = js.native
+  def deleteQuery(query: WebGLQuery): Unit = js.native
+  def deleteTransformFeedback(transformFeedbac: WebGLTransformFeedback): Unit = js.native
+  def deleteVertexArray(vao: WebGLVertexArrayObject): Unit = js.native
   def drawArraysInstanced(mode: Double, first: Double, count: Double, primcount: Double): Unit = js.native
   /* Multiple Render Targets */
   def drawBuffers(buffers: js.Array[Double]): Unit = js.native
@@ -189,7 +192,7 @@ trait WebGLRenderingContext extends js.Object {
   def framebufferTextureLayer(target: Double, attachment: Double, texture: Null, level: Double, layer: Double): Unit = js.native
   def framebufferTextureLayer(target: Double, attachment: Double, texture: WebGLTexture, level: Double, layer: Double): Unit = js.native
   def getQuery(target: Double, pname: Double): js.Any = js.native
-  def getQueryParameter(query: typingsSlinky.std.WebGLQuery, pname: Double): js.Any = js.native
+  def getQueryParameter(query: WebGLQuery, pname: Double): js.Any = js.native
   def getUniformBlockIndex(program: WebGLProgram, uniformBlockName: String): Double = js.native
   def readBuffer(src: Double): Unit = js.native
   def texImage3D(

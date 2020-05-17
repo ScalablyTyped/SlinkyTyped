@@ -2,7 +2,7 @@ package typingsSlinky.baseui.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.baseui.PartialLocale
+import typingsSlinky.baseui.anon.PartialLocale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

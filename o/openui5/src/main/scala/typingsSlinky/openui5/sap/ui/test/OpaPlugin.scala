@@ -7,9 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.test.OpaPlugin")
 @js.native
-class OpaPlugin () extends js.Object {
+trait OpaPlugin extends js.Object {
   /**
     * Gets all the controls of a certain type that are currently instantiated.If the control type is
     * omitted, nothing is returned.
@@ -70,5 +69,71 @@ class OpaPlugin () extends js.Object {
     * @returns or undefined
     */
   def getView(sViewName: String): View = js.native
+}
+
+object OpaPlugin {
+  @scala.inline
+  def apply(
+    getAllControls: js.Any => js.Array[_],
+    getControlByGlobalId: js.Any => js.Array[Element],
+    getControlConstructor: String => js.Any,
+    getControlInView: js.Any => Element | js.Array[Element] | js.Any,
+    getMatchingControls: js.Any => Element | js.Array[Element] | js.Any,
+    getMetadata: () => Metadata,
+    getView: String => View
+  ): OpaPlugin = {
+    val __obj = js.Dynamic.literal(getAllControls = js.Any.fromFunction1(getAllControls), getControlByGlobalId = js.Any.fromFunction1(getControlByGlobalId), getControlConstructor = js.Any.fromFunction1(getControlConstructor), getControlInView = js.Any.fromFunction1(getControlInView), getMatchingControls = js.Any.fromFunction1(getMatchingControls), getMetadata = js.Any.fromFunction0(getMetadata), getView = js.Any.fromFunction1(getView))
+    __obj.asInstanceOf[OpaPlugin]
+  }
+  @scala.inline
+  implicit class OpaPluginOps[Self <: OpaPlugin] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAllControls(value: js.Any => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllControls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetControlByGlobalId(value: js.Any => js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getControlByGlobalId")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetControlConstructor(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getControlConstructor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetControlInView(value: js.Any => Element | js.Array[Element] | js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getControlInView")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMatchingControls(value: js.Any => Element | js.Array[Element] | js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMatchingControls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMetadata(value: () => Metadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMetadata")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetView(value: String => View): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getView")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.express.mod
 
-import typingsSlinky.express.FnCall
+import typingsSlinky.express.anon.FnCall
 import typingsSlinky.qs.mod.IParseOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

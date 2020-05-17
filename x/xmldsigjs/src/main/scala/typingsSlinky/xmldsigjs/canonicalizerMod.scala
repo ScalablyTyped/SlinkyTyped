@@ -1,9 +1,9 @@
 package typingsSlinky.xmldsigjs
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
-import typingsSlinky.std.Document_
 import typingsSlinky.xmlCore.mod.NamespaceManager
 import typingsSlinky.xmlCore.mod.XmlNodeType
 import scala.scalajs.js
@@ -20,7 +20,7 @@ object canonicalizerMod extends js.Object {
     var IsNamespaceInclusive: js.Any = js.native
     var IsNamespaceRendered: js.Any = js.native
     var IsTextNode: js.Any = js.native
-    var document: Document_ = js.native
+    var document: Document = js.native
     var exclusive: Boolean = js.native
     var inclusiveNamespacesPrefixList: js.Array[String] = js.native
     var propagatedNamespaces: NamespaceManager = js.native

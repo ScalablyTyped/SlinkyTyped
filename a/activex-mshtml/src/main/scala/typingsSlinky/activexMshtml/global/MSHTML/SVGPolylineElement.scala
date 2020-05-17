@@ -1,0 +1,11 @@
+package typingsSlinky.activexMshtml.global.MSHTML
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MSHTML.SVGPolylineElement")
+@js.native
+class SVGPolylineElement protected ()
+  extends typingsSlinky.activexMshtml.MSHTML.SVGPolylineElement
+

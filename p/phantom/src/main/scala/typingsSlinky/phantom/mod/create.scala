@@ -1,6 +1,6 @@
 package typingsSlinky.phantom.mod
 
-import typingsSlinky.phantom.AnonLogLevel
+import typingsSlinky.phantom.anon.LogLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 object create extends js.Object {
   def apply(): js.Promise[PhantomJS] = js.native
   def apply(args: js.Array[String]): js.Promise[PhantomJS] = js.native
-  def apply(args: js.Array[String], config: AnonLogLevel): js.Promise[PhantomJS] = js.native
+  def apply(args: js.Array[String], config: LogLevel): js.Promise[PhantomJS] = js.native
 }
 

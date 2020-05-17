@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonCommentsLeft
+import typingsSlinky.astTypes.anon.CommentsLeft
 import typingsSlinky.astTypes.astTypesStrings.AmpersandEqualssign
 import typingsSlinky.astTypes.astTypesStrings.AsteriskEqualssign
 import typingsSlinky.astTypes.astTypesStrings.Equalssign
@@ -33,6 +33,6 @@ trait AssignmentExpressionBuilder extends js.Object {
     left: PatternKind,
     right: ExpressionKind
   ): AssignmentExpression = js.native
-  def from(params: AnonCommentsLeft): AssignmentExpression = js.native
+  def from(params: CommentsLeft): AssignmentExpression = js.native
 }
 

@@ -1,14 +1,14 @@
 package typingsSlinky.braintree.mod
 
-import typingsSlinky.braintree.AnonCountryCodeAlpha2
-import typingsSlinky.braintree.AnonVerificationAcmount
+import typingsSlinky.braintree.anon.CountryCodeAlpha2
+import typingsSlinky.braintree.anon.VerificationAcmount
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PaymentMethodUpdateRequest extends js.Object {
-  var billingAddress: js.UndefOr[AnonCountryCodeAlpha2] = js.native
+  var billingAddress: js.UndefOr[CountryCodeAlpha2] = js.native
   var billingAddressId: js.UndefOr[String] = js.native
   var cardholderName: js.UndefOr[String] = js.native
   var cvv: js.UndefOr[String] = js.native
@@ -17,7 +17,7 @@ trait PaymentMethodUpdateRequest extends js.Object {
   var expirationMonth: js.UndefOr[String] = js.native
   var expirationYear: js.UndefOr[String] = js.native
   var number: js.UndefOr[String] = js.native
-  var options: js.UndefOr[AnonVerificationAcmount] = js.native
+  var options: js.UndefOr[VerificationAcmount] = js.native
   var paymentMethodNonce: js.UndefOr[String] = js.native
 }
 
@@ -34,7 +34,7 @@ object PaymentMethodUpdateRequest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBillingAddress(value: AnonCountryCodeAlpha2): Self = {
+    def withBillingAddress(value: CountryCodeAlpha2): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddress")(value.asInstanceOf[js.Any])
         ret
@@ -142,7 +142,7 @@ object PaymentMethodUpdateRequest {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonVerificationAcmount): Self = {
+    def withOptions(value: VerificationAcmount): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

@@ -1,8 +1,8 @@
 package typingsSlinky.reactNativeEasyUpgrade.mod
 
-import typingsSlinky.reactNativeEasyUpgrade.AnonAllowedInMetered
-import typingsSlinky.reactNativeEasyUpgrade.AnonHasNewVersion
-import typingsSlinky.reactNativeEasyUpgrade.AnonVERSIONCODE
+import typingsSlinky.reactNativeEasyUpgrade.anon.AllowedInMetered
+import typingsSlinky.reactNativeEasyUpgrade.anon.HasNewVersion
+import typingsSlinky.reactNativeEasyUpgrade.anon.VERSIONCODE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,15 +17,15 @@ trait AppUpgrade extends js.Object {
   /**
   	 * Check the ios app version info from app store.
   	 */
-  def checkAppVersionIOS(): js.Promise[AnonHasNewVersion] = js.native
+  def checkAppVersionIOS(): js.Promise[HasNewVersion] = js.native
   /**
   	 * download file
   	 * @param fileUrl
   	 * @param downloadConf
   	 */
   def downloadFile(fileUrl: String): Unit = js.native
-  def downloadFile(fileUrl: String, downloadConf: AnonAllowedInMetered): Unit = js.native
-  def getLocalVersionInfo(): AnonVERSIONCODE = js.native
+  def downloadFile(fileUrl: String, downloadConf: AllowedInMetered): Unit = js.native
+  def getLocalVersionInfo(): VERSIONCODE = js.native
   def getNetworkStatus(): js.Promise[String] = js.native
   def installApk(): Unit = js.native
   def installApk(apkPath: String): Unit = js.native

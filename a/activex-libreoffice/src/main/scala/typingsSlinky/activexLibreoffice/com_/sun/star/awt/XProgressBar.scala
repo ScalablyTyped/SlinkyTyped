@@ -1,0 +1,92 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.awt
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import typingsSlinky.activexLibreoffice.com_.sun.star.util.Color
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** gives access to the value and settings of a progress bar. */
+@js.native
+trait XProgressBar extends XInterface {
+  /** returns the current progress value of the progress bar. */
+  var Value: Double = js.native
+  /** returns the current progress value of the progress bar. */
+  def getValue(): Double = js.native
+  /** sets the background color (RGB) of the control. */
+  def setBackgroundColor(Color: Color): Unit = js.native
+  /** sets the foreground color (RGB) of the control. */
+  def setForegroundColor(Color: Color): Unit = js.native
+  /**
+    * sets the minimum and the maximum progress value of the progress bar.
+    *
+    * If the minimum value is greater than the maximum value, the method exchanges the values automatically.
+    */
+  def setRange(Min: Double, Max: Double): Unit = js.native
+  /** sets the progress value of the progress bar. */
+  def setValue(Value: Double): Unit = js.native
+}
+
+object XProgressBar {
+  @scala.inline
+  def apply(
+    Value: Double,
+    acquire: () => Unit,
+    getValue: () => Double,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    setBackgroundColor: Color => Unit,
+    setForegroundColor: Color => Unit,
+    setRange: (Double, Double) => Unit,
+    setValue: Double => Unit
+  ): XProgressBar = {
+    val __obj = js.Dynamic.literal(Value = Value.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getValue = js.Any.fromFunction0(getValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setBackgroundColor = js.Any.fromFunction1(setBackgroundColor), setForegroundColor = js.Any.fromFunction1(setForegroundColor), setRange = js.Any.fromFunction2(setRange), setValue = js.Any.fromFunction1(setValue))
+    __obj.asInstanceOf[XProgressBar]
+  }
+  @scala.inline
+  implicit class XProgressBarOps[Self <: XProgressBar] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetValue(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetBackgroundColor(value: Color => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBackgroundColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetForegroundColor(value: Color => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setForegroundColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetRange(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetValue(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

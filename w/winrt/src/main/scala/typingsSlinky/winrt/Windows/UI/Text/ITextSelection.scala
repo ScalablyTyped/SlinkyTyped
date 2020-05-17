@@ -1,8 +1,8 @@
 package typingsSlinky.winrt.Windows.UI.Text
 
-import typingsSlinky.winrt.AnonHit
 import typingsSlinky.winrt.Windows.Foundation.Point
 import typingsSlinky.winrt.Windows.Storage.Streams.IRandomAccessStream
+import typingsSlinky.winrt.anon.Hit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,7 +41,7 @@ object ITextSelection {
     getClone: () => ITextRange,
     getIndex: TextRangeUnit => Double,
     getPoint: (HorizontalCharacterAlignment, VerticalCharacterAlignment, PointOptions) => Point,
-    getRect: PointOptions => AnonHit,
+    getRect: PointOptions => Hit,
     getText: TextGetOptions => String,
     getTextViaStream: (TextGetOptions, IRandomAccessStream) => Unit,
     gravity: RangeGravity,

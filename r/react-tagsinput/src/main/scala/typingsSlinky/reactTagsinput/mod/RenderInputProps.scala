@@ -1,7 +1,7 @@
 package typingsSlinky.reactTagsinput.mod
 
 import typingsSlinky.react.mod.ChangeEvent
-import typingsSlinky.reactTagsinput.AnonValue
+import typingsSlinky.reactTagsinput.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +11,13 @@ trait RenderInputProps[Tag] extends InputProps {
    // parameter is either a DOM element or a mounted React component
   val value: Tag = js.native
   def addTag(tag: Tag): Unit = js.native
-  def onChange(e: ChangeEvent[AnonValue]): Unit = js.native
+  def onChange(e: ChangeEvent[Value]): Unit = js.native
   def ref(r: js.Any): Unit = js.native
 }
 
 object RenderInputProps {
   @scala.inline
-  def apply[Tag](addTag: Tag => Unit, onChange: ChangeEvent[AnonValue] => Unit, ref: js.Any => Unit, value: Tag): RenderInputProps[Tag] = {
+  def apply[Tag](addTag: Tag => Unit, onChange: ChangeEvent[Value] => Unit, ref: js.Any => Unit, value: Tag): RenderInputProps[Tag] = {
     val __obj = js.Dynamic.literal(addTag = js.Any.fromFunction1(addTag), onChange = js.Any.fromFunction1(onChange), ref = js.Any.fromFunction1(ref), value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[RenderInputProps[Tag]]
   }
@@ -34,7 +34,7 @@ object RenderInputProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: ChangeEvent[AnonValue] => Unit): Self[Tag] = {
+    def withOnChange(value: ChangeEvent[Value] => Unit): Self[Tag] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

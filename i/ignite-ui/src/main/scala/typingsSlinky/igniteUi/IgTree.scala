@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -353,7 +353,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withDataBinding(value: (/* event */ Event_, /* ui */ DataBindingEventUIParam) => Unit): Self = {
+    def withDataBinding(value: (/* event */ Event, /* ui */ DataBindingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.Any.fromFunction2(value))
         ret
@@ -365,7 +365,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withDataBound(value: (/* event */ Event_, /* ui */ DataBoundEventUIParam) => Unit): Self = {
+    def withDataBound(value: (/* event */ Event, /* ui */ DataBoundEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.Any.fromFunction2(value))
         ret
@@ -425,7 +425,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withDrag(value: (/* event */ Event_, /* ui */ DragEventUIParam) => Unit): Self = {
+    def withDrag(value: (/* event */ Event, /* ui */ DragEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.Any.fromFunction2(value))
         ret
@@ -461,7 +461,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withDragStart(value: (/* event */ Event_, /* ui */ DragStartEventUIParam) => Unit): Self = {
+    def withDragStart(value: (/* event */ Event, /* ui */ DragStartEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragStart")(js.Any.fromFunction2(value))
         ret
@@ -473,7 +473,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withDragStop(value: (/* event */ Event_, /* ui */ DragStopEventUIParam) => Unit): Self = {
+    def withDragStop(value: (/* event */ Event, /* ui */ DragStopEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragStop")(js.Any.fromFunction2(value))
         ret
@@ -593,7 +593,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withNodeCheckstateChanged(value: (/* event */ Event_, /* ui */ NodeCheckstateChangedEventUIParam) => Unit): Self = {
+    def withNodeCheckstateChanged(value: (/* event */ Event, /* ui */ NodeCheckstateChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeCheckstateChanged")(js.Any.fromFunction2(value))
         ret
@@ -605,7 +605,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withNodeCheckstateChanging(value: (/* event */ Event_, /* ui */ NodeCheckstateChangingEventUIParam) => Unit): Self = {
+    def withNodeCheckstateChanging(value: (/* event */ Event, /* ui */ NodeCheckstateChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeCheckstateChanging")(js.Any.fromFunction2(value))
         ret
@@ -617,7 +617,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withNodeClick(value: (/* event */ Event_, /* ui */ NodeClickEventUIParam) => Unit): Self = {
+    def withNodeClick(value: (/* event */ Event, /* ui */ NodeClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeClick")(js.Any.fromFunction2(value))
         ret
@@ -629,7 +629,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withNodeCollapsed(value: (/* event */ Event_, /* ui */ NodeCollapsedEventUIParam) => Unit): Self = {
+    def withNodeCollapsed(value: (/* event */ Event, /* ui */ NodeCollapsedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeCollapsed")(js.Any.fromFunction2(value))
         ret
@@ -641,7 +641,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withNodeCollapsing(value: (/* event */ Event_, /* ui */ NodeCollapsingEventUIParam) => Unit): Self = {
+    def withNodeCollapsing(value: (/* event */ Event, /* ui */ NodeCollapsingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeCollapsing")(js.Any.fromFunction2(value))
         ret
@@ -653,7 +653,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withNodeDoubleClick(value: (/* event */ Event_, /* ui */ NodeDoubleClickEventUIParam) => Unit): Self = {
+    def withNodeDoubleClick(value: (/* event */ Event, /* ui */ NodeDoubleClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDoubleClick")(js.Any.fromFunction2(value))
         ret
@@ -665,7 +665,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withNodeDropped(value: (/* event */ Event_, /* ui */ NodeDroppedEventUIParam) => Unit): Self = {
+    def withNodeDropped(value: (/* event */ Event, /* ui */ NodeDroppedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDropped")(js.Any.fromFunction2(value))
         ret
@@ -677,7 +677,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withNodeDropping(value: (/* event */ Event_, /* ui */ NodeDroppingEventUIParam) => Unit): Self = {
+    def withNodeDropping(value: (/* event */ Event, /* ui */ NodeDroppingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDropping")(js.Any.fromFunction2(value))
         ret
@@ -689,7 +689,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withNodeExpanded(value: (/* event */ Event_, /* ui */ NodeExpandedEventUIParam) => Unit): Self = {
+    def withNodeExpanded(value: (/* event */ Event, /* ui */ NodeExpandedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeExpanded")(js.Any.fromFunction2(value))
         ret
@@ -701,7 +701,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withNodeExpanding(value: (/* event */ Event_, /* ui */ NodeExpandingEventUIParam) => Unit): Self = {
+    def withNodeExpanding(value: (/* event */ Event, /* ui */ NodeExpandingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeExpanding")(js.Any.fromFunction2(value))
         ret
@@ -713,7 +713,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withNodePopulated(value: (/* event */ Event_, /* ui */ NodePopulatedEventUIParam) => Unit): Self = {
+    def withNodePopulated(value: (/* event */ Event, /* ui */ NodePopulatedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodePopulated")(js.Any.fromFunction2(value))
         ret
@@ -725,7 +725,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withNodePopulating(value: (/* event */ Event_, /* ui */ NodePopulatingEventUIParam) => Unit): Self = {
+    def withNodePopulating(value: (/* event */ Event, /* ui */ NodePopulatingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodePopulating")(js.Any.fromFunction2(value))
         ret
@@ -797,7 +797,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withRendered(value: (/* event */ Event_, /* ui */ RenderedEventUIParam) => Unit): Self = {
+    def withRendered(value: (/* event */ Event, /* ui */ RenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(js.Any.fromFunction2(value))
         ret
@@ -809,7 +809,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withRendering(value: (/* event */ Event_, /* ui */ RenderingEventUIParam) => Unit): Self = {
+    def withRendering(value: (/* event */ Event, /* ui */ RenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendering")(js.Any.fromFunction2(value))
         ret
@@ -869,7 +869,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withSelectionChanged(value: (/* event */ Event_, /* ui */ IgTreeSelectionChangedEventUIParam) => Unit): Self = {
+    def withSelectionChanged(value: (/* event */ Event, /* ui */ IgTreeSelectionChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectionChanged")(js.Any.fromFunction2(value))
         ret
@@ -881,7 +881,7 @@ object IgTree {
         ret
     }
     @scala.inline
-    def withSelectionChanging(value: (/* event */ Event_, /* ui */ SelectionChangingEventUIParam) => Unit): Self = {
+    def withSelectionChanging(value: (/* event */ Event, /* ui */ SelectionChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectionChanging")(js.Any.fromFunction2(value))
         ret

@@ -2,8 +2,8 @@ package typingsSlinky.fabric.fabricImplMod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.fabric.AnonBl
-import typingsSlinky.fabric.AnonLeft
+import typingsSlinky.fabric.anon.Bl
+import typingsSlinky.fabric.anon.Left
 import typingsSlinky.fabric.fabricStrings.getImageData
 import typingsSlinky.fabric.fabricStrings.setLineDash
 import typingsSlinky.fabric.fabricStrings.toDataURL
@@ -73,7 +73,7 @@ class StaticCanvas protected ()
   	 * @return {Object} points.tl
   	 * @chainable
   	 */
-  def calcViewportBoundaries(): AnonBl = js.native
+  def calcViewportBoundaries(): Bl = js.native
   /**
   	 * Centers object vertically and horizontally in the canvas
   	 * @param {fabric.Object} object Object to center vertically and horizontally
@@ -144,7 +144,7 @@ class StaticCanvas protected ()
   	 * Returned value is an object with top and left properties
   	 * @return {Object} object with "top" and "left" number values
   	 */
-  def getCenter(): AnonLeft = js.native
+  def getCenter(): Left = js.native
   /**
   	 * Returns context of canvas where objects are drawn
   	 * @return {CanvasRenderingContext2D}

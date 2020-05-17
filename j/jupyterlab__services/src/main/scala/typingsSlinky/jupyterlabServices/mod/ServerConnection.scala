@@ -2,7 +2,7 @@ package typingsSlinky.jupyterlabServices.mod
 
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
-import typingsSlinky.jupyterlabServices.PartialISettings
+import typingsSlinky.jupyterlabServices.anon.PartialISettings
 import typingsSlinky.jupyterlabServices.serverconnectionMod.ServerConnection.ISettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`

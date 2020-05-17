@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,26 +12,8 @@ trait SymbolTableElementType extends js.Object
 
 object SymbolTableElementType {
   @scala.inline
-  def ImageSymbolTableElementInfo(
-    constructor: js.Function,
-    hasOwnProperty: PropertyKey => Boolean,
-    opacity: Double,
-    propertyIsEnumerable: PropertyKey => Boolean,
-    src: String
-  ): SymbolTableElementType = {
-    val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), opacity = opacity.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), src = src.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SymbolTableElementType]
-  }
+  implicit def apply(value: ImageSymbolTableElementInfo): SymbolTableElementType = value.asInstanceOf[SymbolTableElementType]
   @scala.inline
-  def SymbolTableElementInfo(
-    constructor: js.Function,
-    hasOwnProperty: PropertyKey => Boolean,
-    label: String | RampTitle,
-    propertyIsEnumerable: PropertyKey => Boolean,
-    symbol: Symbol
-  ): SymbolTableElementType = {
-    val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), label = label.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), symbol = symbol.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SymbolTableElementType]
-  }
+  implicit def apply(value: SymbolTableElementInfo): SymbolTableElementType = value.asInstanceOf[SymbolTableElementType]
 }
 

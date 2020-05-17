@@ -1,6 +1,6 @@
 package typingsSlinky.jestMessageUtil.mod
 
-import typingsSlinky.jestMessageUtil.AnonMessage
+import typingsSlinky.jestMessageUtil.anon.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("jest-message-util", "separateMessageFromStack")
 @js.native
 object separateMessageFromStack extends js.Object {
-  def apply(content: String): AnonMessage = js.native
+  def apply(content: String): Message = js.native
 }
 

@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Dynamics.b2ContactListener")
 @js.native
-class b2ContactListener () extends js.Object {
+trait b2ContactListener extends js.Object {
   /**
   		* Called when two fixtures begin to touch.
   		* @param contact Contact point.
@@ -31,5 +30,50 @@ class b2ContactListener () extends js.Object {
   		* @param oldManifold Old manifold.
   		**/
   def PreSolve(contact: b2Contact, oldManifold: b2Manifold): Unit = js.native
+}
+
+object b2ContactListener {
+  @scala.inline
+  def apply(
+    BeginContact: b2Contact => Unit,
+    EndContact: b2Contact => Unit,
+    PostSolve: (b2Contact, b2ContactImpulse) => Unit,
+    PreSolve: (b2Contact, b2Manifold) => Unit
+  ): b2ContactListener = {
+    val __obj = js.Dynamic.literal(BeginContact = js.Any.fromFunction1(BeginContact), EndContact = js.Any.fromFunction1(EndContact), PostSolve = js.Any.fromFunction2(PostSolve), PreSolve = js.Any.fromFunction2(PreSolve))
+    __obj.asInstanceOf[b2ContactListener]
+  }
+  @scala.inline
+  implicit class b2ContactListenerOps[Self <: b2ContactListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeginContact(value: b2Contact => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginContact")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEndContact(value: b2Contact => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndContact")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPostSolve(value: (b2Contact, b2ContactImpulse) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PostSolve")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withPreSolve(value: (b2Contact, b2Manifold) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreSolve")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

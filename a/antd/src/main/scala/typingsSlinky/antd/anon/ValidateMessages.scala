@@ -1,0 +1,39 @@
+package typingsSlinky.antd.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ValidateMessages extends js.Object {
+  var validateMessages: js.UndefOr[typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages] = js.native
+}
+
+object ValidateMessages {
+  @scala.inline
+  def apply(): ValidateMessages = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ValidateMessages]
+  }
+  @scala.inline
+  implicit class ValidateMessagesOps[Self <: ValidateMessages] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValidateMessages(value: typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidateMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateMessages")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

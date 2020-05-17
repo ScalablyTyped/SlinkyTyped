@@ -1,6 +1,6 @@
 package typingsSlinky.materializeCss.M
 
-import typingsSlinky.materializeCss.PartialDropdownOptionsAlignment
+import typingsSlinky.materializeCss.anon.PartialDropdownOptionsAlignment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

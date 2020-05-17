@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.asc_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.desc_
 import scala.scalajs.js
@@ -33,8 +32,4 @@ trait FieldColumnConfig extends FieldConfig {
     */
   var visible: Boolean = js.native
 }
-
-@JSGlobal("__esri.FieldColumnConfig")
-@js.native
-object FieldColumnConfig extends TopLevel[FieldColumnConfigConstructor]
 

@@ -18,9 +18,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.CameraComponent[]} cameras A read-only array of {@link pc.CameraComponent} that can be used during rendering, e.g. Inside
   * {@link pc.Layer#onPreCull}, {@link pc.Layer#onPostCull}, {@link pc.Layer#onPreRender}, {@link pc.Layer#onPostRender}.
   */
-@JSGlobal("pc.LayerComposition")
 @js.native
-class LayerComposition () extends EventHandler {
+trait LayerComposition extends EventHandler {
   /**
     * A read-only array of {@link pc.CameraComponent} that can be used during rendering, e.g. Inside
     * {@link pc.Layer#onPreCull}, {@link pc.Layer#onPostCull}, {@link pc.Layer#onPreRender}, {@link pc.Layer#onPostRender}.

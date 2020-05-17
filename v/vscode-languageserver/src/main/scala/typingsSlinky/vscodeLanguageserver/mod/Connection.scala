@@ -8,8 +8,8 @@ import typingsSlinky.vscodeJsonrpc.mod.RequestHandler
 import typingsSlinky.vscodeJsonrpc.mod.RequestHandler0
 import typingsSlinky.vscodeJsonrpc.mod.StarNotificationHandler
 import typingsSlinky.vscodeJsonrpc.mod.StarRequestHandler
-import typingsSlinky.vscodeLanguageserver.AnonPlaceholder
 import typingsSlinky.vscodeLanguageserver.Thenable
+import typingsSlinky.vscodeLanguageserver.anon.Placeholder
 import typingsSlinky.vscodeLanguageserverProtocol.protocolColorProviderMod.ColorPresentationParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolColorProviderMod.DocumentColorParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolFoldingRangeMod.FoldingRangeParams
@@ -415,7 +415,7 @@ trait Connection[PConsole, PTracer, PTelemetry, PClient, PWindow, PWorkspace] ex
   def onPrepareRename(
     handler: RequestHandler[
       TextDocumentPositionParams, 
-      js.UndefOr[typingsSlinky.vscodeLanguageserverTypes.mod.Range | AnonPlaceholder | Null], 
+      js.UndefOr[typingsSlinky.vscodeLanguageserverTypes.mod.Range | Placeholder | Null], 
       Unit
     ]
   ): Unit = js.native

@@ -15,10 +15,8 @@ import scala.scalajs.js.annotation._
   * @property {string} name The non-unique name of a graph node.
   * @property {pc.Tags} tags Interface for tagging graph nodes. Tag based searches can be performed using the {@link pc.GraphNode#findByTag} function.
   */
-@JSGlobal("pc.GraphNode")
 @js.native
-class GraphNode () extends EventHandler {
-  def this(name: String) = this()
+trait GraphNode extends EventHandler {
   /**
     * @readonly
     * @name pc.GraphNode#children

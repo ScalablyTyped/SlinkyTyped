@@ -1,6 +1,6 @@
 package typingsSlinky.uiGrid.mod.moveColumns
 
-import typingsSlinky.uiGrid.AnonColumnPositionChanged
+import typingsSlinky.uiGrid.anon.ColumnPositionChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IGridMoveColumnsApi extends js.Object {
   // Events
-  var on: AnonColumnPositionChanged = js.native
+  var on: ColumnPositionChanged = js.native
   // Methods
   /**
     * Method can be used to change column position
@@ -20,7 +20,7 @@ trait IGridMoveColumnsApi extends js.Object {
 
 object IGridMoveColumnsApi {
   @scala.inline
-  def apply(moveColumn: (Double, Double) => Unit, on: AnonColumnPositionChanged): IGridMoveColumnsApi = {
+  def apply(moveColumn: (Double, Double) => Unit, on: ColumnPositionChanged): IGridMoveColumnsApi = {
     val __obj = js.Dynamic.literal(moveColumn = js.Any.fromFunction2(moveColumn), on = on.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGridMoveColumnsApi]
   }
@@ -37,7 +37,7 @@ object IGridMoveColumnsApi {
         ret
     }
     @scala.inline
-    def withOn(value: AnonColumnPositionChanged): Self = {
+    def withOn(value: ColumnPositionChanged): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
         ret

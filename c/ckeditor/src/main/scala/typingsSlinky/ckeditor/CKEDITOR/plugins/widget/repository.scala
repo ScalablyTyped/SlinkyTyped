@@ -1,16 +1,15 @@
 package typingsSlinky.ckeditor.CKEDITOR.plugins.widget
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ckeditor.AnonFocusInited
 import typingsSlinky.ckeditor.CKEDITOR.event
 import typingsSlinky.ckeditor.CKEDITOR.htmlParser.element
+import typingsSlinky.ckeditor.anon.FocusInited
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CKEDITOR.plugins.widget.repository")
 @js.native
-class repository () extends event {
+trait repository extends event {
   val editor: typingsSlinky.ckeditor.CKEDITOR.editor = js.native
   val focused: typingsSlinky.ckeditor.CKEDITOR.plugins.widget = js.native
   val instances: StringDictionary[typingsSlinky.ckeditor.CKEDITOR.plugins.widget] = js.native
@@ -21,7 +20,7 @@ class repository () extends event {
   def addUpcastCallback(callback: js.Function2[/* element */ element, /* data */ js.Any, Boolean]): Unit = js.native
   def checkSelection(): Unit = js.native
   def checkWidgets(): Unit = js.native
-  def checkWidgets(options: AnonFocusInited): Unit = js.native
+  def checkWidgets(options: FocusInited): Unit = js.native
   def del(widget: typingsSlinky.ckeditor.CKEDITOR.plugins.widget): Unit = js.native
   def destroy(widget: typingsSlinky.ckeditor.CKEDITOR.plugins.widget): Unit = js.native
   def destroy(widget: typingsSlinky.ckeditor.CKEDITOR.plugins.widget, offline: Boolean): Unit = js.native

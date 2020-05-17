@@ -4,17 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Microsoft.Maps.Polygon")
 @js.native
-class Polygon protected () extends IPrimitive {
-  /**
-    * @constructor
-    * @param rings A Location array for basic polygon with single outer perimeter,
-    * or an array of Location arrays for advanced polygon (multi-polygon, polygon with holes, or combination of polygons).
-    * @param options Options used to customize polygon.
-    */
-  def this(rings: js.Array[js.Array[Location] | Location]) = this()
-  def this(rings: js.Array[js.Array[Location] | Location], options: IPolygonOptions) = this()
+trait Polygon extends IPrimitive {
   /**
     * Gets the fill color of the inside of the polygon. Will be string or Color object depending on the the what method was used in the pushpin options.
     * @returns The fill color of the inside of the polygon.

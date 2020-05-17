@@ -3,6 +3,7 @@ package typingsSlinky.reactDnd
 import slinky.core.ReactComponentClass
 import typingsSlinky.dndCore.interfacesMod.BackendFactory
 import typingsSlinky.react.mod.Context
+import typingsSlinky.reactDnd.anon.DragDropManager
 import typingsSlinky.reactDnd.dndContextMod.DndContextType
 import typingsSlinky.reactDnd.dndProviderMod.DndProviderProps
 import typingsSlinky.reactDnd.dragPreviewImageMod.DragPreviewImageProps
@@ -16,9 +17,9 @@ object commonMod extends js.Object {
   val DndContext: Context[DndContextType] = js.native
   val DndProvider: ReactComponentClass[DndProviderProps[js.Any, js.Any]] = js.native
   val DragPreviewImage: ReactComponentClass[DragPreviewImageProps] = js.native
-  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory): AnonDragDropManager = js.native
-  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory, context: BackendContext): AnonDragDropManager = js.native
-  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory, context: BackendContext, options: BackendOptions): AnonDragDropManager = js.native
-  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory, context: BackendContext, options: BackendOptions, debugMode: Boolean): AnonDragDropManager = js.native
+  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory): DragDropManager = js.native
+  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory, context: BackendContext): DragDropManager = js.native
+  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory, context: BackendContext, options: BackendOptions): DragDropManager = js.native
+  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory, context: BackendContext, options: BackendOptions, debugMode: Boolean): DragDropManager = js.native
 }
 

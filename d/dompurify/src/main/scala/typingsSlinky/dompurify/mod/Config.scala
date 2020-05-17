@@ -1,6 +1,6 @@
 package typingsSlinky.dompurify.mod
 
-import typingsSlinky.dompurify.AnonHtml
+import typingsSlinky.dompurify.anon.Html
 import typingsSlinky.dompurify.dompurifyBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,7 +27,7 @@ trait Config extends js.Object {
   var SAFE_FOR_JQUERY: js.UndefOr[Boolean] = js.native
   var SAFE_FOR_TEMPLATES: js.UndefOr[Boolean] = js.native
   var SANITIZE_DOM: js.UndefOr[Boolean] = js.native
-  var USE_PROFILES: js.UndefOr[`false` | AnonHtml] = js.native
+  var USE_PROFILES: js.UndefOr[`false` | Html] = js.native
   var WHOLE_DOCUMENT: js.UndefOr[Boolean] = js.native
 }
 
@@ -272,7 +272,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withUSE_PROFILES(value: `false` | AnonHtml): Self = {
+    def withUSE_PROFILES(value: `false` | Html): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("USE_PROFILES")(value.asInstanceOf[js.Any])
         ret

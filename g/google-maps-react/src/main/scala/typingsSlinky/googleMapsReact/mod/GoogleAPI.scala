@@ -1,6 +1,6 @@
 package typingsSlinky.googleMapsReact.mod
 
-import typingsSlinky.googleMapsReact.Typeofmaps
+import typingsSlinky.googleMapsReact.anon.Typeofmaps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,5 +1,6 @@
 package typingsSlinky.reactCircularProgressbar
 
+import typingsSlinky.reactCircularProgressbar.anon.BackgroundColor
 import typingsSlinky.reactCircularProgressbar.typesMod.CircularProgressbarStyles
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object buildStylesMod extends js.Object {
   def default(
-    hasRotationStrokeLinecapTextColorTextSizePathColorPathTransitionPathTransitionDurationTrailColorBackgroundColor: AnonBackgroundColor
+    hasRotationStrokeLinecapTextColorTextSizePathColorPathTransitionPathTransitionDurationTrailColorBackgroundColor: BackgroundColor
   ): CircularProgressbarStyles = js.native
 }
 

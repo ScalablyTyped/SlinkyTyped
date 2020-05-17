@@ -1,0 +1,17 @@
+package typingsSlinky.officeJsPreview.global.Word
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Contains the collection of the document's TableCell objects.
+  *
+  * [Api set: WordApi 1.3]
+  */
+@JSGlobal("Word.TableCellCollection")
+@js.native
+class TableCellCollection ()
+  extends typingsSlinky.officeJsPreview.Word.TableCellCollection
+

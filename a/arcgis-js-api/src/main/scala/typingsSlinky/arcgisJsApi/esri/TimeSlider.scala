@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`cumulative-from-end`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`cumulative-from-start`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`time-window`
@@ -140,8 +139,4 @@ trait TimeSlider extends Widget_ {
     */
   def stop(): Unit = js.native
 }
-
-@JSGlobal("__esri.TimeSlider")
-@js.native
-object TimeSlider extends TopLevel[TimeSliderConstructor]
 

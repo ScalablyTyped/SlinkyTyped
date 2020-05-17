@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait WhyDidYouRenderOptions extends js.Object {
+trait WhyDidYouRenderOptions extends WhyDidYouRenderComponentMember {
   var collapseGroups: js.UndefOr[Boolean] = js.native
   var diffNameColor: js.UndefOr[String] = js.native
   var diffPathColor: js.UndefOr[String] = js.native

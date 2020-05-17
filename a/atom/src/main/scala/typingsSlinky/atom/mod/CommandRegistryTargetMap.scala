@@ -2,7 +2,7 @@ package typingsSlinky.atom.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.EventTarget
-import typingsSlinky.atom.mod._Global_.HTMLElementTagNameMap
+import typingsSlinky.atom.mod.global.HTMLElementTagNameMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

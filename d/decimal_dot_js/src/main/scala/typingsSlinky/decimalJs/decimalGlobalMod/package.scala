@@ -5,6 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object decimalGlobalMod {
+  type Decimal = typingsSlinky.decimalJs.decimalGlobalMod.Decimal_
   type DecimalInstance = typingsSlinky.decimalJs.decimalGlobalMod.Decimal
-  type DecimalValue = java.lang.String | scala.Double | typingsSlinky.decimalJs.decimalGlobalMod.Decimal
 }

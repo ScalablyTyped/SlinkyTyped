@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojchartMod
 
-import typingsSlinky.oracleOraclejet.Anon0
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.`0`
 import typingsSlinky.oracleOraclejet.ojchartMod.ojSparkChart.ReferenceObject
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentSettableProperties
@@ -61,9 +61,9 @@ trait ojSparkChartSettableProperties[K, D] extends dvtBaseComponentSettablePrope
   var referenceObjects: js.Array[ReferenceObject] = js.native
   var svgClassName: String = js.native
   var svgStyle: js.Object = js.native
-  var tooltip: Anon0 = js.native
+  var tooltip: `0` = js.native
   @JSName("translations")
-  var translations_ojSparkChartSettableProperties: AnonLabelAndValue = js.native
+  var translations_ojSparkChartSettableProperties: LabelAndValue = js.native
   var `type`: area | lineWithArea | bar | line = js.native
   var visualEffects: none | auto = js.native
 }
@@ -92,9 +92,9 @@ object ojSparkChartSettableProperties {
     referenceObjects: js.Array[ReferenceObject],
     svgClassName: String,
     svgStyle: js.Object,
-    tooltip: Anon0,
+    tooltip: `0`,
     trackResize: on | off,
-    translations: AnonLabelAndValue,
+    translations: LabelAndValue,
     `type`: area | lineWithArea | bar | line,
     visualEffects: none | auto
   ): ojSparkChartSettableProperties[K, D] = {
@@ -235,13 +235,13 @@ object ojSparkChartSettableProperties {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon0): Self[K, D] = {
+    def withTooltip(value: `0`): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self[K, D] = {
+    def withTranslations(value: LabelAndValue): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

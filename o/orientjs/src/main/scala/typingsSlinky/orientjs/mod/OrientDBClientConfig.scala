@@ -1,7 +1,7 @@
 package typingsSlinky.orientjs.mod
 
-import typingsSlinky.orientjs.AnonMax
-import typingsSlinky.orientjs.AnonMaxNumber
+import typingsSlinky.orientjs.anon.Max
+import typingsSlinky.orientjs.anon.MaxNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 trait OrientDBClientConfig extends js.Object {
   var host: js.UndefOr[String] = js.native
   var logger: js.UndefOr[js.Any] = js.native
-  var pool: js.UndefOr[AnonMax] = js.native
+  var pool: js.UndefOr[Max] = js.native
   var port: js.UndefOr[Double] = js.native
   var servers: js.UndefOr[js.Array[OServerConfig]] = js.native
-  var subscribePool: js.UndefOr[AnonMaxNumber] = js.native
+  var subscribePool: js.UndefOr[MaxNumber] = js.native
 }
 
 object OrientDBClientConfig {
@@ -53,7 +53,7 @@ object OrientDBClientConfig {
         ret
     }
     @scala.inline
-    def withPool(value: AnonMax): Self = {
+    def withPool(value: Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pool")(value.asInstanceOf[js.Any])
         ret
@@ -89,7 +89,7 @@ object OrientDBClientConfig {
         ret
     }
     @scala.inline
-    def withSubscribePool(value: AnonMaxNumber): Self = {
+    def withSubscribePool(value: MaxNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subscribePool")(value.asInstanceOf[js.Any])
         ret

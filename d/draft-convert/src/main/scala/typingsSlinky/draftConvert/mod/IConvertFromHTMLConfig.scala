@@ -1,8 +1,8 @@
 package typingsSlinky.draftConvert.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.draftConvert.AnonData
-import typingsSlinky.draftConvert.AnonEntity
+import typingsSlinky.draftConvert.anon.Data
+import typingsSlinky.draftConvert.anon.Entity
 import typingsSlinky.draftConvert.draftConvertBooleans.`false`
 import typingsSlinky.draftJs.mod.Draft.Model.Constants.DraftBlockType
 import typingsSlinky.draftJs.mod.Draft.Model.Constants.DraftInlineStyleType
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 trait IConvertFromHTMLConfig extends js.Object {
   // Block styles:
   var htmlToBlock: js.UndefOr[
-    js.Function2[/* nodeName */ String, /* node */ HTMLElement, DraftBlockType | AnonData | `false`]
+    js.Function2[/* nodeName */ String, /* node */ HTMLElement, DraftBlockType | Data | `false`]
   ] = js.native
   // Html entities
   var htmlToEntity: js.UndefOr[
@@ -46,7 +46,7 @@ trait IConvertFromHTMLConfig extends js.Object {
       ], 
       /* mergeEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit], 
       /* replaceEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit], 
-      js.Array[AnonEntity]
+      js.Array[Entity]
     ]
   ] = js.native
 }
@@ -64,7 +64,7 @@ object IConvertFromHTMLConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHtmlToBlock(value: (/* nodeName */ String, /* node */ HTMLElement) => DraftBlockType | AnonData | `false`): Self = {
+    def withHtmlToBlock(value: (/* nodeName */ String, /* node */ HTMLElement) => DraftBlockType | Data | `false`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("htmlToBlock")(js.Any.fromFunction2(value))
         ret
@@ -109,7 +109,7 @@ object IConvertFromHTMLConfig {
       value: (/* text */ String, /* createEntity */ js.Function3[/* type */ String, /* mutability */ String, /* data */ js.Object, EntityKey], /* getEntity */ js.Function1[
           /* key */ EntityKey, 
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Entity */ _
-        ], /* mergeEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit], /* replaceEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit]) => js.Array[AnonEntity]
+        ], /* mergeEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit], /* replaceEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit]) => js.Array[Entity]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("textToEntity")(js.Any.fromFunction5(value))

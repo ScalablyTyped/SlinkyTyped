@@ -3,6 +3,7 @@ package typingsSlinky.inversifyExpressUtils
 import typingsSlinky.express.mod.Application_
 import typingsSlinky.express.mod.Router
 import typingsSlinky.inversify.interfacesMod.interfaces.Container
+import typingsSlinky.inversifyExpressUtils.anon.Instantiable
 import typingsSlinky.inversifyExpressUtils.interfacesMod.interfaces.ConfigFunction
 import typingsSlinky.inversifyExpressUtils.interfacesMod.interfaces.RoutingConfig
 import scala.scalajs.js
@@ -37,56 +38,56 @@ object serverMod extends js.Object {
       customRouter: Null,
       routingConfig: Null,
       customApp: Null,
-      authProvider: AnonInstantiable
+      authProvider: Instantiable
     ) = this()
     def this(
       container: Container,
       customRouter: Null,
       routingConfig: Null,
       customApp: Application_,
-      authProvider: AnonInstantiable
+      authProvider: Instantiable
     ) = this()
     def this(
       container: Container,
       customRouter: Null,
       routingConfig: RoutingConfig,
       customApp: Null,
-      authProvider: AnonInstantiable
+      authProvider: Instantiable
     ) = this()
     def this(
       container: Container,
       customRouter: Null,
       routingConfig: RoutingConfig,
       customApp: Application_,
-      authProvider: AnonInstantiable
+      authProvider: Instantiable
     ) = this()
     def this(
       container: Container,
       customRouter: Router,
       routingConfig: Null,
       customApp: Null,
-      authProvider: AnonInstantiable
+      authProvider: Instantiable
     ) = this()
     def this(
       container: Container,
       customRouter: Router,
       routingConfig: Null,
       customApp: Application_,
-      authProvider: AnonInstantiable
+      authProvider: Instantiable
     ) = this()
     def this(
       container: Container,
       customRouter: Router,
       routingConfig: RoutingConfig,
       customApp: Null,
-      authProvider: AnonInstantiable
+      authProvider: Instantiable
     ) = this()
     def this(
       container: Container,
       customRouter: Router,
       routingConfig: RoutingConfig,
       customApp: Application_,
-      authProvider: AnonInstantiable
+      authProvider: Instantiable
     ) = this()
     def this(
       container: Container,
@@ -101,7 +102,7 @@ object serverMod extends js.Object {
       customRouter: Null,
       routingConfig: Null,
       customApp: Null,
-      authProvider: AnonInstantiable,
+      authProvider: Instantiable,
       forceControllers: Boolean
     ) = this()
     def this(
@@ -117,7 +118,7 @@ object serverMod extends js.Object {
       customRouter: Null,
       routingConfig: Null,
       customApp: Application_,
-      authProvider: AnonInstantiable,
+      authProvider: Instantiable,
       forceControllers: Boolean
     ) = this()
     def this(
@@ -133,7 +134,7 @@ object serverMod extends js.Object {
       customRouter: Null,
       routingConfig: RoutingConfig,
       customApp: Null,
-      authProvider: AnonInstantiable,
+      authProvider: Instantiable,
       forceControllers: Boolean
     ) = this()
     def this(
@@ -149,7 +150,7 @@ object serverMod extends js.Object {
       customRouter: Null,
       routingConfig: RoutingConfig,
       customApp: Application_,
-      authProvider: AnonInstantiable,
+      authProvider: Instantiable,
       forceControllers: Boolean
     ) = this()
     def this(
@@ -165,7 +166,7 @@ object serverMod extends js.Object {
       customRouter: Router,
       routingConfig: Null,
       customApp: Null,
-      authProvider: AnonInstantiable,
+      authProvider: Instantiable,
       forceControllers: Boolean
     ) = this()
     def this(
@@ -181,7 +182,7 @@ object serverMod extends js.Object {
       customRouter: Router,
       routingConfig: Null,
       customApp: Application_,
-      authProvider: AnonInstantiable,
+      authProvider: Instantiable,
       forceControllers: Boolean
     ) = this()
     def this(
@@ -197,7 +198,7 @@ object serverMod extends js.Object {
       customRouter: Router,
       routingConfig: RoutingConfig,
       customApp: Null,
-      authProvider: AnonInstantiable,
+      authProvider: Instantiable,
       forceControllers: Boolean
     ) = this()
     def this(
@@ -213,7 +214,7 @@ object serverMod extends js.Object {
       customRouter: Router,
       routingConfig: RoutingConfig,
       customApp: Application_,
-      authProvider: AnonInstantiable,
+      authProvider: Instantiable,
       forceControllers: Boolean
     ) = this()
     var _AuthProvider: js.Any = js.native

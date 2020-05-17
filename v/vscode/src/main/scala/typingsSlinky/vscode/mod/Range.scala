@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonEnd
+import typingsSlinky.vscode.anon.End
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -91,7 +91,7 @@ class Range protected () extends js.Object {
   		 * @return A range that reflects the given change. Will return `this` range if the change
   		 * is not changing anything.
   		 */
-  def `with`(change: AnonEnd): Range = js.native
+  def `with`(change: End): Range = js.native
   def `with`(start: Position): Range = js.native
   def `with`(start: Position, end: Position): Range = js.native
 }

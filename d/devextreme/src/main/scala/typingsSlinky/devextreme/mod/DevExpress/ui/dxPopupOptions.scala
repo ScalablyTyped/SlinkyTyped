@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonModelAny
-import typingsSlinky.devextreme.AnonModelTitleElement
+import typingsSlinky.devextreme.anon.ModelAny
+import typingsSlinky.devextreme.anon.ModelTitleElement
 import typingsSlinky.devextreme.devextremeStrings.`left bottom`
 import typingsSlinky.devextreme.devextremeStrings.`left top`
 import typingsSlinky.devextreme.devextremeStrings.`right bottom`
@@ -14,7 +14,7 @@ import typingsSlinky.devextreme.devextremeStrings.right
 import typingsSlinky.devextreme.devextremeStrings.top
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.positionConfig
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,13 +29,13 @@ trait dxPopupOptions[T] extends dxOverlayOptions[T] {
   /** A Boolean value specifying whether or not to display the widget in full-screen mode. */
   var fullScreen: js.UndefOr[Boolean] = js.native
   /** A function that is executed each time the widget is resized by one pixel. */
-  var onResize: js.UndefOr[js.Function1[/* e */ AnonModelAny[T], _]] = js.native
+  var onResize: js.UndefOr[js.Function1[/* e */ ModelAny[T], _]] = js.native
   /** A function that is executed when resizing ends. */
-  var onResizeEnd: js.UndefOr[js.Function1[/* e */ AnonModelAny[T], _]] = js.native
+  var onResizeEnd: js.UndefOr[js.Function1[/* e */ ModelAny[T], _]] = js.native
   /** A function that is executed when resizing starts. */
-  var onResizeStart: js.UndefOr[js.Function1[/* e */ AnonModelAny[T], _]] = js.native
+  var onResizeStart: js.UndefOr[js.Function1[/* e */ ModelAny[T], _]] = js.native
   /** A function that is executed when the widget's title is rendered. */
-  var onTitleRendered: js.UndefOr[js.Function1[/* e */ AnonModelTitleElement[T], _]] = js.native
+  var onTitleRendered: js.UndefOr[js.Function1[/* e */ ModelTitleElement[T], _]] = js.native
   /** Positions the widget. */
   @JSName("position")
   var position_dxPopupOptions: js.UndefOr[
@@ -112,7 +112,7 @@ object dxPopupOptions {
         ret
     }
     @scala.inline
-    def withOnResize(value: /* e */ AnonModelAny[T] => _): Self[T] = {
+    def withOnResize(value: /* e */ ModelAny[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction1(value))
         ret
@@ -124,7 +124,7 @@ object dxPopupOptions {
         ret
     }
     @scala.inline
-    def withOnResizeEnd(value: /* e */ AnonModelAny[T] => _): Self[T] = {
+    def withOnResizeEnd(value: /* e */ ModelAny[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeEnd")(js.Any.fromFunction1(value))
         ret
@@ -136,7 +136,7 @@ object dxPopupOptions {
         ret
     }
     @scala.inline
-    def withOnResizeStart(value: /* e */ AnonModelAny[T] => _): Self[T] = {
+    def withOnResizeStart(value: /* e */ ModelAny[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeStart")(js.Any.fromFunction1(value))
         ret
@@ -148,7 +148,7 @@ object dxPopupOptions {
         ret
     }
     @scala.inline
-    def withOnTitleRendered(value: /* e */ AnonModelTitleElement[T] => _): Self[T] = {
+    def withOnTitleRendered(value: /* e */ ModelTitleElement[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleRendered")(js.Any.fromFunction1(value))
         ret

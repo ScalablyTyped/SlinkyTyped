@@ -6,8 +6,8 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.photoswipe.mod.Item
 import typingsSlinky.photoswipe.mod.Options
-import typingsSlinky.reactPhotoswipe.AnonPrevent
-import typingsSlinky.reactPhotoswipe.AnonX
+import typingsSlinky.reactPhotoswipe.anon.Prevent
+import typingsSlinky.reactPhotoswipe.anon.X
 import typingsSlinky.reactPhotoswipe.mod.PhotoSwipeGalleryItem
 import typingsSlinky.reactPhotoswipe.mod.PhotoSwipeGalleryProps
 import scala.scalajs.js
@@ -63,7 +63,7 @@ object PhotoSwipeGallery {
     def parseVerticalMargin(value: (/* instance */ typingsSlinky.reactPhotoswipe.mod.PhotoSwipe, /* item */ Item) => Unit): this.type = set("parseVerticalMargin", js.Any.fromFunction2(value))
     @scala.inline
     def preventDragEvent(
-      value: (/* instance */ typingsSlinky.reactPhotoswipe.mod.PhotoSwipe, /* e */ MouseEvent, /* isDown */ Boolean, /* preventObj */ AnonPrevent) => Unit
+      value: (/* instance */ typingsSlinky.reactPhotoswipe.mod.PhotoSwipe, /* e */ MouseEvent, /* isDown */ Boolean, /* preventObj */ Prevent) => Unit
     ): this.type = set("preventDragEvent", js.Any.fromFunction4(value))
     @scala.inline
     def resize(value: /* instance */ typingsSlinky.reactPhotoswipe.mod.PhotoSwipe => Unit): this.type = set("resize", js.Any.fromFunction1(value))
@@ -74,7 +74,7 @@ object PhotoSwipeGallery {
     @scala.inline
     def unbindEvents(value: /* instance */ typingsSlinky.reactPhotoswipe.mod.PhotoSwipe => Unit): this.type = set("unbindEvents", js.Any.fromFunction1(value))
     @scala.inline
-    def updateScrollOffset(value: (/* instance */ typingsSlinky.reactPhotoswipe.mod.PhotoSwipe, /* _offset */ AnonX) => Unit): this.type = set("updateScrollOffset", js.Any.fromFunction2(value))
+    def updateScrollOffset(value: (/* instance */ typingsSlinky.reactPhotoswipe.mod.PhotoSwipe, /* _offset */ X) => Unit): this.type = set("updateScrollOffset", js.Any.fromFunction2(value))
   }
   
   def withProps(p: PhotoSwipeGalleryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

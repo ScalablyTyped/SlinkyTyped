@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents data for the sensor trigger. */
-@JSGlobal("Windows.Devices.Sensors.ActivitySensorReadingChangeReport")
 @js.native
-abstract class ActivitySensorReadingChangeReport () extends js.Object {
+trait ActivitySensorReadingChangeReport extends js.Object {
   /** Gets the reading of the sensor when it's triggered. */
   var reading: ActivitySensorReading = js.native
+}
+
+object ActivitySensorReadingChangeReport {
+  @scala.inline
+  def apply(reading: ActivitySensorReading): ActivitySensorReadingChangeReport = {
+    val __obj = js.Dynamic.literal(reading = reading.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ActivitySensorReadingChangeReport]
+  }
+  @scala.inline
+  implicit class ActivitySensorReadingChangeReportOps[Self <: ActivitySensorReadingChangeReport] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReading(value: ActivitySensorReading): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reading")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

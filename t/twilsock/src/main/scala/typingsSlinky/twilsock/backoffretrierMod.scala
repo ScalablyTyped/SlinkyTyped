@@ -1,6 +1,7 @@
 package typingsSlinky.twilsock
 
 import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.twilsock.anon.Initial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +14,7 @@ object backoffretrierMod extends js.Object {
   */
   @js.native
   class BackoffRetrier protected () extends EventEmitter {
-    def this(options: AnonInitial) = this()
+    def this(options: Initial) = this()
     var cleanRetrier: js.Any = js.native
     var createRetrier: js.Any = js.native
     var getRetryPolicy: js.Any = js.native

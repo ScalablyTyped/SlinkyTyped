@@ -1,7 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.DoWhileStatement
-import typingsSlinky.babelTypes.babelTypesStrings.WhileStatement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,30 +12,8 @@ trait While extends js.Object
 
 object While {
   @scala.inline
-  def DoWhileStatement_(
-    body: Statement,
-    end: Double,
-    loc: SourceLocation,
-    start: Double,
-    test: Expression,
-    `type`: DoWhileStatement
-  ): While = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], test = test.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[While]
-  }
+  implicit def apply(value: DoWhileStatement_): While = value.asInstanceOf[While]
   @scala.inline
-  def WhileStatement_(
-    body: Statement,
-    end: Double,
-    loc: SourceLocation,
-    start: Double,
-    test: Expression,
-    `type`: WhileStatement
-  ): While = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], test = test.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[While]
-  }
+  implicit def apply(value: WhileStatement_): While = value.asInstanceOf[While]
 }
 

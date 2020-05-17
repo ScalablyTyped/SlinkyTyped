@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`picture-fill`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`simple-fill`
 import scala.scalajs.js
@@ -23,8 +22,4 @@ trait FillSymbol extends Symbol {
   @JSName("type")
   var type_FillSymbol: `simple-fill` | `picture-fill` = js.native
 }
-
-@JSGlobal("__esri.FillSymbol")
-@js.native
-object FillSymbol extends TopLevel[FillSymbolConstructor]
 

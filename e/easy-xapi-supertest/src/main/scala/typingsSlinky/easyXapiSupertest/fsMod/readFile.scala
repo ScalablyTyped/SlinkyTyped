@@ -1,8 +1,8 @@
 package typingsSlinky.easyXapiSupertest.fsMod
 
-import typingsSlinky.easyXapiSupertest.AnonFlag
-import typingsSlinky.easyXapiSupertest.AnonFlagString
 import typingsSlinky.easyXapiSupertest.NodeJS.ErrnoException
+import typingsSlinky.easyXapiSupertest.anon.Flag
+import typingsSlinky.easyXapiSupertest.anon.FlagString
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,12 +19,12 @@ object readFile extends js.Object {
   ): Unit = js.native
   def apply(
     filename: String,
-    options: AnonFlagString,
+    options: FlagString,
     callback: js.Function2[/* err */ ErrnoException, /* data */ Buffer, Unit]
   ): Unit = js.native
   def apply(
     filename: String,
-    options: AnonFlag,
+    options: Flag,
     callback: js.Function2[/* err */ ErrnoException, /* data */ String, Unit]
   ): Unit = js.native
 }

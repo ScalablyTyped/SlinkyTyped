@@ -1,0 +1,65 @@
+package typingsSlinky.awsSdkClientCodecommitNode.getFolderExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommitDoesNotExistExceptionMod.CommitDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+import typingsSlinky.awsSdkClientCodecommitNode.typesFolderDoesNotExistExceptionMod.FolderDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommitExceptionMod.InvalidCommitException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPathExceptionMod.InvalidPathException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesPathRequiredExceptionMod.PathRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommitExceptionMod.InvalidCommitException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommitDoesNotExistExceptionMod.CommitDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesPathRequiredExceptionMod.PathRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPathExceptionMod.InvalidPathException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesFolderDoesNotExistExceptionMod.FolderDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+*/
+trait GetFolderExceptionsUnion extends js.Object
+
+object GetFolderExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: CommitDoesNotExistException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionIntegrityChecksFailedException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyAccessDeniedException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyDisabledException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyNotFoundException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyUnavailableException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: FolderDoesNotExistException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidCommitException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidPathException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidRepositoryNameException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: PathRequiredException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryDoesNotExistException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameRequiredException): GetFolderExceptionsUnion = value.asInstanceOf[GetFolderExceptionsUnion]
+}
+

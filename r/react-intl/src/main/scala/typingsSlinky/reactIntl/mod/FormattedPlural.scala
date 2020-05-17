@@ -2,9 +2,9 @@ package typingsSlinky.reactIntl.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactIntl.PartialPickProps2children
-import typingsSlinky.reactIntl.PickProps2childrenotherze
-import typingsSlinky.reactIntl.WeakValidationMapPickProp
+import typingsSlinky.reactIntl.anon.PartialPickProps2children
+import typingsSlinky.reactIntl.anon.PickProps2childrenotherze
+import typingsSlinky.reactIntl.anon.WeakValidationMapPickProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

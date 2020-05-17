@@ -1,19 +1,12 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ej.Splitter")
 @js.native
-class Splitter_ protected () extends Widget_ {
-  def this(element: JQuery) = this()
-  def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Splitter.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Splitter.Model) = this()
+trait Splitter_ extends Widget_ {
   var defaults: typingsSlinky.ejWebAll.ej.Splitter.Model = js.native
   @JSName("model")
   var model_Splitter_ : typingsSlinky.ejWebAll.ej.Splitter.Model = js.native

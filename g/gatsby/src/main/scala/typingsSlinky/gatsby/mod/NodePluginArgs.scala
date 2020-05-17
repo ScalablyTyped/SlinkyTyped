@@ -1,7 +1,7 @@
 package typingsSlinky.gatsby.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.gatsby.AnonDel
+import typingsSlinky.gatsby.anon.Del
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait NodePluginArgs
   extends /* key */ StringDictionary[js.Any] {
   var actions: Actions = js.native
   var boundActionCreators: Actions = js.native
-  var cache: AnonDel = js.native
+  var cache: Del = js.native
   var createContentDigest: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof createContentDigest */ js.Any = js.native
   var createNodeId: js.Function = js.native
   var emitter: EventEmitter = js.native
@@ -34,7 +34,7 @@ object NodePluginArgs {
   def apply(
     actions: Actions,
     boundActionCreators: Actions,
-    cache: AnonDel,
+    cache: Del,
     createContentDigest: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof createContentDigest */ js.Any,
     createNodeId: js.Function,
     emitter: EventEmitter,
@@ -72,7 +72,7 @@ object NodePluginArgs {
         ret
     }
     @scala.inline
-    def withCache(value: AnonDel): Self = {
+    def withCache(value: Del): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
         ret

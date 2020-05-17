@@ -1,7 +1,6 @@
 package typingsSlinky.std
 
 import org.scalablytyped.runtime.NumberDictionary
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,9 @@ import scala.scalajs.js.annotation._
   * requested number of bytes could not be allocated an exception is raised.
   */
 @js.native
-trait Uint32Array extends /* index */ NumberDictionary[Double] {
+trait Uint32Array
+  extends /* index */ NumberDictionary[Double]
+     with Uint32List {
   /**
     * The size in bytes of each element in the array.
     */
@@ -333,8 +334,4 @@ trait Uint32Array extends /* index */ NumberDictionary[Double] {
     */
   def values(): IterableIterator[Double] = js.native
 }
-
-@JSGlobal("Uint32Array")
-@js.native
-object Uint32Array extends TopLevel[Uint32ArrayConstructor]
 

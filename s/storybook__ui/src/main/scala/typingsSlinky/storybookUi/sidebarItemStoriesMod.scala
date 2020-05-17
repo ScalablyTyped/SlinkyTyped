@@ -1,6 +1,7 @@
 package typingsSlinky.storybookUi
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.storybookUi.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +25,7 @@ object sidebarItemStoriesMod extends js.Object {
   
   @js.native
   object longName extends js.Object {
-    var story: AnonName = js.native
+    var story: Name = js.native
     def apply(): ReactElement = js.native
   }
   

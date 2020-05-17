@@ -1,14 +1,14 @@
 package typingsSlinky.reactNativeSafeAreaView.mod
 
 import typingsSlinky.reactNative.mod.ViewProps
-import typingsSlinky.reactNativeSafeAreaView.AnonBottom
+import typingsSlinky.reactNativeSafeAreaView.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SafeAreaViewProps extends ViewProps {
-  var forceInset: js.UndefOr[AnonBottom] = js.native
+  var forceInset: js.UndefOr[Bottom] = js.native
 }
 
 object SafeAreaViewProps {
@@ -24,7 +24,7 @@ object SafeAreaViewProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withForceInset(value: AnonBottom): Self = {
+    def withForceInset(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("forceInset")(value.asInstanceOf[js.Any])
         ret

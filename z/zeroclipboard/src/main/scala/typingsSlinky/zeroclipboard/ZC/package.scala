@@ -9,6 +9,5 @@ package object ZC {
   // Generic version EventHandler containers.
   // Mimicking native interfaces in lib.dom.d.ts of the same name.
   type EventListener[T /* <: typingsSlinky.zeroclipboard.ZC.ZeroClipboardEvent */] = js.Function1[/* ev */ T, scala.Unit]
-  type EventListenerOrEventListenerObject[T /* <: typingsSlinky.zeroclipboard.ZC.ZeroClipboardEvent */] = typingsSlinky.zeroclipboard.ZC.EventListener[T] | typingsSlinky.zeroclipboard.ZC.EventListenerObject[T]
   type ZeroClipboardBeforeCopyEvent = typingsSlinky.zeroclipboard.ZC.ZeroClipboardEvent
 }

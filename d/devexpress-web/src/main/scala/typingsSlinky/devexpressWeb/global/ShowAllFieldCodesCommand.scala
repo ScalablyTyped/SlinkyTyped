@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * A command to display all field codes in place of the fields in the document.
+  */
+@JSGlobal("ShowAllFieldCodesCommand")
+@js.native
+class ShowAllFieldCodesCommand ()
+  extends typingsSlinky.devexpressWeb.ShowAllFieldCodesCommand
+

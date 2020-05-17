@@ -3,6 +3,7 @@ package typingsSlinky.emberData
 import typingsSlinky.ember.mod.Ember.NativeArray
 import typingsSlinky.ember.mod.default.ComputedProperty
 import typingsSlinky.ember.mod.default.Map
+import typingsSlinky.emberData.anon.TypeofModelInstantiable
 import typingsSlinky.emberData.mod.AttributeMeta
 import typingsSlinky.emberData.mod.DS.Store
 import typingsSlinky.emberData.mod.ModelKeys

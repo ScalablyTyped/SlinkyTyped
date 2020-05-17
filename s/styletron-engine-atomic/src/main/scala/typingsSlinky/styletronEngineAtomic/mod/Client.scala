@@ -2,7 +2,7 @@ package typingsSlinky.styletronEngineAtomic.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLStyleElement
-import typingsSlinky.styletronEngineAtomic.AnonBlock
+import typingsSlinky.styletronEngineAtomic.anon.Block
 import typingsSlinky.styletronStandard.mod.FontFace
 import typingsSlinky.styletronStandard.mod.KeyframesObject
 import typingsSlinky.styletronStandard.mod.StandardEngine
@@ -18,7 +18,7 @@ class Client () extends StandardEngine {
   var fontFaceSheet: HTMLStyleElement = js.native
   var keyframesCache: Cache[KeyframesObject] = js.native
   var keyframesSheet: HTMLStyleElement = js.native
-  var styleCache: MultiCache[AnonBlock] = js.native
+  var styleCache: MultiCache[Block] = js.native
   var styleElements: StringDictionary[HTMLStyleElement] = js.native
 }
 

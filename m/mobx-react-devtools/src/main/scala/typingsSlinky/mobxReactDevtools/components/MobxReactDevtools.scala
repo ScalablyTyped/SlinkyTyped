@@ -2,7 +2,7 @@ package typingsSlinky.mobxReactDevtools.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.mobxReactDevtools.AnonBottom
+import typingsSlinky.mobxReactDevtools.anon.Bottom
 import typingsSlinky.mobxReactDevtools.mobxReactDevtoolsStrings.bottomLeft
 import typingsSlinky.mobxReactDevtools.mobxReactDevtoolsStrings.bottomRight
 import typingsSlinky.mobxReactDevtools.mobxReactDevtoolsStrings.topLeft
@@ -30,7 +30,7 @@ object MobxReactDevtools {
     @scala.inline
     def noPanel(value: Boolean): this.type = set("noPanel", value.asInstanceOf[js.Any])
     @scala.inline
-    def position(value: topRight | bottomRight | bottomLeft | topLeft | AnonBottom): this.type = set("position", value.asInstanceOf[js.Any])
+    def position(value: topRight | bottomRight | bottomLeft | topLeft | Bottom): this.type = set("position", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }

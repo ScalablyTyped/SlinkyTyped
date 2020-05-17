@@ -1,13 +1,13 @@
 package typingsSlinky.resemblejs.mod
 
-import typingsSlinky.resemblejs.AnonBlue
+import typingsSlinky.resemblejs.anon.Blue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait OutputSettings_ extends js.Object {
-  var errorColor: AnonBlue = js.native
+  var errorColor: Blue = js.native
   var errorType: String = js.native
   var largeImageThreshold: Double = js.native
   var transparency: Double = js.native
@@ -15,7 +15,7 @@ trait OutputSettings_ extends js.Object {
 
 object OutputSettings_ {
   @scala.inline
-  def apply(errorColor: AnonBlue, errorType: String, largeImageThreshold: Double, transparency: Double): OutputSettings_ = {
+  def apply(errorColor: Blue, errorType: String, largeImageThreshold: Double, transparency: Double): OutputSettings_ = {
     val __obj = js.Dynamic.literal(errorColor = errorColor.asInstanceOf[js.Any], errorType = errorType.asInstanceOf[js.Any], largeImageThreshold = largeImageThreshold.asInstanceOf[js.Any], transparency = transparency.asInstanceOf[js.Any])
     __obj.asInstanceOf[OutputSettings_]
   }
@@ -26,7 +26,7 @@ object OutputSettings_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withErrorColor(value: AnonBlue): Self = {
+    def withErrorColor(value: Blue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errorColor")(value.asInstanceOf[js.Any])
         ret

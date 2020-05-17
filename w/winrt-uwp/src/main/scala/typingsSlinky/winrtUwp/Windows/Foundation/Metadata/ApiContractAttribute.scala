@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Foundation.Metadata.ApiContractAttribute")
 @js.native
-abstract class ApiContractAttribute () extends js.Object
+trait ApiContractAttribute extends js.Object
 

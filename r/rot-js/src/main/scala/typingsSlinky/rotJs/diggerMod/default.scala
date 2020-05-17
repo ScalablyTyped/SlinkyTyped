@@ -1,6 +1,6 @@
 package typingsSlinky.rotJs.diggerMod
 
-import typingsSlinky.rotJs.PartialOptionsCorridorLength
+import typingsSlinky.rotJs.anon.PartialOptionsCorridorLength
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

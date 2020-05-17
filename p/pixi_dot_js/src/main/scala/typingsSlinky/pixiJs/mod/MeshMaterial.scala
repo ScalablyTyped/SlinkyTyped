@@ -1,6 +1,6 @@
 package typingsSlinky.pixiJs.mod
 
-import typingsSlinky.pixiJs.AnonPluginName
+import typingsSlinky.pixiJs.anon.Alpha
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +16,6 @@ import scala.scalajs.js.annotation._
 class MeshMaterial protected ()
   extends typingsSlinky.pixiJs.PIXI.MeshMaterial {
   def this(uSampler: typingsSlinky.pixiJs.PIXI.Texture) = this()
-  def this(uSampler: typingsSlinky.pixiJs.PIXI.Texture, options: AnonPluginName) = this()
+  def this(uSampler: typingsSlinky.pixiJs.PIXI.Texture, options: Alpha) = this()
 }
 

@@ -1,23 +1,23 @@
 package typingsSlinky.workboxBuild.typesMod
 
-import typingsSlinky.workboxBuild.AnonChannelName
-import typingsSlinky.workboxBuild.AnonHeaders
-import typingsSlinky.workboxBuild.AnonMaxAgeSeconds
-import typingsSlinky.workboxBuild.AnonName
+import typingsSlinky.workboxBuild.anon.ChannelName
+import typingsSlinky.workboxBuild.anon.Headers
+import typingsSlinky.workboxBuild.anon.MaxAgeSeconds
+import typingsSlinky.workboxBuild.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RuntimeCachingEntryOptions extends js.Object {
-  var backgroundSync: js.UndefOr[AnonName] = js.native
-  var broadcastUpdate: js.UndefOr[AnonChannelName] = js.native
+  var backgroundSync: js.UndefOr[Name] = js.native
+  var broadcastUpdate: js.UndefOr[ChannelName] = js.native
   /**
     * The `cacheName` to use when constructing one of the [Workbox strategy classes](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-strategies.html).
     */
   var cacheName: js.UndefOr[String] = js.native
-  var cacheableResponse: js.UndefOr[AnonHeaders] = js.native
-  var expiration: js.UndefOr[AnonMaxAgeSeconds] = js.native
+  var cacheableResponse: js.UndefOr[Headers] = js.native
+  var expiration: js.UndefOr[MaxAgeSeconds] = js.native
   /**
     * The `fetchOptions` property value to use when constructing one of the
     * [Workbox strategy classes](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-strategies.html).
@@ -54,7 +54,7 @@ object RuntimeCachingEntryOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBackgroundSync(value: AnonName): Self = {
+    def withBackgroundSync(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundSync")(value.asInstanceOf[js.Any])
         ret
@@ -66,7 +66,7 @@ object RuntimeCachingEntryOptions {
         ret
     }
     @scala.inline
-    def withBroadcastUpdate(value: AnonChannelName): Self = {
+    def withBroadcastUpdate(value: ChannelName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("broadcastUpdate")(value.asInstanceOf[js.Any])
         ret
@@ -90,7 +90,7 @@ object RuntimeCachingEntryOptions {
         ret
     }
     @scala.inline
-    def withCacheableResponse(value: AnonHeaders): Self = {
+    def withCacheableResponse(value: Headers): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cacheableResponse")(value.asInstanceOf[js.Any])
         ret
@@ -102,7 +102,7 @@ object RuntimeCachingEntryOptions {
         ret
     }
     @scala.inline
-    def withExpiration(value: AnonMaxAgeSeconds): Self = {
+    def withExpiration(value: MaxAgeSeconds): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(value.asInstanceOf[js.Any])
         ret

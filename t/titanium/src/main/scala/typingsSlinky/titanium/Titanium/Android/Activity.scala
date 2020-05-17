@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * The Titanium binding of an Android Activity.
 		 */
-@JSGlobal("Titanium.Android.Activity")
 @js.native
-class Activity () extends Proxy {
+trait Activity extends Proxy {
   /**
   			 * The action bar for this activity.
   			 */

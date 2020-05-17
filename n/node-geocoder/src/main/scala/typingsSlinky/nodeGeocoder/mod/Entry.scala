@@ -1,21 +1,21 @@
 package typingsSlinky.nodeGeocoder.mod
 
-import typingsSlinky.nodeGeocoder.AnonConfidence
-import typingsSlinky.nodeGeocoder.AnonLevel1long
+import typingsSlinky.nodeGeocoder.anon.Confidence
+import typingsSlinky.nodeGeocoder.anon.Level1long
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Entry extends js.Object {
-  var administrativeLevels: js.UndefOr[AnonLevel1long] = js.native
+  var administrativeLevels: js.UndefOr[Level1long] = js.native
   var building: js.UndefOr[String] = js.native
   var city: js.UndefOr[String] = js.native
   var country: js.UndefOr[String] = js.native
   var countryCode: js.UndefOr[String] = js.native
   var county: js.UndefOr[String] = js.native
   var district: js.UndefOr[String] = js.native
-  var extra: js.UndefOr[AnonConfidence] = js.native
+  var extra: js.UndefOr[Confidence] = js.native
   var formattedAddress: js.UndefOr[String] = js.native
   var latitude: js.UndefOr[Double] = js.native
   var longitude: js.UndefOr[Double] = js.native
@@ -40,7 +40,7 @@ object Entry {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdministrativeLevels(value: AnonLevel1long): Self = {
+    def withAdministrativeLevels(value: Level1long): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("administrativeLevels")(value.asInstanceOf[js.Any])
         ret
@@ -124,7 +124,7 @@ object Entry {
         ret
     }
     @scala.inline
-    def withExtra(value: AnonConfidence): Self = {
+    def withExtra(value: Confidence): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
         ret

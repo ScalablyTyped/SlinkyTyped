@@ -9,7 +9,7 @@ package object zoneJs {
     * Patch Function to allow user define their own monkey patch module.
     */
   type PatchFn = js.Function3[
-    /* global */ typingsSlinky.std.Window_, 
+    /* global */ org.scalajs.dom.raw.Window, 
     /* Zone */ typingsSlinky.zoneJs.ZoneType, 
     /* api */ typingsSlinky.zoneJs.ZonePrivate, 
     scala.Unit

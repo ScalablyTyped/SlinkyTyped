@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Networking.Sockets
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides socket control data on a DatagramSocket object. */
+@JSGlobal("Windows.Networking.Sockets.DatagramSocketControl")
+@js.native
+abstract class DatagramSocketControl ()
+  extends typingsSlinky.winrtUwp.Windows.Networking.Sockets.DatagramSocketControl
+

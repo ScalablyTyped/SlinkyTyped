@@ -12,3 +12,14 @@ import scala.scalajs.js.annotation._
 */
 trait PointCloudRenderer extends js.Object
 
+object PointCloudRenderer {
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.PointCloudClassBreaksRenderer): PointCloudRenderer = value.asInstanceOf[PointCloudRenderer]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.PointCloudRGBRenderer): PointCloudRenderer = value.asInstanceOf[PointCloudRenderer]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.PointCloudStretchRenderer): PointCloudRenderer = value.asInstanceOf[PointCloudRenderer]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.PointCloudUniqueValueRenderer): PointCloudRenderer = value.asInstanceOf[PointCloudRenderer]
+}
+

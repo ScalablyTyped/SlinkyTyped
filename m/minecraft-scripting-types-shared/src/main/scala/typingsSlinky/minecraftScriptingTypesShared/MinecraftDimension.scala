@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.minecraftScriptingTypesShared.minecraftScriptingTypesSharedStrings.nether
   - typingsSlinky.minecraftScriptingTypesShared.minecraftScriptingTypesSharedStrings.`the end`
 */
-trait MinecraftDimension extends js.Object
+trait MinecraftDimension extends Dimension
 
 object MinecraftDimension {
   @scala.inline

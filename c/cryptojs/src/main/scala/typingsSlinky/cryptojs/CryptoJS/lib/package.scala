@@ -13,6 +13,5 @@ package object lib {
   type HasherHelper = typingsSlinky.cryptojs.CryptoJS.lib.IHasherHelper[js.Object]
   type PasswordBasedCipher = typingsSlinky.cryptojs.CryptoJS.lib.IPasswordBasedCipher[typingsSlinky.cryptojs.CryptoJS.lib.IPasswordBasedCipherCfg]
   type SerializableCipher = typingsSlinky.cryptojs.CryptoJS.lib.ISerializableCipher[typingsSlinky.cryptojs.CryptoJS.lib.ISerializableCipherCfg]
-  type SomeArray = js.typedarray.ArrayBuffer | js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array
   type StreamCipher = typingsSlinky.cryptojs.CryptoJS.lib.IStreamCipher[js.Object]
 }

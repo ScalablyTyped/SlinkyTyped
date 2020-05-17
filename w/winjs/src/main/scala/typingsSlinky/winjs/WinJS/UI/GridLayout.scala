@@ -8,16 +8,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a grid layout for the ListView in which items are arranged in a horizontal grid.
   **/
-@JSGlobal("WinJS.UI.GridLayout")
 @js.native
-//#region Constructors
-/**
-  * Creates a new GridLayout object.
-  * @constructor
-  * @param options The set of properties and values to apply to the new GridLayout.
-  **/
-class GridLayout () extends js.Object {
-  def this(options: js.Any) = this()
+trait GridLayout extends js.Object {
   //#endregion Methods
   //#region Properties
   /**
@@ -113,13 +105,153 @@ class GridLayout () extends js.Object {
   def uninitialize(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("WinJS.UI.GridLayout")
-@js.native
-object GridLayout extends js.Object {
-  /**
-    * Indicates that the object is compatibile with declarative processing.
-    **/
-  var supportedForProcessing: Boolean = js.native
+object GridLayout {
+  @scala.inline
+  def apply(
+    backdropColor: String,
+    disableBackdrop: Boolean,
+    dragLeave: () => Unit,
+    dragOver: () => Unit,
+    executeAnimations: () => Unit,
+    getAdjacent: (js.Any, Key) => js.Any,
+    groupHeaderPosition: HeaderPosition,
+    groupInfo: js.Function,
+    hitTest: (Double, Double) => Unit,
+    initialize: (ILayoutSite2, Boolean) => Unit,
+    itemInfo: js.Function,
+    itemsFromRange: (Double, Double) => Unit,
+    layout: (js.Any, js.Any, js.Any, js.Any) => Unit,
+    maxRows: Double,
+    maximumRowsOrColumns: Double,
+    numberOfItemsPerItemsBlock: js.Any,
+    orientation: Orientation,
+    setupAnimations: () => Unit,
+    uninitialize: () => Unit
+  ): GridLayout = {
+    val __obj = js.Dynamic.literal(backdropColor = backdropColor.asInstanceOf[js.Any], disableBackdrop = disableBackdrop.asInstanceOf[js.Any], dragLeave = js.Any.fromFunction0(dragLeave), dragOver = js.Any.fromFunction0(dragOver), executeAnimations = js.Any.fromFunction0(executeAnimations), getAdjacent = js.Any.fromFunction2(getAdjacent), groupHeaderPosition = groupHeaderPosition.asInstanceOf[js.Any], groupInfo = groupInfo.asInstanceOf[js.Any], hitTest = js.Any.fromFunction2(hitTest), initialize = js.Any.fromFunction2(initialize), itemInfo = itemInfo.asInstanceOf[js.Any], itemsFromRange = js.Any.fromFunction2(itemsFromRange), layout = js.Any.fromFunction4(layout), maxRows = maxRows.asInstanceOf[js.Any], maximumRowsOrColumns = maximumRowsOrColumns.asInstanceOf[js.Any], numberOfItemsPerItemsBlock = numberOfItemsPerItemsBlock.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], setupAnimations = js.Any.fromFunction0(setupAnimations), uninitialize = js.Any.fromFunction0(uninitialize))
+    __obj.asInstanceOf[GridLayout]
+  }
+  @scala.inline
+  implicit class GridLayoutOps[Self <: GridLayout] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackdropColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableBackdrop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableBackdrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDragLeave(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragLeave")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDragOver(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragOver")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withExecuteAnimations(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executeAnimations")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAdjacent(value: (js.Any, Key) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAdjacent")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGroupHeaderPosition(value: HeaderPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupHeaderPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroupInfo(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHitTest(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hitTest")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withInitialize(value: (ILayoutSite2, Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialize")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withItemInfo(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItemsFromRange(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsFromRange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLayout(value: (js.Any, js.Any, js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withMaxRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaximumRowsOrColumns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumRowsOrColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumberOfItemsPerItemsBlock(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfItemsPerItemsBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: Orientation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetupAnimations(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupAnimations")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUninitialize(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uninitialize")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

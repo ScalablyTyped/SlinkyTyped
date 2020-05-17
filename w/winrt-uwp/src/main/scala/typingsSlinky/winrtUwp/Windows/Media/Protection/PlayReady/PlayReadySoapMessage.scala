@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains a SOAP message used in manual challenge requests. */
-@JSGlobal("Windows.Media.Protection.PlayReady.PlayReadySoapMessage")
 @js.native
-abstract class PlayReadySoapMessage () extends js.Object {
+trait PlayReadySoapMessage extends js.Object {
   /** Gets a collection of the SOAP headers applied to the current SOAP request or SOAP response. */
   var messageHeaders: IPropertySet = js.native
   /** Gets the base URL of the XML Web service. */
@@ -19,5 +18,39 @@ abstract class PlayReadySoapMessage () extends js.Object {
     * @return The contents of the SOAP message.
     */
   def getMessageBody(): js.Array[Double] = js.native
+}
+
+object PlayReadySoapMessage {
+  @scala.inline
+  def apply(getMessageBody: () => js.Array[Double], messageHeaders: IPropertySet, uri: Uri): PlayReadySoapMessage = {
+    val __obj = js.Dynamic.literal(getMessageBody = js.Any.fromFunction0(getMessageBody), messageHeaders = messageHeaders.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PlayReadySoapMessage]
+  }
+  @scala.inline
+  implicit class PlayReadySoapMessageOps[Self <: PlayReadySoapMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetMessageBody(value: () => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMessageBody")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMessageHeaders(value: IPropertySet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

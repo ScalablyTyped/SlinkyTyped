@@ -1,6 +1,6 @@
 package typingsSlinky.childProcessPromise.mod
 
-import typingsSlinky.childProcessPromise.ReadonlyOptionsSpawnOptio
+import typingsSlinky.childProcessPromise.anon.ReadonlyOptionsSpawnOptio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

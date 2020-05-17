@@ -1,6 +1,8 @@
 package typingsSlinky.reactNativeNavigation
 
 import typingsSlinky.reactNative.mod.ComponentProvider
+import typingsSlinky.reactNativeNavigation.anon.TypeofSharedElement
+import typingsSlinky.reactNativeNavigation.anon.TypeofTouchablePreview
 import typingsSlinky.reactNativeNavigation.constantsMod.NavigationConstants
 import typingsSlinky.reactNativeNavigation.eventsRegistryMod.EventsRegistry
 import typingsSlinky.reactNativeNavigation.layoutMod.Layout

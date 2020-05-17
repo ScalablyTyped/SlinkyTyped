@@ -1,6 +1,6 @@
 package typingsSlinky.discordRpc.mod
 
-import typingsSlinky.discordRpc.AnonLeft
+import typingsSlinky.discordRpc.anon.Left
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait UserVoiceSettings extends js.Object {
   var id: String = js.native
   var mute: js.UndefOr[Boolean] = js.native
-  var pan: js.UndefOr[AnonLeft] = js.native
+  var pan: js.UndefOr[Left] = js.native
   var volume: js.UndefOr[Double] = js.native
 }
 
@@ -44,7 +44,7 @@ object UserVoiceSettings {
         ret
     }
     @scala.inline
-    def withPan(value: AnonLeft): Self = {
+    def withPan(value: Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pan")(value.asInstanceOf[js.Any])
         ret

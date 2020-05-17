@@ -1,6 +1,6 @@
 package typingsSlinky.rotJs.pathPathMod
 
-import typingsSlinky.rotJs.PartialOptions
+import typingsSlinky.rotJs.anon.PartialOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

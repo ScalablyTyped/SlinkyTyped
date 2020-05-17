@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.global
@@ -254,8 +253,4 @@ trait SceneView
     */
   def toScreen(point: Point): SceneViewScreenPoint = js.native
 }
-
-@JSGlobal("__esri.SceneView")
-@js.native
-object SceneView extends TopLevel[SceneViewConstructor]
 

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -113,7 +112,125 @@ trait ListItem extends js.Object {
   val visibleAtCurrentScale: Boolean = js.native
 }
 
-@JSGlobal("__esri.ListItem")
-@js.native
-object ListItem extends TopLevel[ListItemConstructor]
+object ListItem {
+  @scala.inline
+  def apply(
+    actionsOpen: Boolean,
+    actionsSections: Collection[Collection[ActionButton | ActionToggle]],
+    children: Collection[ListItem],
+    error: Error,
+    layer: Layer,
+    layerView: LayerView,
+    open: Boolean,
+    panel: ListItemPanel,
+    parent: ListItem,
+    title: String,
+    updating: Boolean,
+    view: MapView | SceneView,
+    visibilityMode: String,
+    visible: Boolean,
+    visibleAtCurrentScale: Boolean
+  ): ListItem = {
+    val __obj = js.Dynamic.literal(actionsOpen = actionsOpen.asInstanceOf[js.Any], actionsSections = actionsSections.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], layer = layer.asInstanceOf[js.Any], layerView = layerView.asInstanceOf[js.Any], open = open.asInstanceOf[js.Any], panel = panel.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], updating = updating.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any], visibilityMode = visibilityMode.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any], visibleAtCurrentScale = visibleAtCurrentScale.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ListItem]
+  }
+  @scala.inline
+  implicit class ListItemOps[Self <: ListItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionsOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionsOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActionsSections(value: Collection[Collection[ActionButton | ActionToggle]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionsSections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: Collection[ListItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withError(value: Error): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLayer(value: Layer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLayerView(value: LayerView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPanel(value: ListItemPanel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: ListItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdating(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withView(value: MapView | SceneView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisibilityMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibilityMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisibleAtCurrentScale(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleAtCurrentScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

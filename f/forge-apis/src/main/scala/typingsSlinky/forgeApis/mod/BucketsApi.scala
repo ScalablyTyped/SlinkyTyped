@@ -1,7 +1,7 @@
 package typingsSlinky.forgeApis.mod
 
-import typingsSlinky.forgeApis.AnonLimit
-import typingsSlinky.forgeApis.AnonXAdsRegion
+import typingsSlinky.forgeApis.anon.Limit
+import typingsSlinky.forgeApis.anon.XAdsRegion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class BucketsApi () extends js.Object {
     */
   def createBucket(
     postBuckets: PostBucketsPayload,
-    opts: AnonXAdsRegion,
+    opts: XAdsRegion,
     oauth2Client: AuthClient,
     credentials: AuthToken
   ): js.Promise[ApiResponse] = js.native
@@ -31,6 +31,6 @@ class BucketsApi () extends js.Object {
   /**
     * This endpoint will return the buckets owned by the application. This endpoint supports pagination.
     */
-  def getBuckets(opts: AnonLimit, oauth2Client: AuthClient, credentials: AuthToken): js.Promise[ApiResponse] = js.native
+  def getBuckets(opts: Limit, oauth2Client: AuthClient, credentials: AuthToken): js.Promise[ApiResponse] = js.native
 }
 

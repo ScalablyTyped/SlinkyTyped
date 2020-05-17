@@ -1,7 +1,6 @@
 package typingsSlinky.bull.mod
 
-import typingsSlinky.bull.AnonCount
-import typingsSlinky.bull.AnonJobId
+import typingsSlinky.bull.anon.Count
 import typingsSlinky.bull.bullStrings.active
 import typingsSlinky.bull.bullStrings.cleaned
 import typingsSlinky.bull.bullStrings.completed
@@ -144,9 +143,9 @@ trait Queue[T] extends EventEmitter {
     * Returns a object with the logs according to the start and end arguments. The returned count
     * value is the total amount of logs, useful for implementing pagination.
     */
-  def getJobLogs(jobId: String): js.Promise[AnonCount] = js.native
-  def getJobLogs(jobId: String, start: Double): js.Promise[AnonCount] = js.native
-  def getJobLogs(jobId: String, start: Double, end: Double): js.Promise[AnonCount] = js.native
+  def getJobLogs(jobId: String): js.Promise[Count] = js.native
+  def getJobLogs(jobId: String, start: Double): js.Promise[Count] = js.native
+  def getJobLogs(jobId: String, start: Double, end: Double): js.Promise[Count] = js.native
   /**
     * Returns a promise that will return an array of job instances of the given job statuses.
     * Optional parameters for range and ordering are provided.
@@ -376,12 +375,12 @@ trait Queue[T] extends EventEmitter {
     *
     * name: The name of the to be removed job
     */
-  def removeRepeatable(name: String, repeat: (CronRepeatOptions | EveryRepeatOptions) with AnonJobId): js.Promise[Unit] = js.native
+  def removeRepeatable(name: String, repeat: (CronRepeatOptions | EveryRepeatOptions) with typingsSlinky.bull.anon.JobId): js.Promise[Unit] = js.native
   /**
     * Removes a given repeatable job. The RepeatOptions and JobId needs to be the same as the ones
     * used for the job when it was added.
     */
-  def removeRepeatable(repeat: (CronRepeatOptions | EveryRepeatOptions) with AnonJobId): js.Promise[Unit] = js.native
+  def removeRepeatable(repeat: (CronRepeatOptions | EveryRepeatOptions) with typingsSlinky.bull.anon.JobId): js.Promise[Unit] = js.native
   /**
     * Removes a given repeatable job by key.
     */

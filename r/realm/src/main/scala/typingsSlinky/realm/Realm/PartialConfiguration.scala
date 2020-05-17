@@ -1,6 +1,6 @@
 package typingsSlinky.realm.Realm
 
-import typingsSlinky.realm.PartialSyncConfiguration
+import typingsSlinky.realm.anon.PartialSyncConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

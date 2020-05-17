@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabCoreutils.statedbMod
 
-import typingsSlinky.jupyterlabCoreutils.AnonValues
+import typingsSlinky.jupyterlabCoreutils.anon.Values
 import typingsSlinky.jupyterlabCoreutils.statedbMod.StateDB.Change
 import typingsSlinky.jupyterlabCoreutils.statedbMod.StateDB.IOptions
 import typingsSlinky.jupyterlabCoreutils.tokensMod.IStateDB
@@ -74,6 +74,6 @@ class StateDB_[T /* <: ReadonlyJSONValue */] () extends IStateDB[T] {
     * console in order to optimistically return any extant data without failing.
     * This promise will always succeed.
     */
-  def list(namespace: String): js.Promise[AnonValues[T]] = js.native
+  def list(namespace: String): js.Promise[Values[T]] = js.native
 }
 

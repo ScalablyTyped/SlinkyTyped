@@ -7,13 +7,13 @@ import scala.scalajs.js.annotation._
 /* Inlined std.Pick<@tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/kernel_registry.NamedTensorInfoMap, 'x'> */
 @js.native
 trait SquareInputs extends js.Object {
-  var x: js.Any = js.native
+  var x: js.UndefOr[js.Any] = js.native
 }
 
 object SquareInputs {
   @scala.inline
-  def apply(x: js.Any): SquareInputs = {
-    val __obj = js.Dynamic.literal(x = x.asInstanceOf[js.Any])
+  def apply(): SquareInputs = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[SquareInputs]
   }
   @scala.inline
@@ -26,6 +26,12 @@ object SquareInputs {
     def withX(value: js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
         ret
     }
   }

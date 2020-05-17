@@ -1,10 +1,10 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.csr
 
-import typingsSlinky.jsrsasign.AnonAccessLocation
-import typingsSlinky.jsrsasign.AnonCa
-import typingsSlinky.jsrsasign.AnonE
-import typingsSlinky.jsrsasign.AnonKid
-import typingsSlinky.jsrsasign.AnonName
+import typingsSlinky.jsrsasign.anon.AccessLocation
+import typingsSlinky.jsrsasign.anon.Ca
+import typingsSlinky.jsrsasign.anon.E
+import typingsSlinky.jsrsasign.anon.Kid
+import typingsSlinky.jsrsasign.anon.Name
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ArrayParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.BinParam
@@ -36,9 +36,8 @@ import scala.scalajs.js.annotation._
   * csri.setSubjectByParam({'str': '/C=US/O=Test/CN=example.com'});
   * csri.setSubjectPublicKeyByGetKey(pubKeyObj);
   */
-@JSGlobal("jsrsasign.KJUR.asn1.csr.CertificationRequestInfo")
 @js.native
-class CertificationRequestInfo () extends ASN1Object {
+trait CertificationRequestInfo extends ASN1Object {
   def _initialize(): Unit = js.native
   /**
     * append X.509v3 extension to this object by name and parameters
@@ -54,9 +53,9 @@ class CertificationRequestInfo () extends ASN1Object {
     * o.appendExtensionByName('AuthorityKeyIdentifier', {kid: '1234ab..'});
     * o.appendExtensionByName('AuthorityInfoAccess', {array: [{accessMethod:{oid:...},accessLocation:{uri:...}}]});
     */
-  def appendExtensionByName(name: String, extParams: AnonCa): Unit = js.native
-  def appendExtensionByName(name: String, extParams: AnonKid): Unit = js.native
-  def appendExtensionByName(name: String, extParams: ArrayParam[AnonAccessLocation | AnonName]): Unit = js.native
+  def appendExtensionByName(name: String, extParams: Ca): Unit = js.native
+  def appendExtensionByName(name: String, extParams: Kid): Unit = js.native
+  def appendExtensionByName(name: String, extParams: ArrayParam[AccessLocation | Name]): Unit = js.native
   def appendExtensionByName(name: String, extParams: BinParam): Unit = js.native
   def appendExtensionByName(name: String, extParams: UriParam): Unit = js.native
   /**
@@ -69,7 +68,7 @@ class CertificationRequestInfo () extends ASN1Object {
     */
   def setSubjectByParam(x500NameParam: StringParam): Unit = js.native
   def setSubjectPublicKeyByGetKey(keyParam: String): Unit = js.native
-  def setSubjectPublicKeyByGetKey(keyParam: AnonE): Unit = js.native
+  def setSubjectPublicKeyByGetKey(keyParam: E): Unit = js.native
   def setSubjectPublicKeyByGetKey(keyParam: DSA): Unit = js.native
   def setSubjectPublicKeyByGetKey(keyParam: ECDSA): Unit = js.native
   def setSubjectPublicKeyByGetKey(keyParam: JsonWebKey): Unit = js.native

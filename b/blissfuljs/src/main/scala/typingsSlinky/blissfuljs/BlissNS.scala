@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Attr
 import org.scalajs.dom.raw.ClientRect
 import org.scalajs.dom.raw.ClientRectList
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.ErrorEvent
 import org.scalajs.dom.raw.FocusEvent
@@ -122,7 +123,11 @@ import org.scalajs.dom.raw.SVGViewElement
 import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
+import org.scalajs.dom.raw.Window
 import org.scalajs.dom.raw.XMLHttpRequest
+import typingsSlinky.blissfuljs.anon.Add
+import typingsSlinky.blissfuljs.anon.Data
+import typingsSlinky.blissfuljs.anon.DictpropertyName
 import typingsSlinky.blissfuljs.blissfuljsStrings.MSContentZoom
 import typingsSlinky.blissfuljs.blissfuljsStrings.MSGestureChange
 import typingsSlinky.blissfuljs.blissfuljsStrings.MSGestureDoubleTap
@@ -395,9 +400,8 @@ import typingsSlinky.blissfuljs.blissfuljsStrings.webkitfullscreenchange
 import typingsSlinky.blissfuljs.blissfuljsStrings.webkitfullscreenerror
 import typingsSlinky.blissfuljs.blissfuljsStrings.wheel
 import typingsSlinky.blissfuljs.blissfuljsStrings.xmp
-import typingsSlinky.std.Document_
+import typingsSlinky.std.Event
 import typingsSlinky.std.EventListenerOrEventListenerObject
-import typingsSlinky.std.Event_
 import typingsSlinky.std.HTMLAppletElement
 import typingsSlinky.std.HTMLBaseFontElement
 import typingsSlinky.std.HTMLDirectoryElement
@@ -412,7 +416,6 @@ import typingsSlinky.std.MSInputMethodContext
 import typingsSlinky.std.MSPointerEvent
 import typingsSlinky.std.Number
 import typingsSlinky.std.SVGForeignObjectElement
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -421,7 +424,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object BlissNS extends js.Object {
   @js.native
-  trait AriaRequestEvent extends Event_ {
+  trait AriaRequestEvent extends Event {
     val attributeName: String = js.native
     var attributeValue: String | Null = js.native
   }
@@ -444,17 +447,24 @@ object BlissNS extends js.Object {
     def contents(elements: Array[_]): BlissDecoratedElement[T] = js.native
     def contents(elements: Node): BlissDecoratedElement[T] = js.native
     def contents(elements: Number): BlissDecoratedElement[T] = js.native
-    def delegate(`type`: String, selector: String, callback: js.Function1[/* event */ Event_, Unit]): BlissDecoratedElement[T] = js.native
-    def delegate(`type`: String, selectorsToCallbacks: StringDictionary[js.Function1[/* event */ Event_, Unit]]): BlissDecoratedElement[T] = js.native
     def delegate(
-      typesToSelectorsToCallbacks: StringDictionary[StringDictionary[js.Function1[/* event */ Event_, Unit]]]
+      `type`: String,
+      selector: String,
+      callback: js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]
     ): BlissDecoratedElement[T] = js.native
-    def events(handlers: StringDictionary[js.Function1[/* event */ Event_, Unit]]): BlissDecoratedElement[T] = js.native
+    def delegate(
+      `type`: String,
+      selectorsToCallbacks: StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]
+    ): BlissDecoratedElement[T] = js.native
+    def delegate(
+      typesToSelectorsToCallbacks: StringDictionary[StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]]
+    ): BlissDecoratedElement[T] = js.native
+    def events(handlers: StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]): BlissDecoratedElement[T] = js.native
     def events(handlers: Element): BlissDecoratedElement[T] = js.native
     def fire(`type`: String): BlissDecoratedElement[T] = js.native
     def fire(`type`: String, properties: StringDictionary[js.Any]): BlissDecoratedElement[T] = js.native
     def inside(element: Element): BlissDecoratedElement[T] = js.native
-    def once(handlers: StringDictionary[js.Function1[/* event */ Event_, Unit]]): BlissDecoratedElement[T] = js.native
+    def once(handlers: StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]): BlissDecoratedElement[T] = js.native
     def once(handlers: Element): BlissDecoratedElement[T] = js.native
     def properties(props: js.Object): BlissDecoratedElement[T] = js.native
     def remove(): BlissDecoratedElement[T] = js.native
@@ -478,17 +488,24 @@ object BlissNS extends js.Object {
     def contents(elements: Array[_]): BlissCollectionArray[T] = js.native
     def contents(elements: Node): BlissCollectionArray[T] = js.native
     def contents(elements: Number): BlissCollectionArray[T] = js.native
-    def delegate(`type`: String, selector: String, callback: js.Function1[/* event */ Event_, Unit]): BlissCollectionArray[T] = js.native
-    def delegate(`type`: String, selectorsToCallbacks: StringDictionary[js.Function1[/* event */ Event_, Unit]]): BlissCollectionArray[T] = js.native
     def delegate(
-      typesToSelectorsToCallbacks: StringDictionary[StringDictionary[js.Function1[/* event */ Event_, Unit]]]
+      `type`: String,
+      selector: String,
+      callback: js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]
     ): BlissCollectionArray[T] = js.native
-    def events(handlers: StringDictionary[js.Function1[/* event */ Event_, Unit]]): BlissCollectionArray[T] = js.native
+    def delegate(
+      `type`: String,
+      selectorsToCallbacks: StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]
+    ): BlissCollectionArray[T] = js.native
+    def delegate(
+      typesToSelectorsToCallbacks: StringDictionary[StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]]
+    ): BlissCollectionArray[T] = js.native
+    def events(handlers: StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]): BlissCollectionArray[T] = js.native
     def events(handlers: Element): BlissCollectionArray[T] = js.native
     def fire(`type`: String): BlissCollectionArray[T] = js.native
     def fire(`type`: String, properties: StringDictionary[js.Any]): BlissCollectionArray[T] = js.native
     def inside(element: Element): BlissCollectionArray[T] = js.native
-    def once(handlers: StringDictionary[js.Function1[/* event */ Event_, Unit]]): BlissCollectionArray[T] = js.native
+    def once(handlers: StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]): BlissCollectionArray[T] = js.native
     def once(handlers: Element): BlissCollectionArray[T] = js.native
     def properties(props: js.Object): BlissCollectionArray[T] = js.native
     def remove(): BlissCollectionArray[T] = js.native
@@ -626,17 +643,25 @@ object BlissNS extends js.Object {
     @JSName("addEventListener")
     def addEventListener_blur(`type`: blur, listener: js.Function1[/* ev */ FocusEvent, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_canplay(`type`: canplay, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_canplay(`type`: canplay, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_canplay(`type`: canplay, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_canplay(
+      `type`: canplay,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_canplaythrough(`type`: canplaythrough, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_canplaythrough(`type`: canplaythrough, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_canplaythrough(`type`: canplaythrough, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_canplaythrough(
+      `type`: canplaythrough,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_change(`type`: change, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_change(`type`: change, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_change(`type`: change, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_change(`type`: change, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
     def addEventListener_click(`type`: click, listener: js.Function1[/* ev */ MouseEvent, _]): T = js.native
     @JSName("addEventListener")
@@ -654,9 +679,13 @@ object BlissNS extends js.Object {
     @JSName("addEventListener")
     def addEventListener_copy(`type`: copy, listener: js.Function1[/* ev */ DragEvent, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_cuechange(`type`: cuechange, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_cuechange(`type`: cuechange, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_cuechange(`type`: cuechange, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_cuechange(
+      `type`: cuechange,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
     def addEventListener_cut(`type`: cut, listener: js.Function1[/* ev */ DragEvent, _]): T = js.native
     @JSName("addEventListener")
@@ -698,17 +727,25 @@ object BlissNS extends js.Object {
     @JSName("addEventListener")
     def addEventListener_drop(`type`: drop, listener: js.Function1[/* ev */ DragEvent, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_durationchange(`type`: durationchange, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_durationchange(`type`: durationchange, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_durationchange(`type`: durationchange, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_durationchange(
+      `type`: durationchange,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_emptied(`type`: emptied, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_emptied(`type`: emptied, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_emptied(`type`: emptied, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_emptied(
+      `type`: emptied,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_ended(`type`: ended, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_ended(`type`: ended, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_ended(`type`: ended, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_ended(`type`: ended, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
     def addEventListener_error(`type`: error, listener: js.Function1[/* ev */ ErrorEvent, _]): T = js.native
     @JSName("addEventListener")
@@ -722,9 +759,9 @@ object BlissNS extends js.Object {
     @JSName("addEventListener")
     def addEventListener_gotpointercapture(`type`: gotpointercapture, listener: js.Function1[/* ev */ PointerEvent, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_input(`type`: input, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_input(`type`: input, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_input(`type`: input, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_input(`type`: input, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
     def addEventListener_keydown(`type`: keydown, listener: js.Function1[/* ev */ KeyboardEvent, _]): T = js.native
     @JSName("addEventListener")
@@ -738,21 +775,33 @@ object BlissNS extends js.Object {
     @JSName("addEventListener")
     def addEventListener_keyup(`type`: keyup, listener: js.Function1[/* ev */ KeyboardEvent, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_load(`type`: load, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_load(`type`: load, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_load(`type`: load, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_load(`type`: load, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_loadeddata(`type`: loadeddata, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_loadeddata(`type`: loadeddata, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_loadeddata(`type`: loadeddata, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_loadeddata(
+      `type`: loadeddata,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_loadedmetadata(
+      `type`: loadedmetadata,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_loadstart(`type`: loadstart, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_loadstart(`type`: loadstart, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_loadstart(`type`: loadstart, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_loadstart(
+      `type`: loadstart,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
     def addEventListener_lostpointercapture(`type`: lostpointercapture, listener: js.Function1[/* ev */ PointerEvent, _]): T = js.native
     @JSName("addEventListener")
@@ -794,17 +843,21 @@ object BlissNS extends js.Object {
     @JSName("addEventListener")
     def addEventListener_paste(`type`: paste, listener: js.Function1[/* ev */ DragEvent, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_pause(`type`: pause, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_pause(`type`: pause, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_pause(`type`: pause, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_pause(`type`: pause, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_play(`type`: play, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_play(`type`: play, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_play(`type`: play, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_play(`type`: play, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_playing(`type`: playing, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_playing(`type`: playing, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_playing(`type`: playing, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_playing(
+      `type`: playing,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
     def addEventListener_pointercancel(`type`: pointercancel, listener: js.Function1[/* ev */ PointerEvent, _]): T = js.native
     @JSName("addEventListener")
@@ -842,49 +895,73 @@ object BlissNS extends js.Object {
     @JSName("addEventListener")
     def addEventListener_progress(`type`: progress, listener: js.Function1[/* ev */ ProgressEvent, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_ratechange(`type`: ratechange, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_ratechange(`type`: ratechange, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_ratechange(`type`: ratechange, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_ratechange(
+      `type`: ratechange,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_reset(`type`: reset, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_reset(`type`: reset, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_reset(`type`: reset, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_reset(`type`: reset, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
     def addEventListener_scroll(`type`: scroll, listener: js.Function1[/* ev */ UIEvent, _]): T = js.native
     @JSName("addEventListener")
     def addEventListener_scroll(`type`: scroll, listener: js.Function1[/* ev */ UIEvent, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_seeked(`type`: seeked, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_seeked(`type`: seeked, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_seeked(`type`: seeked, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_seeked(`type`: seeked, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_seeking(`type`: seeking, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_seeking(`type`: seeking, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_seeking(`type`: seeking, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_seeking(
+      `type`: seeking,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
     def addEventListener_select(`type`: select, listener: js.Function1[/* ev */ UIEvent, _]): T = js.native
     @JSName("addEventListener")
     def addEventListener_select(`type`: select, listener: js.Function1[/* ev */ UIEvent, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_selectstart(`type`: selectstart, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_selectstart(`type`: selectstart, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_selectstart(`type`: selectstart, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_selectstart(
+      `type`: selectstart,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_stalled(`type`: stalled, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_stalled(`type`: stalled, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_stalled(`type`: stalled, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_stalled(
+      `type`: stalled,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_submit(`type`: submit, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_submit(`type`: submit, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_submit(`type`: submit, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_submit(`type`: submit, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_suspend(`type`: suspend, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_suspend(`type`: suspend, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_suspend(`type`: suspend, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_suspend(
+      `type`: suspend,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_timeupdate(`type`: timeupdate, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_timeupdate(`type`: timeupdate, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_timeupdate(`type`: timeupdate, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_timeupdate(
+      `type`: timeupdate,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
     def addEventListener_touchcancel(`type`: touchcancel, listener: js.Function1[/* ev */ TouchEvent, _]): T = js.native
     @JSName("addEventListener")
@@ -902,21 +979,37 @@ object BlissNS extends js.Object {
     @JSName("addEventListener")
     def addEventListener_touchstart(`type`: touchstart, listener: js.Function1[/* ev */ TouchEvent, _], useCapture: Boolean): T = js.native
     @JSName("addEventListener")
-    def addEventListener_volumechange(`type`: volumechange, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_volumechange(`type`: volumechange, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_volumechange(`type`: volumechange, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_volumechange(
+      `type`: volumechange,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_waiting(`type`: waiting, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_waiting(`type`: waiting, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_waiting(`type`: waiting, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_waiting(
+      `type`: waiting,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_webkitfullscreenchange(`type`: webkitfullscreenchange, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_webkitfullscreenchange(`type`: webkitfullscreenchange, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_webkitfullscreenchange(`type`: webkitfullscreenchange, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_webkitfullscreenchange(
+      `type`: webkitfullscreenchange,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
-    def addEventListener_webkitfullscreenerror(`type`: webkitfullscreenerror, listener: js.Function1[/* ev */ Event_, _]): T = js.native
+    def addEventListener_webkitfullscreenerror(`type`: webkitfullscreenerror, listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _]): T = js.native
     @JSName("addEventListener")
-    def addEventListener_webkitfullscreenerror(`type`: webkitfullscreenerror, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): T = js.native
+    def addEventListener_webkitfullscreenerror(
+      `type`: webkitfullscreenerror,
+      listener: js.Function1[/* ev */ org.scalajs.dom.raw.Event, _],
+      useCapture: Boolean
+    ): T = js.native
     @JSName("addEventListener")
     def addEventListener_wheel(`type`: wheel, listener: js.Function1[/* ev */ WheelEvent, _]): T = js.native
     @JSName("addEventListener")
@@ -1317,15 +1410,15 @@ object BlissNS extends js.Object {
     @JSName("$")
     var $_Original: BlissStaticCollection = js.native
     var classProps: js.Object = js.native
-    var hooks: AnonAdd = js.native
+    var hooks: Add = js.native
     @JSName("$")
     def $(expr: Node): js.Array[Node] = js.native
     @JSName("$")
     def $(expr: Node, context: Element): js.Array[Node] = js.native
     @JSName("$")
-    def $(expr: Window_): js.Array[Window_] = js.native
+    def $(expr: Window): js.Array[Window] = js.native
     @JSName("$")
-    def $(expr: Window_, context: Element): js.Array[Window_] = js.native
+    def $(expr: Window, context: Element): js.Array[Window] = js.native
     @JSName("$")
     def $[T](expr: js.Object): Array[T] = js.native
     @JSName("$")
@@ -1340,9 +1433,9 @@ object BlissNS extends js.Object {
     def $_T_BlissDecoratedElement[T](selector: String, context: Element): BlissDecoratedElement[T] = js.native
     def apply[T](selector: String): BlissDecoratedElement[T] = js.native
     def apply[T](selector: String, context: Element): BlissDecoratedElement[T] = js.native
-    def Class(options: AnonDictpropertyName): js.Object = js.native
+    def Class(options: DictpropertyName): js.Object = js.native
     @JSName("Class")
-    def Class_T_T[T](options: AnonDictpropertyName): T = js.native
+    def Class_T_T[T](options: DictpropertyName): T = js.native
     def add(callbacks: StringDictionary[js.Function]): Unit = js.native
     def add(callbacks: StringDictionary[js.Function], on: Array[_]): Unit = js.native
     def add(callbacks: StringDictionary[js.Function], on: BlissStatic): Unit = js.native
@@ -1580,31 +1673,31 @@ object BlissNS extends js.Object {
       subject: Array[BlissDecoratedElement[T]],
       `type`: String,
       selector: String,
-      callback: js.Function1[/* event */ Event_, Unit]
+      callback: js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]
     ): Array[BlissDecoratedElement[T]] = js.native
     def delegate[T](
       subject: Array[BlissDecoratedElement[T]],
       `type`: String,
-      selectorsToCallbacks: StringDictionary[js.Function1[/* event */ Event_, Unit]]
+      selectorsToCallbacks: StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]
     ): Array[BlissDecoratedElement[T]] = js.native
     def delegate[T](
       subject: Array[BlissDecoratedElement[T]],
-      typesToSelectorsToCallbacks: StringDictionary[StringDictionary[js.Function1[/* event */ Event_, Unit]]]
+      typesToSelectorsToCallbacks: StringDictionary[StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]]
     ): Array[BlissDecoratedElement[T]] = js.native
     def delegate[T](
       subject: BlissDecoratedElement[T],
       `type`: String,
       selector: String,
-      callback: js.Function1[/* event */ Event_, Unit]
+      callback: js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]
     ): BlissDecoratedElement[T] = js.native
     def delegate[T](
       subject: BlissDecoratedElement[T],
       `type`: String,
-      selectorsToCallbacks: StringDictionary[js.Function1[/* event */ Event_, Unit]]
+      selectorsToCallbacks: StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]
     ): BlissDecoratedElement[T] = js.native
     def delegate[T](
       subject: BlissDecoratedElement[T],
-      typesToSelectorsToCallbacks: StringDictionary[StringDictionary[js.Function1[/* event */ Event_, Unit]]]
+      typesToSelectorsToCallbacks: StringDictionary[StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]]
     ): BlissDecoratedElement[T] = js.native
     def each(obj: StringDictionary[js.Any], callback: js.Function): js.Object = js.native
     def each(obj: StringDictionary[js.Any], callback: js.Function, ret: js.Object): js.Object = js.native
@@ -1614,12 +1707,12 @@ object BlissNS extends js.Object {
     def each_T_T[T](obj: StringDictionary[js.Any], callback: js.Function, ret: js.Object): T = js.native
     def events[T](
       subject: Array[BlissDecoratedElement[T]],
-      handlers: StringDictionary[js.Function1[/* event */ Event_, Unit]]
+      handlers: StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]
     ): Array[BlissDecoratedElement[T]] = js.native
     def events[T](subject: Array[BlissDecoratedElement[T]], handlers: Element): Array[BlissDecoratedElement[T]] = js.native
     def events[T](
       subject: BlissDecoratedElement[T],
-      handlers: StringDictionary[js.Function1[/* event */ Event_, Unit]]
+      handlers: StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]
     ): BlissDecoratedElement[T] = js.native
     def events[T](subject: BlissDecoratedElement[T], handlers: Element): BlissDecoratedElement[T] = js.native
     def extend(target: js.Object, source: js.Any): js.Object = js.native
@@ -1638,7 +1731,7 @@ object BlissNS extends js.Object {
     @JSName("extend")
     def extend_T_T[T](target: js.Object, source: js.Any, whitelist: js.RegExp): T = js.native
     def fetch(url: String): js.Promise[XMLHttpRequest] = js.native
-    def fetch(url: String, options: AnonData): js.Promise[XMLHttpRequest] = js.native
+    def fetch(url: String, options: Data): js.Promise[XMLHttpRequest] = js.native
     def fire[T](subject: Array[BlissDecoratedElement[T]], `type`: String): Array[BlissDecoratedElement[T]] = js.native
     def fire[T](subject: Array[BlissDecoratedElement[T]], `type`: String, properties: StringDictionary[js.Any]): Array[BlissDecoratedElement[T]] = js.native
     def fire[T](subject: BlissDecoratedElement[T], `type`: String): BlissDecoratedElement[T] = js.native
@@ -1663,18 +1756,18 @@ object BlissNS extends js.Object {
     def live_T_T[T](`object`: js.Object, property: String, descriptor: js.Object): T = js.native
     def once[T](
       subject: Array[BlissDecoratedElement[T]],
-      handlers: StringDictionary[js.Function1[/* event */ Event_, Unit]]
+      handlers: StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]
     ): Array[BlissDecoratedElement[T]] = js.native
     def once[T](subject: Array[BlissDecoratedElement[T]], handlers: Element): Array[BlissDecoratedElement[T]] = js.native
     def once[T](
       subject: BlissDecoratedElement[T],
-      handlers: StringDictionary[js.Function1[/* event */ Event_, Unit]]
+      handlers: StringDictionary[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]]
     ): BlissDecoratedElement[T] = js.native
     def once[T](subject: BlissDecoratedElement[T], handlers: Element): BlissDecoratedElement[T] = js.native
     def properties[T](subject: Array[BlissDecoratedElement[T]], props: js.Object): Array[BlissDecoratedElement[T]] = js.native
     def properties[T](subject: BlissDecoratedElement[T], props: js.Object): BlissDecoratedElement[T] = js.native
     def ready(): js.Promise[_] = js.native
-    def ready(context: Document_): js.Promise[_] = js.native
+    def ready(context: Document): js.Promise[_] = js.native
     def remove(subject: BlissStatic): Unit = js.native
     def remove(subject: Element): Unit = js.native
     def set[T](subject: BlissDecoratedElement[T], options: js.Object): BlissDecoratedElement[T] = js.native
@@ -1698,14 +1791,14 @@ object BlissNS extends js.Object {
   trait BlissStaticCollection extends BlissStatic {
     def apply(expr: Node): js.Array[Node] = js.native
     def apply(expr: Node, context: Element): js.Array[Node] = js.native
-    def apply(expr: Window_): js.Array[Window_] = js.native
-    def apply(expr: Window_, context: Element): js.Array[Window_] = js.native
+    def apply(expr: Window): js.Array[Window] = js.native
+    def apply(expr: Window, context: Element): js.Array[Window] = js.native
     def apply[T](expr: js.Object): Array[T] = js.native
     def apply[T](expr: js.Object, context: Element): Array[T] = js.native
   }
   
   @js.native
-  trait CommandEvent extends Event_ {
+  trait CommandEvent extends Event {
     val commandName: String = js.native
     val detail: String | Null = js.native
   }

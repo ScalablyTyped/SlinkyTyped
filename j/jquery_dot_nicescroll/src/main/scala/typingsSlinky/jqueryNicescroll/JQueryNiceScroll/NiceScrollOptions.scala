@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryNicescroll.JQueryNiceScroll
 
-import typingsSlinky.jqueryNicescroll.AnonBottom
-import typingsSlinky.jqueryNicescroll.AnonLeft
+import typingsSlinky.jqueryNicescroll.anon.Bottom
+import typingsSlinky.jqueryNicescroll.anon.Left
 import typingsSlinky.jqueryNicescroll.jqueryNicescrollStrings.auto
 import typingsSlinky.jqueryNicescroll.jqueryNicescrollStrings.bottom
 import typingsSlinky.jqueryNicescroll.jqueryNicescrollStrings.cursor
@@ -61,9 +61,9 @@ trait NiceScrollOptions extends js.Object {
   var preservenativescrolling: js.UndefOr[Boolean] = js.native
   var preventmultitouchscrolling: js.UndefOr[Boolean] = js.native
   var railalign: js.UndefOr[right | left | top | bottom] = js.native
-  var railhoffset: js.UndefOr[Boolean | AnonLeft] = js.native
-  var railoffset: js.UndefOr[Boolean | AnonLeft] = js.native
-  var railpadding: js.UndefOr[AnonBottom] = js.native
+  var railhoffset: js.UndefOr[Boolean | Left] = js.native
+  var railoffset: js.UndefOr[Boolean | Left] = js.native
+  var railpadding: js.UndefOr[Bottom] = js.native
   var railvalign: js.UndefOr[right | left | top | bottom] = js.native
   var rtlmode: js.UndefOr[auto | Boolean] = js.native
   var scriptpath: js.UndefOr[String] = js.native
@@ -559,7 +559,7 @@ object NiceScrollOptions {
         ret
     }
     @scala.inline
-    def withRailhoffset(value: Boolean | AnonLeft): Self = {
+    def withRailhoffset(value: Boolean | Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("railhoffset")(value.asInstanceOf[js.Any])
         ret
@@ -571,7 +571,7 @@ object NiceScrollOptions {
         ret
     }
     @scala.inline
-    def withRailoffset(value: Boolean | AnonLeft): Self = {
+    def withRailoffset(value: Boolean | Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("railoffset")(value.asInstanceOf[js.Any])
         ret
@@ -583,7 +583,7 @@ object NiceScrollOptions {
         ret
     }
     @scala.inline
-    def withRailpadding(value: AnonBottom): Self = {
+    def withRailpadding(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("railpadding")(value.asInstanceOf[js.Any])
         ret

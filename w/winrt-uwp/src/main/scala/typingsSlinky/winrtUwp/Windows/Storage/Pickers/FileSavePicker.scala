@@ -10,10 +10,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a file picker that lets the user choose the file name, extension, and storage location for a file. */
-@JSGlobal("Windows.Storage.Pickers.FileSavePicker")
 @js.native
-/** Creates a new instance of a FileSavePicker . */
-class FileSavePicker () extends js.Object {
+trait FileSavePicker extends js.Object {
   /** Gets or sets the label text of the commit button in the file picker UI. */
   var commitButtonText: String = js.native
   /** Gets a set of values to be populated by the app before a PickSaveFileAndContinue operation that deactivates the app in order to provide context when the app is activated. (Windows Phone Store apps) */
@@ -39,5 +37,99 @@ class FileSavePicker () extends js.Object {
     * @return When the call to this method completes successfully, it returns a storageFile object that was created to represent the saved file. The file name, extension, and location of this storageFile match those specified by the user, but the file has no content.
     */
   def pickSaveFileAsync(): IPromiseWithIAsyncOperation[StorageFile] = js.native
+}
+
+object FileSavePicker {
+  @scala.inline
+  def apply(
+    commitButtonText: String,
+    continuationData: ValueSet,
+    defaultFileExtension: String,
+    enterpriseId: String,
+    fileTypeChoices: IMap[String, IVector[String]],
+    pickSaveFileAndContinue: () => Unit,
+    pickSaveFileAsync: () => IPromiseWithIAsyncOperation[StorageFile],
+    settingsIdentifier: String,
+    suggestedFileName: String,
+    suggestedSaveFile: StorageFile,
+    suggestedStartLocation: PickerLocationId
+  ): FileSavePicker = {
+    val __obj = js.Dynamic.literal(commitButtonText = commitButtonText.asInstanceOf[js.Any], continuationData = continuationData.asInstanceOf[js.Any], defaultFileExtension = defaultFileExtension.asInstanceOf[js.Any], enterpriseId = enterpriseId.asInstanceOf[js.Any], fileTypeChoices = fileTypeChoices.asInstanceOf[js.Any], pickSaveFileAndContinue = js.Any.fromFunction0(pickSaveFileAndContinue), pickSaveFileAsync = js.Any.fromFunction0(pickSaveFileAsync), settingsIdentifier = settingsIdentifier.asInstanceOf[js.Any], suggestedFileName = suggestedFileName.asInstanceOf[js.Any], suggestedSaveFile = suggestedSaveFile.asInstanceOf[js.Any], suggestedStartLocation = suggestedStartLocation.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FileSavePicker]
+  }
+  @scala.inline
+  implicit class FileSavePickerOps[Self <: FileSavePicker] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommitButtonText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitButtonText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContinuationData(value: ValueSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuationData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultFileExtension(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFileExtension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnterpriseId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileTypeChoices(value: IMap[String, IVector[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTypeChoices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPickSaveFileAndContinue(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickSaveFileAndContinue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPickSaveFileAsync(value: () => IPromiseWithIAsyncOperation[StorageFile]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickSaveFileAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSettingsIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuggestedFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedFileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuggestedSaveFile(value: StorageFile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedSaveFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuggestedStartLocation(value: PickerLocationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedStartLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

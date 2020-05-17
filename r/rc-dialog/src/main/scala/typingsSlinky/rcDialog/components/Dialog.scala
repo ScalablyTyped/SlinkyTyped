@@ -1,5 +1,6 @@
 package typingsSlinky.rcDialog.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
@@ -7,13 +8,12 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcDialog.AnonX
+import typingsSlinky.rcDialog.anon.X
 import typingsSlinky.rcDialog.dialogMod.IDialogChildProps
 import typingsSlinky.rcDialog.dialogMod.default
 import typingsSlinky.rcDialog.idialogproptypesMod.IStringOrHtmlElement
 import typingsSlinky.rcDialog.rcDialogBooleans.`false`
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -76,9 +76,9 @@ object Dialog {
     @scala.inline
     def maskTransitionName(value: String): this.type = set("maskTransitionName", value.asInstanceOf[js.Any])
     @scala.inline
-    def mousePosition(value: AnonX): this.type = set("mousePosition", value.asInstanceOf[js.Any])
+    def mousePosition(value: X): this.type = set("mousePosition", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClose(value: /* e */ SyntheticEvent[Event_, HTMLDivElement] => _): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* e */ SyntheticEvent[Event, HTMLDivElement] => _): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline

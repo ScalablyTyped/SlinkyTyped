@@ -1,6 +1,7 @@
 package typingsSlinky.reactCircularProgressbar
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactCircularProgressbar.anon.BackgroundColor
 import typingsSlinky.reactCircularProgressbar.circularProgressbarMod.default
 import typingsSlinky.reactCircularProgressbar.circularProgressbarWithChildrenMod.CircularProgressbarWithChildrenProps
 import typingsSlinky.reactCircularProgressbar.typesMod.CircularProgressbarDefaultProps
@@ -17,7 +18,7 @@ object mod extends js.Object {
   
   def CircularProgressbarWithChildren(props: CircularProgressbarWithChildrenProps): ReactElement = js.native
   def buildStyles(
-    hasRotationStrokeLinecapTextColorTextSizePathColorPathTransitionPathTransitionDurationTrailColorBackgroundColor: AnonBackgroundColor
+    hasRotationStrokeLinecapTextColorTextSizePathColorPathTransitionPathTransitionDurationTrailColorBackgroundColor: BackgroundColor
   ): CircularProgressbarStyles = js.native
   /* static members */
   @js.native

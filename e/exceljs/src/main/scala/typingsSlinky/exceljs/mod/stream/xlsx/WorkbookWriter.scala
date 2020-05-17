@@ -1,6 +1,6 @@
 package typingsSlinky.exceljs.mod.stream.xlsx
 
-import typingsSlinky.exceljs.PartialWorkbookStreamWrit
+import typingsSlinky.exceljs.anon.PartialWorkbookStreamWrit
 import typingsSlinky.exceljs.mod.Workbook
 import scala.scalajs.js
 import scala.scalajs.js.`|`

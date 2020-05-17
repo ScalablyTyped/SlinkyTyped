@@ -1,6 +1,6 @@
 package typingsSlinky.qtip2.QTip2
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ object Events {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBlur(value: (/* event */ Event_, /* api */ Api) => Unit): Self = {
+    def withBlur(value: (/* event */ Event, /* api */ Api) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.Any.fromFunction2(value))
         ret
@@ -46,7 +46,7 @@ object Events {
         ret
     }
     @scala.inline
-    def withFocus(value: (/* event */ Event_, /* api */ Api) => Unit): Self = {
+    def withFocus(value: (/* event */ Event, /* api */ Api) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.Any.fromFunction2(value))
         ret
@@ -58,7 +58,7 @@ object Events {
         ret
     }
     @scala.inline
-    def withHidden(value: (/* event */ Event_, /* api */ Api) => Unit): Self = {
+    def withHidden(value: (/* event */ Event, /* api */ Api) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.Any.fromFunction2(value))
         ret
@@ -70,7 +70,7 @@ object Events {
         ret
     }
     @scala.inline
-    def withHide(value: (/* event */ Event_, /* api */ Api) => Unit): Self = {
+    def withHide(value: (/* event */ Event, /* api */ Api) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction2(value))
         ret
@@ -82,7 +82,7 @@ object Events {
         ret
     }
     @scala.inline
-    def withMove(value: (/* event */ Event_, /* api */ Api) => Unit): Self = {
+    def withMove(value: (/* event */ Event, /* api */ Api) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("move")(js.Any.fromFunction2(value))
         ret
@@ -94,7 +94,7 @@ object Events {
         ret
     }
     @scala.inline
-    def withRender(value: (/* event */ Event_, /* api */ Api) => Unit): Self = {
+    def withRender(value: (/* event */ Event, /* api */ Api) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction2(value))
         ret
@@ -106,7 +106,7 @@ object Events {
         ret
     }
     @scala.inline
-    def withShow(value: (/* event */ Event_, /* api */ Api) => Unit): Self = {
+    def withShow(value: (/* event */ Event, /* api */ Api) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction2(value))
         ret
@@ -118,7 +118,7 @@ object Events {
         ret
     }
     @scala.inline
-    def withToggle(value: (/* event */ Event_, /* api */ Api) => Unit): Self = {
+    def withToggle(value: (/* event */ Event, /* api */ Api) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.Any.fromFunction2(value))
         ret
@@ -130,7 +130,7 @@ object Events {
         ret
     }
     @scala.inline
-    def withVisible(value: (/* event */ Event_, /* api */ Api) => Unit): Self = {
+    def withVisible(value: (/* event */ Event, /* api */ Api) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.Any.fromFunction2(value))
         ret

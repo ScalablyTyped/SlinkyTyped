@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Node.typesListObjectVersionsInputMod
 
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.url
-import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
 import scala.scalajs.js
@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ListObjectVersionsInput extends _InputTypesUnion {
+trait ListObjectVersionsInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

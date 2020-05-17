@@ -1,6 +1,6 @@
 package typingsSlinky.reactWeui.mod
 
-import typingsSlinky.reactWeui.AnonTransparent
+import typingsSlinky.reactWeui.anon.Transparent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class Mask protected () extends js.Object {
 @JSImport("react-weui", "Mask")
 @js.native
 object Mask extends js.Object {
-  var defaultProps: AnonTransparent = js.native
+  var defaultProps: Transparent = js.native
   @js.native
   object propTypes extends js.Object {
     @js.native

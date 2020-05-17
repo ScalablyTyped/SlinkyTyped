@@ -1,6 +1,7 @@
 package typingsSlinky.reactFns
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.reactFns.anon.PartialScrollConfig
 import typingsSlinky.reactFns.scrollScrollMod.ScrollProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

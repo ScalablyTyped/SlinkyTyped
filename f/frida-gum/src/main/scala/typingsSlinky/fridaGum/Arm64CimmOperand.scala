@@ -10,12 +10,12 @@ trait Arm64CimmOperand
   extends Arm64BaseOperand
      with Arm64Operand {
   var `type`: cimm = js.native
-  var value: Int64_ = js.native
+  var value: Int64 = js.native
 }
 
 object Arm64CimmOperand {
   @scala.inline
-  def apply(`type`: cimm, value: Int64_): Arm64CimmOperand = {
+  def apply(`type`: cimm, value: Int64): Arm64CimmOperand = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Arm64CimmOperand]
@@ -33,7 +33,7 @@ object Arm64CimmOperand {
         ret
     }
     @scala.inline
-    def withValue(value: Int64_): Self = {
+    def withValue(value: Int64): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.mod
 
-import typingsSlinky.antdMobileRn.AnonOnSelect
+import typingsSlinky.antdMobileRn.anon.OnSelect
 import typingsSlinky.antdMobileRn.popoverIndexNativeMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,6 +15,6 @@ class Popover () extends default
 @js.native
 object Popover extends js.Object {
   var Item: js.Any = js.native
-  var defaultProps: AnonOnSelect = js.native
+  var defaultProps: OnSelect = js.native
 }
 

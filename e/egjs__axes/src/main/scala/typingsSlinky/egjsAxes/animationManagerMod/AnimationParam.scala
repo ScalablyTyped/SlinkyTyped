@@ -1,6 +1,6 @@
 package typingsSlinky.egjsAxes.animationManagerMod
 
-import typingsSlinky.egjsAxes.AnonDestPos
+import typingsSlinky.egjsAxes.anon.DestPos
 import typingsSlinky.egjsAxes.axisManagerMod.Axis
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ trait AnimationParam extends js.Object {
   var duration: Double = js.native
   var inputEvent: js.UndefOr[js.Any] = js.native
   var setTo: js.UndefOr[
-    js.Function2[/* destPos */ js.UndefOr[Axis], /* duration */ js.UndefOr[Double], AnonDestPos]
+    js.Function2[/* destPos */ js.UndefOr[Axis], /* duration */ js.UndefOr[Double], DestPos]
   ] = js.native
   var startTime: js.UndefOr[Double] = js.native
 }
@@ -81,7 +81,7 @@ object AnimationParam {
         ret
     }
     @scala.inline
-    def withSetTo(value: (/* destPos */ js.UndefOr[Axis], /* duration */ js.UndefOr[Double]) => AnonDestPos): Self = {
+    def withSetTo(value: (/* destPos */ js.UndefOr[Axis], /* duration */ js.UndefOr[Double]) => DestPos): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setTo")(js.Any.fromFunction2(value))
         ret

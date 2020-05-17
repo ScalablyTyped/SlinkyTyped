@@ -27,14 +27,8 @@ import scala.scalajs.js.annotation._
   * Game Objects directly register themselves with the Creator and inject their own creation
   * methods into the class.
   */
-@JSGlobal("Phaser.GameObjects.GameObjectCreator")
 @js.native
-class GameObjectCreator protected () extends js.Object {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object Factory belongs.
-    */
-  def this(scene: Scene) = this()
+trait GameObjectCreator extends js.Object {
   /**
     * A reference to the Scene Display List.
     */

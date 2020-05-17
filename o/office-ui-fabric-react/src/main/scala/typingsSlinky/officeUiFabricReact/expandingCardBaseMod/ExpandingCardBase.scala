@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.expandingCardBaseMod
 
-import typingsSlinky.officeUiFabricReact.AnonCompactCardHeight
+import typingsSlinky.officeUiFabricReact.anon.CompactCardHeight
 import typingsSlinky.officeUiFabricReact.expandingCardTypesMod.IExpandingCardProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -29,6 +29,6 @@ class ExpandingCardBase protected ()
 @JSImport("office-ui-fabric-react/lib/components/HoverCard/ExpandingCard.base", "ExpandingCardBase")
 @js.native
 object ExpandingCardBase extends js.Object {
-  var defaultProps: AnonCompactCardHeight = js.native
+  var defaultProps: CompactCardHeight = js.native
 }
 

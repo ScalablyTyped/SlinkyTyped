@@ -1,6 +1,6 @@
 package typingsSlinky.workerRpc.rpcProviderMod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import typingsSlinky.workerRpc.rpcProviderInterfaceMod.RpcProviderInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ trait RpcProvider_ extends RpcProviderInterface {
   var _signalHandlers: js.Any = js.native
   var _transactionTimeout: js.Any = js.native
   @JSName("error")
-  var error_RpcProvider_ : Event_ = js.native
+  var error_RpcProvider_ : Event = js.native
   def rpc[T, U](id: String, payload: T, transfer: js.Any): js.Promise[U] = js.native
   def signal[T](id: String, payload: T, transfer: js.Any): this.type = js.native
 }

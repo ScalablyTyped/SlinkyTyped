@@ -8,12 +8,6 @@ package object cloudwatcheventsMod {
   type AccountId = java.lang.String
   type Action = java.lang.String
   type Arn = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
-    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
-    - java.lang.String
-  */
-  type AssignPublicIp = typingsSlinky.awsSdk.cloudwatcheventsMod._AssignPublicIp | java.lang.String
   type Boolean = scala.Boolean
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.cloudwatcheventsMod.ClientApiVersions
   type ErrorCode = java.lang.String
@@ -27,22 +21,9 @@ package object cloudwatcheventsMod {
   type EventSourceList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.EventSource]
   type EventSourceName = java.lang.String
   type EventSourceNamePrefix = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.PENDING
-    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
-    - java.lang.String
-  */
-  type EventSourceState = typingsSlinky.awsSdk.cloudwatcheventsMod._EventSourceState | java.lang.String
   type EventTime = js.Date
   type InputTransformerPathKey = java.lang.String
   type Integer = scala.Double
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.EC2
-    - typingsSlinky.awsSdk.awsSdkStrings.FARGATE
-    - java.lang.String
-  */
-  type LaunchType = typingsSlinky.awsSdk.cloudwatcheventsMod._LaunchType | java.lang.String
   type LimitMax100 = scala.Double
   type LimitMin1 = scala.Double
   type ManagedBy = java.lang.String
@@ -65,12 +46,6 @@ package object cloudwatcheventsMod {
   type RuleName = java.lang.String
   type RuleNameList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.RuleName]
   type RuleResponseList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.Rule]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
-    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
-    - java.lang.String
-  */
-  type RuleState = typingsSlinky.awsSdk.cloudwatcheventsMod._RuleState | java.lang.String
   type RunCommandTargetKey = java.lang.String
   type RunCommandTargetValue = java.lang.String
   type RunCommandTargetValues = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.RunCommandTargetValue]
@@ -93,11 +68,4 @@ package object cloudwatcheventsMod {
   type Timestamp = js.Date
   type TransformerInput = java.lang.String
   type TransformerPaths = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.cloudwatcheventsMod.TargetInputPath]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2014-02-03`
-    - typingsSlinky.awsSdk.awsSdkStrings.`2015-10-07`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.cloudwatcheventsMod._apiVersion | java.lang.String
 }

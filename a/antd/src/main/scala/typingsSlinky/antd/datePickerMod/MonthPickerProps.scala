@@ -7,7 +7,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.AnonLang
+import typingsSlinky.antd.anon.Lang
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
 import typingsSlinky.antd.antdStrings.additions
@@ -135,7 +135,7 @@ trait MonthPickerProps extends js.Object {
   var format: js.UndefOr[String | js.Array[String]] = js.native
   var getPopupContainer: js.UndefOr[js.Function1[/* node */ HTMLElement, HTMLElement]] = js.native
   var inputReadOnly: js.UndefOr[Boolean] = js.native
-  var locale: js.UndefOr[AnonLang] = js.native
+  var locale: js.UndefOr[Lang] = js.native
   var mode: js.UndefOr[PanelMode] = js.native
   var monthCellRender: js.UndefOr[MonthCellRender[Moment]] = js.native
   var name: js.UndefOr[String] = js.native
@@ -982,7 +982,7 @@ object MonthPickerProps {
         ret
     }
     @scala.inline
-    def withLocale(value: AnonLang): Self = {
+    def withLocale(value: Lang): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
         ret

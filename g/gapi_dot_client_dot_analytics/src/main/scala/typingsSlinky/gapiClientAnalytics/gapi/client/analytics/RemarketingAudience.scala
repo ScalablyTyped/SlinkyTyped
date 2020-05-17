@@ -1,7 +1,6 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonExcludeConditions
-import typingsSlinky.gapiClientAnalytics.AnonIncludeConditions
+import typingsSlinky.gapiClientAnalytics.anon.ExcludeConditions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ trait RemarketingAudience extends js.Object {
   /** Account ID to which this remarketing audience belongs. */
   var accountId: js.UndefOr[String] = js.native
   /** The simple audience definition that will cause a user to be added to an audience. */
-  var audienceDefinition: js.UndefOr[AnonIncludeConditions] = js.native
+  var audienceDefinition: js.UndefOr[typingsSlinky.gapiClientAnalytics.anon.IncludeConditions] = js.native
   /** The type of audience, either SIMPLE or STATE_BASED. */
   var audienceType: js.UndefOr[String] = js.native
   /** Time this remarketing audience was created. */
@@ -31,7 +30,7 @@ trait RemarketingAudience extends js.Object {
   /** The name of this remarketing audience. */
   var name: js.UndefOr[String] = js.native
   /** A state based audience definition that will cause a user to be added or removed from an audience. */
-  var stateBasedAudienceDefinition: js.UndefOr[AnonExcludeConditions] = js.native
+  var stateBasedAudienceDefinition: js.UndefOr[ExcludeConditions] = js.native
   /** Time this remarketing audience was last modified. */
   var updated: js.UndefOr[String] = js.native
   /** Web property ID of the form UA-XXXXX-YY to which this remarketing audience belongs. */
@@ -63,7 +62,7 @@ object RemarketingAudience {
         ret
     }
     @scala.inline
-    def withAudienceDefinition(value: AnonIncludeConditions): Self = {
+    def withAudienceDefinition(value: typingsSlinky.gapiClientAnalytics.anon.IncludeConditions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("audienceDefinition")(value.asInstanceOf[js.Any])
         ret
@@ -183,7 +182,7 @@ object RemarketingAudience {
         ret
     }
     @scala.inline
-    def withStateBasedAudienceDefinition(value: AnonExcludeConditions): Self = {
+    def withStateBasedAudienceDefinition(value: ExcludeConditions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stateBasedAudienceDefinition")(value.asInstanceOf[js.Any])
         ret

@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientLogging.gapi.client.logging
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientLogging.AnonBearertoken
-import typingsSlinky.gapiClientLogging.AnonKey
-import typingsSlinky.gapiClientLogging.AnonOauthtoken
-import typingsSlinky.gapiClientLogging.AnonPp
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientLogging.anon.Bearertoken
+import typingsSlinky.gapiClientLogging.anon.Key
+import typingsSlinky.gapiClientLogging.anon.Oauthtoken
+import typingsSlinky.gapiClientLogging.anon.Pp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,34 +15,34 @@ trait SinksResource extends js.Object {
     * Creates a sink that exports specified log entries to a destination. The export of newly-ingested log entries begins immediately, unless the sink's
     * writer_identity is not permitted to write to the destination. A sink can export log entries only from the resource owning the sink.
     */
-  def create(request: AnonKey): Request_[LogSink] = js.native
+  def create(request: Key): Request[LogSink] = js.native
   /** Deletes a sink. If the sink has a unique writer_identity, then that service account is also deleted. */
-  def delete(request: AnonOauthtoken): Request_[js.Object] = js.native
+  def delete(request: Oauthtoken): Request[js.Object] = js.native
   /** Gets a sink. */
-  def get(request: AnonOauthtoken): Request_[LogSink] = js.native
+  def get(request: Oauthtoken): Request[LogSink] = js.native
   /** Lists sinks. */
-  def list(request: AnonBearertoken): Request_[ListSinksResponse] = js.native
+  def list(request: Bearertoken): Request[ListSinksResponse] = js.native
   /**
     * Updates a sink. This method replaces the following fields in the existing sink with values from the new sink: destination, and filter. The updated sink
     * might also have a new writer_identity; see the unique_writer_identity field.
     */
-  def patch(request: AnonPp): Request_[LogSink] = js.native
+  def patch(request: Pp): Request[LogSink] = js.native
   /**
     * Updates a sink. This method replaces the following fields in the existing sink with values from the new sink: destination, and filter. The updated sink
     * might also have a new writer_identity; see the unique_writer_identity field.
     */
-  def update(request: AnonPp): Request_[LogSink] = js.native
+  def update(request: Pp): Request[LogSink] = js.native
 }
 
 object SinksResource {
   @scala.inline
   def apply(
-    create: AnonKey => Request_[LogSink],
-    delete: AnonOauthtoken => Request_[js.Object],
-    get: AnonOauthtoken => Request_[LogSink],
-    list: AnonBearertoken => Request_[ListSinksResponse],
-    patch: AnonPp => Request_[LogSink],
-    update: AnonPp => Request_[LogSink]
+    create: Key => Request[LogSink],
+    delete: Oauthtoken => Request[js.Object],
+    get: Oauthtoken => Request[LogSink],
+    list: Bearertoken => Request[ListSinksResponse],
+    patch: Pp => Request[LogSink],
+    update: Pp => Request[LogSink]
   ): SinksResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[SinksResource]
@@ -54,37 +54,37 @@ object SinksResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonKey => Request_[LogSink]): Self = {
+    def withCreate(value: Key => Request[LogSink]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonOauthtoken => Request_[js.Object]): Self = {
+    def withDelete(value: Oauthtoken => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonOauthtoken => Request_[LogSink]): Self = {
+    def withGet(value: Oauthtoken => Request[LogSink]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonBearertoken => Request_[ListSinksResponse]): Self = {
+    def withList(value: Bearertoken => Request[ListSinksResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonPp => Request_[LogSink]): Self = {
+    def withPatch(value: Pp => Request[LogSink]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonPp => Request_[LogSink]): Self = {
+    def withUpdate(value: Pp => Request[LogSink]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.elasticElasticsearch.poolMod
 
-import typingsSlinky.elasticElasticsearch.TypeofConnection
+import typingsSlinky.elasticElasticsearch.anon.TypeofConnection
 import typingsSlinky.elasticElasticsearch.connectionMod.AgentOptions
 import typingsSlinky.node.tlsMod.SecureContextOptions
 import scala.scalajs.js
